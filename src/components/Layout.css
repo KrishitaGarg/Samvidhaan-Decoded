@@ -27,7 +27,7 @@ span {
 }
 
 header {
-  position: relative;
+  position: sticky;
 }
 
 nav {
