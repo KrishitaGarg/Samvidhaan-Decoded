@@ -7,14 +7,14 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyANGi4DKIrlfMWlfnPGe0pPImvLbYaeT4k",
+  authDomain: "sih-hackathon-906de.firebaseapp.com",
+  projectId: "sih-hackathon-906de",
+  storageBucket: "sih-hackathon-906de.appspot.com",
+  messagingSenderId: "470534870675",
+  appId: "1:470534870675:web:78c27fb81593265aaa5f66",
+  measurementId: "G-49GM2H5B8N",
 };
-
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
