@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
               </Link>
             </li>
             <li>
-              <Link to="/game" className="nav-li menu">
+              <Link to="/startgame" className="nav-li menu">
                 Game
               </Link>
             </li>
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
               <Link to="/" className="header-btn yellow">
                 Home
               </Link>
-              <Link to="/game" className="header-btn">
+              <Link to="/startgame" className="header-btn">
                 Game
               </Link>
               <Link to="/chatbot" className="header-btn">
