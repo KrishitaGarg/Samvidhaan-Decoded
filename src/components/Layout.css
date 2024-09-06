@@ -1,0 +1,178 @@
+body {
+  background-image: url("../assets/bg-sih.png");
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main .content {
+  color: black;
+  border: 0.1rem solid rgb(8, 8, 254);
+  width: 70%;
+  margin-top: 3vh;
+}
+
+span {
+  color: yellow;
+}
+
+.nav1 {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+}
+
+nav {
+  background-color: black;
+  border: 0.1rem solid rgb(8, 8, 254);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.name {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 50px;
+}
+
+.header-btn {
+  color: white;
+  background: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  background-color: rgb(8, 8, 254);
+  color: yellow;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 5vh;
+  width: 150px;
+  z-index: 999;
+  background-color: rgba(64, 63, 63, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+  list-style-type: none;
+}
+
+.sidebar .nav-li {
+  width: 100%;
+  color: yellow;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.yellow {
+  color: yellow;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-buttons {
+    margin-top: 10px;
+  }
+  .name {
+    font-size: 0.5rem;
+  }
+  .nav-li {
+    padding: 0;
+  }
+  .logo {
+    height: auto;
+    max-height: 8rem;
+  }
+  .btn,
+  .btn-outline-primary {
+    position: relative;
+    font-size: 0.3rem;
+    top: 90%;
+    border: 0.1rem solid rgb(8, 8, 254);
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .name {
+    font-size: 0.4rem;
+  }
+  .nav-li {
+    font-size: 0.4rem;
+  }
+  .logo {
+    height: auto;
+    max-height: 16rem;
+  }
+  .btn,
+  .btn-outline-primary {
+    position: relative;
+    font-size: 0.4rem;
+    top: 90%;
+    border: 0.1rem solid rgb(8, 8, 254);
+  }
+}

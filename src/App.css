@@ -13,8 +13,16 @@
   }
 }
 
+.App-bg {
+  background-image: url("./assets/signin.png");
+  background-size: 70% auto; /* Ensures the background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  width: 100%; /* Adjusts width to cover the full width of the container */
+  height: 100vh;
+}
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
