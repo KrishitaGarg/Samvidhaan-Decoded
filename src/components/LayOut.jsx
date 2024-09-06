@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 import yellowLogo from "../assets/yellow.png";
+import logo from "../assets/logo.png"; 
 
 const Layout = ({ children }) => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -10,6 +11,8 @@ const Layout = ({ children }) => {
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
+
+  const [showText, setShowText] = useState(true);
 
   return (
     <div>
@@ -89,6 +92,19 @@ const Layout = ({ children }) => {
       </header>
 
       <main>{children}</main>
+      <footer className="footer">
+        {showText && (
+          <div className="footer-text-container">
+            <span className="footer-text">Say hi to Nyaya.AI</span>
+            <button className="close-button" onClick={() => setShowText(false)}>
+              &times;
+            </button>
+          </div>
+        )}
+        <a href="/chatbot" className="footer-logo-container">
+          <img src={logo} alt="Logo" className="footer-logo" />
+        </a>
+      </footer>
     </div>
   );
 };
