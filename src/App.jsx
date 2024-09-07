@@ -9,7 +9,7 @@ import StartGame from "./components/Game/start-game.jsx";
 import Instructions from "./components/Game/instructions.jsx";
 import Articles from "./components/Articles/articles.jsx";
 import Game from "./components/Game/game.jsx";
-/*import Game from "./components/Game/game.jsx";*/
+import Game from "./components/Game/game.jsx";
 import "./App.css"
 
 function App() {
