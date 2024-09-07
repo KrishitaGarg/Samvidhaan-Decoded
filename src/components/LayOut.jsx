@@ -52,8 +52,8 @@ const Layout = ({ children }) => {
           </ul>
           <div className="header-content">
             <Link to="/" className="nav-li name">
-              <img src={yellowLogo} height="20" width="20" alt="Logo" /> संविधान
-              Decoded
+              <img src={yellowLogo} height="65" width="65" alt="Logo" /> 
+              {" "}संविधान Decode<span>d</span>
             </Link>
             <div className="header-buttons">
               <Link to="/" className="header-btn yellow">
@@ -95,7 +95,7 @@ const Layout = ({ children }) => {
       <footer className="footer">
         {showText && (
           <div className="footer-text-container">
-            <span className="footer-text">Say hi to Nyaya.AI</span>
+            <div className="footer-text">Say hi to <span>Nyaya.AI</span></div>
             <button className="close-button" onClick={() => setShowText(false)}>
               &times;
             </button>

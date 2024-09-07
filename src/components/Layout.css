@@ -40,6 +40,7 @@ nav {
 .name {
   text-decoration: none;
   font-size: 20px;
+  color: white;
 }
 
 .header-content {
@@ -184,6 +185,10 @@ nav {
   height: 80px;
   width: auto;
   cursor: pointer;
+}
+
+.footer-text{
+  color: white;
 }
 
 @media (max-width: 800px) {

@@ -71,14 +71,6 @@ const ConstitutionDecoder = () => {
             <div className="second">
               <div className="third">
                 <img src={mainImg} className="logo mainimg" alt="Logo" />
-                <Link to="/articles">
-                  <button
-                    type="button"
-                    className="btn btn-outline-primary"
-                  >
-                    Let's Dive <span>In </span>
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
@@ -243,92 +235,6 @@ const ConstitutionDecoder = () => {
                 simplified summaries of all the articles in the constitution,
                 making it easy for users to understand complex legal texts.!"
               </h4>
-              <div className="classification-buttons">
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Union")}
-                >
-                  Union
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("State")}
-                >
-                  State
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Executive")}
-                >
-                  Executive
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Judiciary")}
-                >
-                  Judiciary
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Parliament")}
-                >
-                  Parliament
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("President")}
-                >
-                  President
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Attorney-General")}
-                >
-                  Attorney-General
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Council of Members")}
-                >
-                  Council of Members
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Officers of Parliament")}
-                >
-                  Officers of Parliament
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Power Privileges")}
-                >
-                  Power Privileges
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("General Procedure")}
-                >
-                  General Procedure
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-info m-2"
-                  onClick={() => handleClick("Legislative Procedure")}
-                >
-                  Legislative Procedure
-                </button>
-              </div>
             </div>
           </div>
         </div>

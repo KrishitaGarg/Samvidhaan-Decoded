@@ -1,0 +1,93 @@
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79vh;
+  background-image: url("../../assets/signin.png");
+  background-size: 70% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px;
+}
+
+.sign-up-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px) brightness(0.9) contrast(1.1);
+  -webkit-backdrop-filter: blur(10px) brightness(0.9) contrast(1.1);
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Kyiv*Type Titling";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+}
+
+.subheading {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.input {
+  width: 80% !important;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white !important;
+  font-size: 16px;
+  color: black !important;
+}
+
+.input::placeholder {
+  color: black !important;
+}
+
+.sign-up-button {
+  width: 80%;
+  padding: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #2563ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sign-up-button:hover {
+  background-color: #2866cc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.social-icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.or {
+  width: 400px;
+  margin: 20px auto;
+}

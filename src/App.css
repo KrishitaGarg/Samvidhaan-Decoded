@@ -1,0 +1,25 @@
+/* Add this CSS to your global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}

@@ -4,12 +4,18 @@ import {
   googleProvider,
   githubProvider,
   facebookProvider,
-} from "./firebase";
+} from "../firebase";
 import {
   signInWithPopup,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
+import "./SignIn.css";
+import Github from "../../assets/github.png";
+import Facebook from "../../assets/facebook.png";
+import Google from "../../assets/google.png";
+import Or from "../../assets/SignOr.png";
+import { Link } from "react-router-dom";
 import "./SignIn.css";
 
 const SignIn = () => {
@@ -53,7 +59,9 @@ const SignIn = () => {
   return (
     <div className="sign-in-container">
       <div className="sign-in-box">
-        <h1 className="title">Welcome</h1>
+        <h1 className="title">
+          Welcom<span>e</span>
+        </h1>
         <h2 className="subheading">Enter your details to sign in</h2>
         <input
           type="text"
@@ -72,21 +80,22 @@ const SignIn = () => {
         <a href="#" onClick={handlePasswordReset} className="forgot-password">
           Forgot Password?
         </a>
+        <img src={Or} alt="Or" className="or" />
         <div className="social-icons">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+            src={Google}
             alt="Google Sign-In"
             className="social-icon"
             onClick={() => handleSocialSignIn(googleProvider)}
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            src={Github}
             alt="GitHub Sign-In"
             className="social-icon"
             onClick={() => handleSocialSignIn(githubProvider)}
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            src={Facebook}
             alt="Facebook Sign-In"
             className="social-icon"
             onClick={() => handleSocialSignIn(facebookProvider)}
@@ -95,6 +104,10 @@ const SignIn = () => {
         <button onClick={handleSignIn} className="sign-in-button">
           Sign In
         </button>
+        <div>
+        <Link to="/signup" className="signup">
+          New here? <span>Sign up now</span>
+        </Link></div>
       </div>
     </div>
   );
