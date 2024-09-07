@@ -30,7 +30,7 @@ const GameComponent = () => {
             fontSize: "18px",
             margin: "10px",
             cursor: "pointer",
-            background: "transparent",
+            background: "black",
             border: "2px solid blue",
             color: "white",
             borderRadius: "10px",
