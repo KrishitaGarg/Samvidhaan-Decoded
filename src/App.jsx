@@ -6,6 +6,7 @@ import ConstitutionDecoder from "./components/ConstitutionDecoder/ConstitutionDe
 import Layout from "./components/LayOut.jsx";
 import StartGame from "./components/Game/start-game.jsx";
 import Instructions from "./components/Game/instructions.jsx";
+import Articles from "./components/Articles/articles.jsx";
 /*import Game from "./components/Game/game.jsx";*/
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/startgame" element={<StartGame />} />
           <Route path="/instructions" element={<Instructions />} />
+          <Route path="/articles" element={<Articles />} />
         </Routes>
       </Layout>
     </Router>

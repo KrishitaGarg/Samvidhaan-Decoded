@@ -2,11 +2,49 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import mainImg from "../../assets/img.png";
+import Modal from "react-bootstrap/Modal";
+import { Link } from "react-router-dom";
 
 const ConstitutionDecoder = () => {
   const [meaningVisible, setMeaningVisible] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [tooltipStyle, setTooltipStyle] = useState({});
+  const [modalVisible, setModalVisible] = useState(false);
+  const [currentTitle, setCurrentTitle] = useState("");
+  const [currentInfo, setCurrentInfo] = useState("");
+
+  const classifications = {
+    Union:
+      "The central government, which holds authority over the entire nation.",
+    State:
+      "The government at the state level, responsible for the governance of individual states.",
+    Executive:
+      "Branch responsible for enforcing laws and administering government policies.",
+    Judiciary:
+      "Branch responsible for interpreting laws and administering justice.",
+    Parliament: "The legislative body responsible for creating laws.",
+    President: "The head of state in a republic system of government.",
+    "Attorney-General": "Chief legal advisor to the government.",
+    "Council of Members":
+      "A body of members within the Executive responsible for aiding in decision-making.",
+    "Officers of Parliament":
+      "Members who help Parliament function effectively.",
+    "Power Privileges":
+      "Special rights and privileges granted to the Parliament and its members.",
+    "General Procedure":
+      "The set of rules followed by Parliament in its workings.",
+    "Legislative Procedure": "The process by which laws are made and passed.",
+  };
+
+  const handleClick = (title) => {
+    setCurrentTitle(title);
+    setCurrentInfo(classifications[title]);
+    setModalVisible(true);
+  };
+
+  const handleClose = () => {
+    setModalVisible(false);
+  };
 
   const handleMouseOver = (event) => {
     const meaningText = event.target.getAttribute("data-meaning");
@@ -33,9 +71,14 @@ const ConstitutionDecoder = () => {
             <div className="second">
               <div className="third">
                 <img src={mainImg} className="logo mainimg" alt="Logo" />
-                <button type="button" className="btn btn-outline-primary">
-                  Let's Dive <span>In </span>
-                </button>
+                <Link to="/articles">
+                  <button
+                    type="button"
+                    className="btn btn-outline-primary"
+                  >
+                    Let's Dive <span>In </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -191,17 +234,113 @@ const ConstitutionDecoder = () => {
         <div className="content">
           <div className="image-1">
             <div className="second-p">
-              <h1>Understanding <span>Constitution</span></h1>
+              <h1>
+                Understanding <span>Constitution</span>
+              </h1>
               <h2>With संविधान Decoded</h2>
               <h4>
                 "The website provides a streamlined interface that presents
                 simplified summaries of all the articles in the constitution,
                 making it easy for users to understand complex legal texts.!"
               </h4>
+              <div className="classification-buttons">
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Union")}
+                >
+                  Union
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("State")}
+                >
+                  State
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Executive")}
+                >
+                  Executive
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Judiciary")}
+                >
+                  Judiciary
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Parliament")}
+                >
+                  Parliament
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("President")}
+                >
+                  President
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Attorney-General")}
+                >
+                  Attorney-General
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Council of Members")}
+                >
+                  Council of Members
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Officers of Parliament")}
+                >
+                  Officers of Parliament
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Power Privileges")}
+                >
+                  Power Privileges
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("General Procedure")}
+                >
+                  General Procedure
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-info m-2"
+                  onClick={() => handleClick("Legislative Procedure")}
+                >
+                  Legislative Procedure
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Modal for showing classification details */}
+      <Modal show={modalVisible} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{currentTitle}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{currentInfo}</Modal.Body>
+      </Modal>
     </div>
   );
 };

@@ -112,6 +112,12 @@ nav {
   color: white;
   cursor: pointer;
   font-size: 1.5rem;
+  width: 50px;
+  margin-top: 0px;
+}
+
+.menu-toggle-btn:hover {
+  background-color: blue;
 }
 
 .yellow {
@@ -146,20 +152,28 @@ nav {
 }
 
 .close-button {
-  font-size: 12px;
+  width: 24px;
+  height: 24px; 
+  font-size: 16px;
   background: black;
   border: 1px solid white;
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  position: absolute;
-  top: -10px;
-  right: 10px;
+  position: relative;
+  top: -20px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .close-button:hover {
   color: #ff0000;
+  background-color: blue;
 }
+
 
 .footer-logo-container {
   display: flex;

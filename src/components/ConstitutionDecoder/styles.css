@@ -11,6 +11,10 @@ h4 {
   text-align: left;
 }
 
+.second-p h1 {
+  color: white;
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -50,10 +54,11 @@ span {
   border-radius: 60px;
 }
 
-.btn,
+
 .btn-outline-primary {
   position: absolute;
-  top: 85%;
+  width: 10%;
+  top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -65,6 +70,11 @@ span {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 1rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: #080bba;
+  color: white;
 }
 
 .meaning-box {
@@ -153,6 +163,34 @@ span {
   display: inline-block;
 }
 
+.classification-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.classification-buttons .btn {
+  padding: 10px 20px; /* Adjust button padding */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px; /* Make buttons slightly rounded */
+}
+
+.modal-body {
+  color: white;
+  background-color: black;
+  font-size: large;
+}
+
+.modal-header {
+  color: black;
+  background-color: white;
+}
+
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
@@ -222,6 +260,10 @@ span {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.5rem;
   }
+  .classification-buttons .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -272,6 +314,10 @@ span {
     z-index: 900;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.5rem;
+  }
+  .classification-buttons .btn {
+    font-size: 10px;
+    padding: 6px 12px;
   }
 }
 

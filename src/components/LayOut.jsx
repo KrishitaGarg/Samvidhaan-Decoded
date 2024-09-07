@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 import yellowLogo from "../assets/yellow.png";
-import logo from "../assets/logo.png"; 
+import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
