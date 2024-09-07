@@ -1,0 +1,228 @@
+.game-container-run{
+    height: fit-content;
+    width: 98%;
+    margin: 16px 20px;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 36px;
+    color: white!important;
+}
+
+.game-header-run{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+.game-header-run-score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.game-header-run-score svg{
+    width: 36px;
+    height: 36px;
+    padding-bottom: 5px;
+}
+.game-header-run-score span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 2px solid  blue;
+    border-radius: 5px;
+}
+
+.game-main-run{
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 10px;
+
+    @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+.game-header-run-user-img{
+    width: 36px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.game-main-run-game{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.game-main-run-questions{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.game-main-run-questions-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.game-main-run-question-timer{
+    font-size: 2rem;
+    font-weight: 700;
+    height: 80px;
+    width: 80px;
+    padding: 5px 15px;
+    background: radial-gradient(50% 50% at 50% 50%, #03257C 72.3%, #27BEFF 89%, #03257C 100%);
+    border-radius: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-main-run-question-timer span{
+    color: white;
+}
+
+.QuestionBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.game-main-run-question{
+    flex : 1 0 auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.game-main-run-options{
+    /* padding: 20px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* QuestionBox.css */
+
+
+.game-main-run-game-board{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    /* border: 2px solid blue; */
+}
+
+.game-main-run-game-board-tile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.game-main-run-game-board-tile-img{
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.game-main-run-dice{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.game-action-run{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end ;
+}
+.game-action-button-box{
+    display: flex;
+    gap: 20px;
+}
+
+.game-action-button-box button{
+    border-radius: 200px;
+    padding: 0;
+    width: 50px;
+    aspect-ratio: 1/1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.147);
+    border: 2px solid blue;
+}
+
+.game-main-run-dice {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+  
+  .game-timer {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ .game-timer .text {
+    color: #aaa;
+    font-size: 16px;
+  }
+  
+ .game-timer .value {
+    font-size: 50px;
+  }
+  
+  .game-timer .info {
+    max-width: 360px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .game-timer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-grow: 1;
+  }

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/game_bg.png";
 import titleImage from "../../assets/game_title.png";
 
 const GameComponent = () => {
+
+  const [gameState, setGameState] = useState({
+    gameStauts: "start",
+    gameTimer: 60,
+    score: 0,
+    currentPos: 0,
+    currentQuestion: 0
+  });
+
   return (
     <div
       style={{
