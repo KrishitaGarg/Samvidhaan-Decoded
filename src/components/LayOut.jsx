@@ -6,10 +6,10 @@ import yellowLogo from "../assets/yellow.png";
 import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [activeButton, setActiveButton] = useState("Home");
 
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
   };
 
   const [showText, setShowText] = useState(true);
@@ -18,75 +18,58 @@ const Layout = ({ children }) => {
     <div>
       <header className="header">
         <nav>
-          <ul className={`sidebar ${sidebarVisible ? "d-flex" : "d-none"}`}>
-            <li>
-              <Link to="/" className="nav-li menu">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/startgame" className="nav-li menu">
-                Game
-              </Link>
-            </li>
-            <li>
-              <Link to="/chatbot" className="nav-li menu">
-                Nyaya.AI
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="nav-li menu">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/signin" className="nav-li menu">
-                Sign In
-              </Link>
-            </li>
-            <li onClick={toggleSidebar}>
-              <a href="#" className="nav-li">
-                Close
-              </a>
-            </li>
-          </ul>
           <div className="header-content">
             <Link to="/" className="nav-li name">
-              <img src={yellowLogo} height="65" width="65" alt="Logo" /> 
-              {" "}संविधान Decode<span>d</span>
+              <img src={yellowLogo} height="65" width="65" alt="Logo" /> संविधान
+              Decode<span>d</span>
             </Link>
             <div className="header-buttons">
-              <Link to="/" className="header-btn yellow">
+              <Link
+                to="/"
+                className={`header-btn ${
+                  activeButton === "Home" ? "yellow" : ""
+                }`}
+                onClick={() => handleButtonClick("Home")}
+              >
                 Home
               </Link>
-              <Link to="/startgame" className="header-btn">
+              <Link
+                to="/startgame"
+                className={`header-btn ${
+                  activeButton === "Game" ? "yellow" : ""
+                }`}
+                onClick={() => handleButtonClick("Game")}
+              >
                 Game
               </Link>
-              <Link to="/chatbot" className="header-btn">
+              <Link
+                to="/chatbot"
+                className={`header-btn ${
+                  activeButton === "Nyaya.AI" ? "yellow" : ""
+                }`}
+                onClick={() => handleButtonClick("Nyaya.AI")}
+              >
                 Nyaya.AI
               </Link>
-              <Link to="/about" className="header-btn">
+              <Link
+                to="/about"
+                className={`header-btn ${
+                  activeButton === "About Us" ? "yellow" : ""
+                }`}
+                onClick={() => handleButtonClick("About Us")}
+              >
                 About Us
               </Link>
-              <Link to="/signin" className="header-btn">
+              <Link
+                to="/signin"
+                className={`header-btn ${
+                  activeButton === "Sign In" ? "yellow" : ""
+                }`}
+                onClick={() => handleButtonClick("Sign In")}
+              >
                 Sign In
               </Link>
             </div>
-            <button className="menu-toggle-btn" onClick={toggleSidebar}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="50"
-                fill="currentColor"
-                className="bi bi-list"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                />
-              </svg>
-            </button>
           </div>
         </nav>
       </header>
@@ -95,7 +78,9 @@ const Layout = ({ children }) => {
       <footer className="footer">
         {showText && (
           <div className="footer-text-container">
-            <div className="footer-text">Say hi to <span>Nyaya.AI</span></div>
+            <div className="footer-text">
+              Say hi to <span>Nyaya.AI</span>
+            </div>
             <button className="close-button" onClick={() => setShowText(false)}>
               &times;
             </button>

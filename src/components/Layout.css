@@ -103,24 +103,6 @@ nav {
   font-size: 18px;
 }
 
-.menu-button {
-  display: none;
-}
-
-.menu-toggle-btn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5rem;
-  width: 50px;
-  margin-top: 0px;
-}
-
-.menu-toggle-btn:hover {
-  background-color: blue;
-}
-
 .yellow {
   color: yellow;
 }
@@ -194,9 +176,6 @@ nav {
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
-  }
-  .menu-button {
-    display: block;
   }
   .header-content {
     flex-direction: column;
