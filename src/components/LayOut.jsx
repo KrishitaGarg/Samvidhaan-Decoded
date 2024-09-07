@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 import yellowLogo from "../assets/yellow.png";
@@ -7,12 +7,16 @@ import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
+  const [showText, setShowText] = useState(true);
+  const location = useLocation();
+
+  // Determine if the current path is Home or About Us
+  const showNyayaAI =
+    location.pathname === "/" || location.pathname === "/about";
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
-
-  const [showText, setShowText] = useState(true);
 
   return (
     <div>
@@ -75,19 +79,22 @@ const Layout = ({ children }) => {
       </header>
 
       <main>{children}</main>
-      <footer className="footer">
-        {showText && (
-          <div className="footer-text-container">
-            <div className="footer-text">
+      <footer className="layout-footer">
+        {showNyayaAI && showText && (
+          <div className="layout-footer-text-container">
+            <div className="layoutfooter-text">
               Say hi to <span>Nyaya.AI</span>
             </div>
-            <button className="close-button" onClick={() => setShowText(false)}>
+            <button
+              className="layout-close-button"
+              onClick={() => setShowText(false)}
+            >
               &times;
             </button>
           </div>
         )}
-        <a href="/chatbot" className="footer-logo-container">
-          <img src={logo} alt="Logo" className="footer-logo" />
+        <a href="/chatbot" className="layout-footer-logo-container">
+          <img src={logo} alt="Logo" className="layout-footer-logo" />
         </a>
       </footer>
     </div>

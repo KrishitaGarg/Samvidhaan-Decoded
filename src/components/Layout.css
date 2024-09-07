@@ -107,7 +107,7 @@ nav {
   color: yellow;
 }
 
-.footer {
+.layout-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -117,13 +117,13 @@ nav {
   padding: 10px 20px;
 }
 
-.footer-text-container {
+.layout-footer-text-container {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.footer-text {
+.layout-footer-text {
   font-size: 18px;
   margin-right: 10px;
   color: yellow;
@@ -134,7 +134,7 @@ nav {
   padding-right: 20px;
 }
 
-.close-button {
+.layout-close-button {
   width: 24px;
   height: 24px; 
   font-size: 16px;
@@ -152,24 +152,25 @@ nav {
   padding: 0;
 }
 
-.close-button:hover {
+.layout-close-button:hover {
   color: #ff0000;
   background-color: blue;
 }
 
 
-.footer-logo-container {
+.layout-footer-logo-container {
   display: flex;
   align-items: center;
 }
 
-.footer-logo {
+.layout-footer-logo {
   height: 80px;
   width: auto;
   cursor: pointer;
+  z-index: 100;
 }
 
-.footer-text{
+.layout-footer-text{
   color: white;
 }
 

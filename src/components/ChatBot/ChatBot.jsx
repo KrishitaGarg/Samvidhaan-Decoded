@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ChatBot.css";
-import logo from "../../assets/logo.png";
+import botLogo from "../../assets/logo.png"; // Path to bot logo
 
 const autoResize = (e) => {
   e.target.style.height = "auto";
@@ -110,13 +110,14 @@ const Chatbot = () => {
       <div className="chatbot-messages">
         {messages.map((msg, index) => (
           <div key={index} className={`message ${msg.isBot ? "bot" : "user"}`}>
-            <img src={logo} alt="logo" className="message-logo" />
+            {msg.isBot && (
+              <img src={botLogo} alt="bot logo" className="message-logo" />
+            )}
             <span>{msg.text}</span>
           </div>
         ))}
       </div>
       <div className="chatbot-input">
-        <img src={logo} alt="logo" className="input-logo" />
         <textarea
           value={input}
           onChange={handleInputChange}

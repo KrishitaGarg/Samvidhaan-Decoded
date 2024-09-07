@@ -1,8 +1,8 @@
 .chatbot {
   width: 800px;
   height: 600px;
-  background-color: #111427;
-  color: white;
+  background-color: rgb(0, 3, 20);
+  color: white !important;
   border: 5px solid blue;
   border-radius: 15px;
   overflow: hidden;
@@ -41,6 +41,12 @@
 .chatbot-header select {
   width: 250px;
   margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .chatbot-messages {
@@ -67,12 +73,17 @@
   background-color: #2c2f48;
   align-self: flex-start;
   color: white !important;
+  background-color: rgb(3, 37, 124);
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .message.user {
-  background-color: #ffd700;
+  background-color: rgb(2, 26, 67);
+  border: 2px solid white;
   align-self: flex-end;
-  color: black;
+  border-radius: 10px;
+  color: white !important;
 }
 
 .message-logo {
