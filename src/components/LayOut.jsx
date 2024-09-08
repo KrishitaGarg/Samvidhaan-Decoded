@@ -7,10 +7,9 @@ import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
-  const [showText, setShowText] = useState(true); // State to manage text visibility
+  const [showText, setShowText] = useState(true);
   const location = useLocation();
 
-  // Determine if the current path is Home or About Us
   const showStickyLogo =
     location.pathname === "/" || location.pathname === "/about";
 

@@ -148,7 +148,6 @@ main {
   background-color: blue;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 800px) {
   .header-content {
     flex-direction: column;
@@ -161,7 +160,7 @@ main {
   }
 
   .name {
-    font-size: 1rem; /* Adjusted for better readability */
+    font-size: 1rem;
   }
 
   .header-btn {
@@ -170,9 +169,9 @@ main {
 
   .sidebar {
     width: 100%;
-    top: auto; /* Adjusted for mobile */
+    top: auto;
     bottom: 0;
-    box-shadow: none; /* Remove shadow for mobile */
+    box-shadow: none;
   }
 }
 
@@ -204,6 +203,6 @@ main {
   }
 
   .sticky-logo {
-    height: 40px; /* Adjust as needed */
+    height: 40px;
   }
 }

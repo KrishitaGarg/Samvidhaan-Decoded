@@ -15,11 +15,12 @@ import Github from "../../assets/github.png";
 import Facebook from "../../assets/facebook.png";
 import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const navigate = useNavigate();
 
   const sendSignInDetailsToBackend = async (user) => {
     try {
@@ -53,6 +54,7 @@ const SignIn = () => {
     alert("Signed in successfully!");
     // Optionally, send the user details to the backend API
     await sendSignInDetailsToBackend(user);
+    navigate("/");
   };
 
   const handleSignIn = async () => {

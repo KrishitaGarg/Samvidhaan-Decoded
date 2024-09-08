@@ -29,7 +29,7 @@
 }
 
 .header-logo {
-  width: 75px; /* Adjusted the size for better visibility */
+  width: 75px;
   height: auto;
   margin-right: 20px;
 }
@@ -37,7 +37,7 @@
 .dropdowns {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Ensures dropdowns are aligned to the right */
+  align-items: flex-end;
 }
 
 .chatbot-header h1 {
@@ -162,7 +162,7 @@
   }
 
   .header-logo {
-    width: 50px; /* Adjusted size */
+    width: 50px;
     margin-right: 10px;
   }
 
@@ -182,7 +182,7 @@
   }
 
   .chatbot-messages {
-    height: calc(100vh - 150px); /* Adjust height to fit mobile screens */
+    height: calc(100vh - 150px);
     padding: 10px;
   }
 

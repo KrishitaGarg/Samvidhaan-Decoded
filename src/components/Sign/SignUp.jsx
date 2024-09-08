@@ -65,7 +65,6 @@ const SignUp = () => {
       );
       const user = userCredential.user;
 
-      // Set the display name (username)
       await updateProfile(user, {
         displayName: username,
       });

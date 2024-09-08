@@ -1,9 +1,9 @@
 .page-container {
-  border: 5px solid rgb(1, 68, 163);; /* Color and width of the border */
-  padding: 20px; /* Padding to ensure the content doesn't touch the border */
-  margin: 20px; /* Margin to ensure some space around the border */
-  border-radius: 10px; /* Optional: Gives rounded edges to the border */
-  box-sizing: border-box; /* Ensure padding is included in the overall width and height */
+  border: 5px solid rgb(1, 68, 163);;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -21,13 +21,13 @@
 }
 
 .team-header {
-  background-image: url("../../assets/constitution.png"); /* Path to your background image */
-  background-size: cover; /* Cover ensures the image scales nicely */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  padding: 60px 20px; /* Adds padding to space out the content */
+  background-image: url("../../assets/constitution.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
   margin-bottom: 40px;
-  border-radius: 10px; /* Optional for rounded edges */
+  border-radius: 10px;
 }
 
 .team-heading {
@@ -45,10 +45,9 @@
   line-height: 1.5;
 }
 
-/* Set the layout to a 3 x 2 grid */
 .team-members {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
 }
@@ -100,10 +99,9 @@
   color: #00d8ff;
 }
 
-/* Responsive Styles for mobile (1 column layout) */
 @media (max-width: 768px) {
   .team-members {
-    grid-template-columns: 1fr; /* Switch to 1 column for smaller screens */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 

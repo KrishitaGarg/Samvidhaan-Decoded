@@ -182,7 +182,6 @@ const Chatbot = () => {
     <div className="chatbot">
       <div className="chatbot-header">
         <div className="header-content">
-          {/* Add the logo image to the left */}
           <img src={botLogo} alt="bot logo" className="header-logo" />
 
           <div className="dropdowns">
