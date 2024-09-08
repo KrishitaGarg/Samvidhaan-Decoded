@@ -7,15 +7,19 @@ import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(true); // State to manage text visibility
   const location = useLocation();
 
   // Determine if the current path is Home or About Us
-  const showNyayaAI =
+  const showStickyLogo =
     location.pathname === "/" || location.pathname === "/about";
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
+  };
+
+  const handleCloseText = () => {
+    setShowText(false);
   };
 
   return (
@@ -79,24 +83,22 @@ const Layout = ({ children }) => {
       </header>
 
       <main>{children}</main>
-      <footer className="layout-footer">
-        {showNyayaAI && showText && (
-          <div className="layout-footer-text-container">
-            <div className="layoutfooter-text">
+
+      {showStickyLogo && (
+        <div className="sticky-logo-container">
+          {showText && (
+            <span className="sticky-text">
               Say hi to <span>Nyaya.AI</span>
-            </div>
-            <button
-              className="layout-close-button"
-              onClick={() => setShowText(false)}
-            >
-              &times;
-            </button>
-          </div>
-        )}
-        <a href="/chatbot" className="layout-footer-logo-container">
-          <img src={logo} alt="Logo" className="layout-footer-logo" />
-        </a>
-      </footer>
+              <span className="close-button" onClick={handleCloseText}>
+                &times;
+              </span>
+            </span>
+          )}
+          <a href="/chatbot" className="sticky-logo-link">
+            <img src={logo} alt="Logo" className="sticky-logo" />
+          </a>
+        </div>
+      )}
     </div>
   );
 };
