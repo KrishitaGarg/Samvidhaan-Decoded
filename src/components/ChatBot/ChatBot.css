@@ -127,7 +127,7 @@
 
 .chatbot-input textarea {
   flex: 1;
-  padding: 10px;
+  padding: 9px;
   border-radius: 15px;
   margin-right: 20px;
   border: none;
@@ -140,6 +140,15 @@
   line-height: 1.5;
   overflow-y: auto;
   box-sizing: border-box;
+}
+
+.send-icon {
+  width: 40px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
 }
 
 @media (max-width: 600px) {

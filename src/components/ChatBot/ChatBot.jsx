@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import "./ChatBot.css";
 import botLogo from "../../assets/logo.png";
+import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 
 const autoResize = (e) => {
@@ -25,6 +26,8 @@ const Chatbot = () => {
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
+
+  const messagesEndRef = useRef(null);
 
   const getAuthToken = async () => {
     const user = auth.currentUser;
@@ -81,9 +84,7 @@ const Chatbot = () => {
       const data = await response.json();
       console.log("Fetched articles:", data);
 
-      // Check if data contains the children array
       if (data.children && Array.isArray(data.children)) {
-        // Extract articles from children array
         const articlesArray = data.children.map((item) => ({
           id: item.id,
           name: item.name,
@@ -96,7 +97,6 @@ const Chatbot = () => {
       console.error("Error fetching articles:", error);
     }
   };
-
 
   const fetchMessages = async () => {
     try {
@@ -132,6 +132,10 @@ const Chatbot = () => {
       fetchArticles(category);
     }
   }, [category]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
@@ -174,7 +178,12 @@ const Chatbot = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSendMessage();
+      if (e.shiftKey) {
+        return;
+      } else {
+        e.preventDefault();
+        handleSendMessage();
+      }
     }
   };
 
@@ -205,8 +214,8 @@ const Chatbot = () => {
               >
                 <option value="">Select an Article</option>
                 {articlesList.map((art) => (
-                  <option key={art.number} value={art.number}>
-                    Article {art.number}
+                  <option key={art.id} value={art.id}>
+                    Article {art.id}
                   </option>
                 ))}
               </select>
@@ -224,6 +233,7 @@ const Chatbot = () => {
             <span>{msg.text}</span>
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="chatbot-input">
         <textarea
@@ -233,7 +243,13 @@ const Chatbot = () => {
           onInput={autoResize}
           placeholder="Start Typing here..."
           rows={1}
-          style={{ maxHeight: "6em", overflowY: "auto" }}
+          style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
+        />
+        <img
+          src={sendIcon}
+          alt="Send"
+          className="send-icon"
+          onClick={handleSendMessage}
         />
       </div>
     </div>
