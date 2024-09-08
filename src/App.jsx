@@ -8,7 +8,8 @@ import Layout from "./components/LayOut.jsx";
 import StartGame from "./components/Game/start-game.jsx";
 import Articles from "./components/Articles/articles.jsx";
 import Game from "./components/Game/game.jsx";
-import "./App.css"
+import About from "./components/About/about.jsx";
+import "./App.css";
 
 function App() {
   return (
@@ -21,11 +22,10 @@ function App() {
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/startgame" element={<StartGame />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
-      <Routes>
-        <Route path="/startgame" element={<StartGame />} />
-      </Routes>
     </Router>
   );
 }

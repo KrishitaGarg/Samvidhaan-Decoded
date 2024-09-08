@@ -54,28 +54,6 @@ span {
   border-radius: 60px;
 }
 
-.btn-outline-primary {
-  position: absolute;
-  width: 10%;
-  top: 82%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: black;
-  border: 0.2rem solid rgb(8, 8, 254);
-  color: white;
-  font-size: 16px;
-  font-weight: bolder;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 1rem;
-}
-
-.btn-outline-primary:hover {
-  background-color: #080bba;
-  color: white;
-}
-
 .meaning-box {
   position: absolute;
   background-color: #000000;
@@ -142,15 +120,6 @@ span {
   border-radius: 2rem;
 }
 
-.p-content {
-  position: absolute;
-  top: 20rem;
-  left: 30px;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-}
-
 .second-p {
   color: white;
   font-size: 1rem;
@@ -162,180 +131,82 @@ span {
   display: inline-block;
 }
 
-.classification-buttons {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
-  justify-content: center; /* Center the buttons */
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px;
-  width: 50%;
-  margin-left: 25%;
-}
-
-.classification-buttons .btn {
-  padding: 10px 20px; /* Adjust button padding */
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 10px; /* Make buttons slightly rounded */
-}
-
-.modal-body {
-  color: white;
-  background-color: black;
-  font-size: large;
-}
-
-.modal-header {
-  color: black;
-  background-color: white;
-}
-
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
   }
-  .menu-button {
-    display: block;
-  }
-  .name {
-    font-size: 0.5rem;
-  }
+
   .logo {
     height: auto;
     max-height: 8rem;
   }
-  .btn,
+
   .btn-outline-primary {
     position: relative;
     font-size: 0.3rem;
     top: 90%;
-    border: 0.1rem solid rgb(8, 8, 254);
   }
+
   .preamble-container {
     padding: 5px;
     width: 90%;
     line-height: 0.7rem;
     font-size: 0.5rem;
-    border-radius: 10px;
-    color: #36230d;
     padding-top: 3rem;
     margin-top: 3rem;
   }
+
   .preamble-div {
-    background-image: url("../../assets/preamble_bg.jpg");
     background-size: 26rem 36rem;
-    background-repeat: no-repeat;
-    background-position: center;
     padding-top: 7rem;
-    min-height: 80vh;
-    text-align: center;
-    border-radius: 2rem;
   }
+
   .second-p {
-    color: white;
     font-size: 0.5rem;
     padding: 0.6rem;
   }
-  .p-content {
-    position: absolute;
-    top: 17rem;
-    left: 28px;
-    padding: 0;
-    margin: 0;
-    font-size: 20pt;
-  }
+
   .meaning-box {
     display: none;
     max-width: 130px;
     max-height: 120px;
-    position: absolute;
     border: 4px solid #342f2f;
-    color: #ffffff;
     background-color: #756b52;
     padding: 2px;
-    border-radius: 5px;
-    font-weight: 900;
-    z-index: 900;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.5rem;
-  }
-  .classification-buttons .btn {
-    font-size: 12px;
-    padding: 8px 16px;
   }
 }
 
 @media (max-width: 400px) {
   .preamble-container {
-    padding: 5px;
-    width: 90%;
-    line-height: 0.7rem;
-    font-size: 0.5rem;
-    border-radius: 10px;
-    color: #36230d;
     padding-top: 5rem;
-    margin-top: 3rem;
   }
+
   .preamble-div {
-    background-image: url("../../assets/preamble_bg.jpg");
-    background-size: 26rem 36rem;
-    background-repeat: no-repeat;
-    background-position: center;
     padding-top: 12rem;
-    top: 20%;
-    text-align: center;
-    border-radius: 2rem;
   }
+
   .second-p {
-    color: white;
     font-size: 0.5rem;
     padding: 0.6rem;
   }
-  .p-content {
-    position: absolute;
-    top: 17rem;
-    left: 28px;
-    padding: 0;
-    margin: 0;
-    font-size: 20pt;
-  }
+
   .meaning-box {
-    display: none;
     max-width: 130px;
     max-height: 120px;
-    position: absolute;
-    border: 4px solid #342f2f;
-    color: #ffffff;
-    background-color: #756b52;
-    padding: 2px;
-    border-radius: 5px;
-    font-weight: 900;
-    z-index: 900;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.5rem;
-  }
-  .classification-buttons .btn {
-    font-size: 10px;
-    padding: 6px 12px;
   }
 }
 
 @media (max-width: 1024px) {
-  .name {
-    font-size: 0.4rem;
-  }
-  .nav-li {
-    font-size: 0.4rem;
-  }
   .logo {
     height: auto;
     max-height: 16rem;
   }
-  .btn,
+
   .btn-outline-primary {
     position: relative;
     font-size: 0.4rem;
     top: 90%;
-    border: 0.1rem solid rgb(8, 8, 254);
   }
 }

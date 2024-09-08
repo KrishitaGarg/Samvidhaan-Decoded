@@ -2,50 +2,12 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import mainImg from "../../assets/img.png";
-import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
 import ConstitutionTreeGraph from "./ConstitutionTreeGraph";
 
-const   ConstitutionDecoder = () => {
+const  ConstitutionDecoder = () => {
   const [meaningVisible, setMeaningVisible] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [tooltipStyle, setTooltipStyle] = useState({});
-  const [modalVisible, setModalVisible] = useState(false);
-  const [currentTitle, setCurrentTitle] = useState("");
-  const [currentInfo, setCurrentInfo] = useState("");
-
-  const classifications = {
-    Union:
-      "The central government, which holds authority over the entire nation.",
-    State:
-      "The government at the state level, responsible for the governance of individual states.",
-    Executive:
-      "Branch responsible for enforcing laws and administering government policies.",
-    Judiciary:
-      "Branch responsible for interpreting laws and administering justice.",
-    Parliament: "The legislative body responsible for creating laws.",
-    President: "The head of state in a republic system of government.",
-    "Attorney-General": "Chief legal advisor to the government.",
-    "Council of Members":
-      "A body of members within the Executive responsible for aiding in decision-making.",
-    "Officers of Parliament":
-      "Members who help Parliament function effectively.",
-    "Power Privileges":
-      "Special rights and privileges granted to the Parliament and its members.",
-    "General Procedure":
-      "The set of rules followed by Parliament in its workings.",
-    "Legislative Procedure": "The process by which laws are made and passed.",
-  };
-
-  const handleClick = (title) => {
-    setCurrentTitle(title);
-    setCurrentInfo(classifications[title]);
-    setModalVisible(true);
-  };
-
-  const handleClose = () => {
-    setModalVisible(false);
-  };
 
   const handleMouseOver = (event) => {
     const meaningText = event.target.getAttribute("data-meaning");
@@ -241,14 +203,6 @@ const   ConstitutionDecoder = () => {
           </div>
         </div>
       </section>
-
-      {/* Modal for showing classification details */}
-      <Modal show={modalVisible} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{currentTitle}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{currentInfo}</Modal.Body>
-      </Modal>
     </div>
   );
 };

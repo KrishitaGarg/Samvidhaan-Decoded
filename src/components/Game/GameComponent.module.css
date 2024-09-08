@@ -2,14 +2,13 @@
   background-image: url("../../assets/game_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.8;
-  height: 90vh;
+  opacity: 1;
+  height: 89vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-  padding: 20px;
 }
 
 .titleImage {
