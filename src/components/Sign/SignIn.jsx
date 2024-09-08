@@ -16,16 +16,59 @@ import Facebook from "../../assets/facebook.png";
 import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
 import { Link } from "react-router-dom";
-import "./SignIn.css";
 
 const SignIn = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const handleSignIn = async () => {
+  const sendSignInDetailsToBackend = async (user) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("Signed in successfully!");
+      const response = await fetch(
+        "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/get-user/",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${user.accessToken}`,
+          },
+        }
+      );
+      if (response.status === 200) {
+        const data = await response.json();
+        alert("User details fetched successfully!");
+        console.log("User details:", data); // Optionally log or use the data
+      } else if (response.status === 422) {
+        const errorData = await response.json();
+        console.error("Validation Error:", errorData);
+        alert("Validation error: " + JSON.stringify(errorData.detail)); // Show specific validation error
+      } else {
+        throw new Error("Failed to fetch user details from backend.");
+      }
+    } catch (error) {
+      console.error("Error fetching user details from backend", error);
+      alert("Failed to fetch user details from backend.");
+    }
+  };
+
+  const handleSignInSuccess = async (user) => {
+    alert("Signed in successfully!");
+    // Optionally, send the user details to the backend API
+    await sendSignInDetailsToBackend(user);
+  };
+
+  const handleSignIn = async () => {
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
+    }
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      await handleSignInSuccess(user);
     } catch (error) {
       console.error("Error signing in with email and password", error);
       alert("Failed to sign in. Please check your credentials.");
@@ -34,8 +77,9 @@ const SignIn = () => {
 
   const handleSocialSignIn = async (provider) => {
     try {
-      await signInWithPopup(auth, provider);
-      alert("Signed in successfully!");
+      const userCredential = await signInWithPopup(auth, provider);
+      const user = userCredential.user;
+      await handleSignInSuccess(user);
     } catch (error) {
       console.error("Error signing in with provider", error);
       alert("Failed to sign in with provider.");
@@ -105,9 +149,10 @@ const SignIn = () => {
           Sign In
         </button>
         <div>
-        <Link to="/signup" className="signup">
-          New here? <span>Sign up now</span>
-        </Link></div>
+          <Link to="/signup" className="signup">
+            New here? <span>Sign up now</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

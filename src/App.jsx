@@ -8,6 +8,7 @@ import Layout from "./components/LayOut.jsx";
 import StartGame from "./components/Game/start-game.jsx";
 import Articles from "./components/Articles/articles.jsx";
 import Game from "./components/Game/game.jsx";
+import About from "./components/About/about.jsx";
 import "./App.css"
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       </Layout>
       <Routes>
         <Route path="/startgame" element={<StartGame />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

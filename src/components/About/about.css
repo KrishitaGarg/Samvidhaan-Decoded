@@ -1,0 +1,114 @@
+.page-container {
+  border: 5px solid rgb(1, 68, 163);; /* Color and width of the border */
+  padding: 20px; /* Padding to ensure the content doesn't touch the border */
+  margin: 20px; /* Margin to ensure some space around the border */
+  border-radius: 10px; /* Optional: Gives rounded edges to the border */
+  box-sizing: border-box; /* Ensure padding is included in the overall width and height */
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.team-container {
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.team-header {
+  background-image: url("../../assets/constitution.png"); /* Path to your background image */
+  background-size: cover; /* Cover ensures the image scales nicely */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 60px 20px; /* Adds padding to space out the content */
+  margin-bottom: 40px;
+  border-radius: 10px; /* Optional for rounded edges */
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* Set the layout to a 3 x 2 grid */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+  gap: 20px;
+  justify-items: center;
+}
+
+.team-member-card {
+  background-color: rgb(1, 68, 163);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-member-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-member-info {
+  padding: 20px;
+}
+
+.team-member-role {
+  font-size: 1.1rem;
+  color: #00d8ff;
+  margin-bottom: 5px;
+}
+
+.team-member-description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #d1d1d1;
+}
+
+.team-member-social a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.team-member-social a:hover {
+  color: #00d8ff;
+}
+
+/* Responsive Styles for mobile (1 column layout) */
+@media (max-width: 768px) {
+  .team-members {
+    grid-template-columns: 1fr; /* Switch to 1 column for smaller screens */
+    gap: 20px;
+  }
+
+  .team-member-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

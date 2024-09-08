@@ -15,38 +15,48 @@ import Github from "../../assets/github.png";
 import Facebook from "../../assets/facebook.png";
 import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
-import "./SignUp.css";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // Function to send user data to the backend
+  const [loading, setLoading] = useState(false);
+  
   const sendUserDetailsToBackend = async (user) => {
+    setLoading(true);
     try {
-      const response = await fetch("https://your-backend-api.com/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          uid: user.uid,
-          username: username,
-          email: email,
-        }),
-      });
+      const response = await fetch(
+        "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/create-user/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: user.email,
+            name: user.displayName,
+            firebase_user_id: user.uid,
+          }),
+        }
+      );
       if (!response.ok) {
-        throw new Error("Failed to send data to the backend.");
+        const errorData = await response.json();
+        const errorMessage =
+          errorData?.detail?.[0]?.msg || "Failed to send data to backend.";
+        throw new Error(errorMessage);
       }
-      alert("User data sent to backend successfully!");
+      const result = await response.json();
+      alert(`Success: ${result}`);
     } catch (error) {
       console.error("Error sending user data to backend", error);
-      alert("Failed to send user data to backend.");
+      alert(`Failed to send user data to backend. Error: ${error.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleSignUp = async () => {
+    setLoading(true);
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -65,12 +75,21 @@ const SignUp = () => {
       // Send the user details to the backend API
       await sendUserDetailsToBackend(user);
     } catch (error) {
-      console.error("Error signing up with email and password", error);
-      alert("Failed to sign up. Please try again.");
+      if (error.code === "auth/email-already-in-use") {
+        alert(
+          "The email address is already in use. Please use a different email or sign in."
+        );
+      } else {
+        console.error("Error signing up with email and password", error);
+        alert("Failed to sign up. Please try again.");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleSocialSignUp = async (provider) => {
+    setLoading(true);
     try {
       const userCredential = await signInWithPopup(auth, provider);
       const user = userCredential.user;
@@ -82,6 +101,8 @@ const SignUp = () => {
     } catch (error) {
       console.error("Error signing up with provider", error);
       alert("Failed to sign up with provider.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,8 +155,12 @@ const SignUp = () => {
             onClick={() => handleSocialSignUp(facebookProvider)}
           />
         </div>
-        <button onClick={handleSignUp} className="sign-up-button">
-          Sign Up
+        <button
+          onClick={handleSignUp}
+          className="sign-up-button"
+          disabled={loading}
+        >
+          {loading ? "Signing Up..." : "Sign Up"}
         </button>
       </div>
     </div>
