@@ -4,8 +4,9 @@ import "./styles.css";
 import mainImg from "../../assets/img.png";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
+import ConstitutionTreeGraph from "./ConstitutionTreeGraph";
 
-const ConstitutionDecoder = () => {
+const   ConstitutionDecoder = () => {
   const [meaningVisible, setMeaningVisible] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [tooltipStyle, setTooltipStyle] = useState({});
@@ -236,6 +237,7 @@ const ConstitutionDecoder = () => {
                 making it easy for users to understand complex legal texts.!"
               </h4>
             </div>
+          <ConstitutionTreeGraph />
           </div>
         </div>
       </section>
