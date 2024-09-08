@@ -50,16 +50,18 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
+  margin: 50px;
 }
 
 .team-member-card {
   background-color: rgb(1, 68, 163);
   border-radius: 10px;
   overflow: hidden;
-  width: 280px;
+  width: 325px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
+  margin: 10px 10px;
 }
 
 .team-member-card:hover {

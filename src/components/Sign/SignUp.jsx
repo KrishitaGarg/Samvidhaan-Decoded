@@ -11,53 +11,27 @@ import {
   updateProfile,
 } from "firebase/auth";
 import "./SignUp.css";
+import Google from "../../assets/google.png";
 import Github from "../../assets/github.png";
 import Facebook from "../../assets/facebook.png";
-import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
+import { useNavigate } from "react-router-dom";
+
+const BASE_URL =
+  "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  
-  const sendUserDetailsToBackend = async (user) => {
-    setLoading(true);
-    try {
-      const response = await fetch(
-        "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/create-user/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: user.email,
-            name: user.displayName,
-            firebase_user_id: user.uid,
-          }),
-        }
-      );
-      if (!response.ok) {
-        const errorData = await response.json();
-        const errorMessage =
-          errorData?.detail?.[0]?.msg || "Failed to send data to backend.";
-        throw new Error(errorMessage);
-      }
-      const result = await response.json();
-      alert(`Success: ${result}`);
-    } catch (error) {
-      console.error("Error sending user data to backend", error);
-      alert(`Failed to send user data to backend. Error: ${error.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const navigate = useNavigate();
 
-  const handleSignUp = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setLoading(true);
     try {
+      // Create user with Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -65,23 +39,37 @@ const SignUp = () => {
       );
       const user = userCredential.user;
 
-      await updateProfile(user, {
-        displayName: username,
+      // Update profile with username
+      await updateProfile(user, { displayName: username });
+
+      // Prepare data to send to backend
+      const data = {
+        email: user.email,
+        name: user.displayName,
+        firebase_user_id: user.uid,
+      };
+
+      // Send user details to backend
+      const response = await fetch(`${BASE_URL}/user/create-user/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
 
-      alert("Signed up successfully!");
-
-      // Send the user details to the backend API
-      await sendUserDetailsToBackend(user);
-    } catch (error) {
-      if (error.code === "auth/email-already-in-use") {
-        alert(
-          "The email address is already in use. Please use a different email or sign in."
-        );
-      } else {
-        console.error("Error signing up with email and password", error);
-        alert("Failed to sign up. Please try again.");
+      if (!response.ok) {
+        const errorData = await response.json();
+        const errorMessage =
+          errorData?.detail?.[0]?.msg || "Failed to send data to backend.";
+        throw new Error(errorMessage);
       }
+
+      alert("Sign Up successful!");
+      navigate("/");
+    } catch (error) {
+      console.error("Error during Sign Up:", error);
+      alert(`Failed to sign up. Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -93,13 +81,34 @@ const SignUp = () => {
       const userCredential = await signInWithPopup(auth, provider);
       const user = userCredential.user;
 
-      alert("Signed up successfully with social provider!");
+      // Prepare data to send to backend
+      const data = {
+        email: user.email,
+        name: user.displayName,
+        firebase_user_id: user.uid,
+      };
 
-      // Send the user details to the backend API
-      await sendUserDetailsToBackend(user);
+      // Send user details to backend
+      const response = await fetch(`${BASE_URL}/user/create-user/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        const errorMessage =
+          errorData?.detail?.[0]?.msg || "Failed to send data to backend.";
+        throw new Error(errorMessage);
+      }
+
+      alert("Sign Up successful with social provider!");
+      navigate("/");
     } catch (error) {
-      console.error("Error signing up with provider", error);
-      alert("Failed to sign up with provider.");
+      console.error("Error signing up with provider:", error);
+      alert(`Failed to sign up with provider. Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -109,30 +118,38 @@ const SignUp = () => {
     <div className="sign-up-container">
       <div className="sign-up-box">
         <h1 className="title">
-          Welcom<span>e</span>
+          Welcome<span>e</span>
         </h1>
         <h2 className="subheading">Enter your details to sign up</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="input"
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="input"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="input"
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="input"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="input"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="input"
+            required
+          />
+          <button type="submit" className="sign-up-button" disabled={loading}>
+            {loading ? "Signing Up..." : "Sign Up"}
+          </button>
+        </form>
         <img src={Or} alt="Or" className="or" />
         <div className="social-icons">
           <img
@@ -154,13 +171,6 @@ const SignUp = () => {
             onClick={() => handleSocialSignUp(facebookProvider)}
           />
         </div>
-        <button
-          onClick={handleSignUp}
-          className="sign-up-button"
-          disabled={loading}
-        >
-          {loading ? "Signing Up..." : "Sign Up"}
-        </button>
       </div>
     </div>
   );

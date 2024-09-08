@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
   googleProvider,
@@ -15,24 +16,23 @@ import Github from "../../assets/github.png";
 import Facebook from "../../assets/facebook.png";
 import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
-import { Link, useNavigate } from "react-router-dom";
+
+const BASE_URL =
+  "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
 
 const SignIn = () => {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const sendSignInDetailsToBackend = async (user) => {
     try {
-      const response = await fetch(
-        "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/get-user/",
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${user.accessToken}`,
-          },
-        }
-      );
+      const response = await fetch(`${BASE_URL}/user/get-user/`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${user.accessToken}`,
+        },
+      });
       if (response.status === 200) {
         const data = await response.json();
         alert("User details fetched successfully!");
@@ -52,12 +52,12 @@ const SignIn = () => {
 
   const handleSignInSuccess = async (user) => {
     alert("Signed in successfully!");
-    // Optionally, send the user details to the backend API
     await sendSignInDetailsToBackend(user);
     navigate("/");
   };
 
-  const handleSignIn = async () => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
     if (!email || !password) {
       alert("Please enter both email and password.");
       return;
@@ -106,12 +106,12 @@ const SignIn = () => {
     <div className="sign-in-container">
       <div className="sign-in-box">
         <h1 className="title">
-          Welcom<span>e</span>
+          Welcome<span>e</span>
         </h1>
         <h2 className="subheading">Enter your details to sign in</h2>
         <input
-          type="text"
-          placeholder="Email or Username"
+          type="email"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="input"
