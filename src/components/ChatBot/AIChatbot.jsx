@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./ChatBot.css";
+import React, { useState, useEffect, useRef } from "react";
+import "./AIChatbot.css";
 import botLogo from "../../assets/logo.png";
+import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 
 const autoResize = (e) => {
@@ -15,16 +16,14 @@ const autoResize = (e) => {
   }
 };
 
-const Chatbot = () => {
+const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [category, setCategory] = useState("");
-  const [article, setArticle] = useState("");
-  const [articlesList, setArticlesList] = useState([]);
-  const [baseCategories, setBaseCategories] = useState([]);
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
+
+  const messagesEndRef = useRef(null);
 
   const getAuthToken = async () => {
     const user = auth.currentUser;
@@ -33,70 +32,6 @@ const Chatbot = () => {
     }
     return null;
   };
-
-  const fetchBaseCategories = async () => {
-    try {
-      const token = await getAuthToken();
-      const response = await fetch(`${backendUrl}/user/get-base-category/`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok)
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
-
-      const data = await response.json();
-      console.log("Fetched base categories:", data);
-
-      if (data.children && Array.isArray(data.children)) {
-        const categoriesArray = data.children.map((category) => ({
-          id: category.id,
-          name: category.name,
-        }));
-        setBaseCategories(categoriesArray);
-      } else {
-        console.error("Unexpected data format for categories:", data);
-      }
-    } catch (error) {
-      console.error("Error fetching base categories:", error);
-    }
-  };
-
-  const fetchArticles = async (categoryId) => {
-    try {
-      const token = await getAuthToken();
-      const response = await fetch(
-        `${backendUrl}/user/${categoryId}/get-category/`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      if (!response.ok)
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
-
-      const data = await response.json();
-      console.log("Fetched articles:", data);
-
-      // Check if data contains the children array
-      if (data.children && Array.isArray(data.children)) {
-        // Extract articles from children array
-        const articlesArray = data.children.map((item) => ({
-          id: item.id,
-          name: item.name,
-        }));
-        setArticlesList(articlesArray);
-      } else {
-        console.error("Unexpected data format for articles:", data);
-      }
-    } catch (error) {
-      console.error("Error fetching articles:", error);
-    }
-  };
-
 
   const fetchMessages = async () => {
     try {
@@ -110,7 +45,6 @@ const Chatbot = () => {
       if (!response.ok)
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       const data = await response.json();
-      console.log("Fetched messages:", data);
       setMessages(
         data.map((msg) => ({
           text: msg.message,
@@ -123,15 +57,12 @@ const Chatbot = () => {
   };
 
   useEffect(() => {
-    fetchBaseCategories();
     fetchMessages();
   }, []);
 
   useEffect(() => {
-    if (category) {
-      fetchArticles(category);
-    }
-  }, [category]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
@@ -174,7 +105,12 @@ const Chatbot = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSendMessage();
+      if (e.shiftKey) {
+        return;
+      } else {
+        e.preventDefault();
+        handleSendMessage();
+      }
     }
   };
 
@@ -183,35 +119,7 @@ const Chatbot = () => {
       <div className="chatbot-header">
         <div className="header-content">
           <img src={botLogo} alt="bot logo" className="header-logo" />
-
-          <div className="dropdowns">
-            <h1>
-              <select
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                <option value="">Select a Category</option>
-                {baseCategories.map((cat) => (
-                  <option key={cat.id} value={cat.id}>
-                    {cat.name}
-                  </option>
-                ))}
-              </select>
-            </h1>
-            <p>
-              <select
-                value={article}
-                onChange={(e) => setArticle(e.target.value)}
-              >
-                <option value="">Select an Article</option>
-                {articlesList.map((art) => (
-                  <option key={art.number} value={art.number}>
-                    Article {art.number}
-                  </option>
-                ))}
-              </select>
-            </p>
-          </div>
+          <h1>Nyaya<span>.AI</span></h1>
         </div>
       </div>
 
@@ -224,6 +132,7 @@ const Chatbot = () => {
             <span>{msg.text}</span>
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="chatbot-input">
         <textarea
@@ -233,11 +142,17 @@ const Chatbot = () => {
           onInput={autoResize}
           placeholder="Start Typing here..."
           rows={1}
-          style={{ maxHeight: "6em", overflowY: "auto" }}
+          style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
+        />
+        <img
+          src={sendIcon}
+          alt="Send"
+          className="send-icon"
+          onClick={handleSendMessage}
         />
       </div>
     </div>
   );
 };
 
-export default Chatbot;
+export default AIChatbot;
