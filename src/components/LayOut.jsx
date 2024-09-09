@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
-import yellowLogo from "../assets/yellow.png";
+import mainLogo from "../assets/main_logo.png";
 import logo from "../assets/logo.png";
 
 const Layout = ({ children }) => {
@@ -27,18 +27,18 @@ const Layout = ({ children }) => {
         <nav>
           <div className="header-content">
             <Link to="/" className="nav-li name">
-              <img src={yellowLogo} height="65" width="65" alt="Logo" /> संविधान
+              <img src={mainLogo} height="55" width="55" alt="Logo" /> संविधान
               Decode<span>d</span>
             </Link>
             <div className="header-buttons">
               <Link
-                to="/"
+                to="/simplifier"
                 className={`header-btn ${
                   activeButton === "Home" ? "yellow" : ""
                 }`}
                 onClick={() => handleButtonClick("Home")}
               >
-                Home
+                Explore
               </Link>
               <Link
                 to="/startgame"
@@ -87,7 +87,7 @@ const Layout = ({ children }) => {
         <div className="sticky-logo-container">
           {showText && (
             <span className="sticky-text">
-              Say hi to <span>Nyaya.AI</span>
+              Say hi to <span className="coffee">Nyaya.AI</span>
               <span className="close-button" onClick={handleCloseText}>
                 &times;
               </span>

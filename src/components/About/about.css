@@ -1,9 +1,8 @@
 .page-container {
-  border: 5px solid rgb(1, 68, 163);;
-  padding: 20px;
   margin: 20px;
   border-radius: 10px;
   box-sizing: border-box;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -15,17 +14,16 @@
 
 .team-container {
   text-align: center;
-  background-color: #111;
   color: #fff;
   padding: 40px 20px;
 }
 
 .team-header {
-  background-image: url("../../assets/constitution.png");
+  background-image: url("../../assets/about_border.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 60px 20px;
+  padding: 160px 60px;
   margin-bottom: 40px;
   border-radius: 10px;
 }
@@ -54,7 +52,7 @@
 }
 
 .team-member-card {
-  background-color: rgb(1, 68, 163);
+  background: #57383B;
   border-radius: 10px;
   overflow: hidden;
   width: 325px;
@@ -80,7 +78,7 @@
 
 .team-member-role {
   font-size: 1.1rem;
-  color: #00d8ff;
+  color: #D68D44;
   margin-bottom: 5px;
 }
 

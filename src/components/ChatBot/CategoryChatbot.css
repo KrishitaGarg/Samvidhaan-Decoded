@@ -9,7 +9,7 @@
   font-family: "Arial", sans-serif;
   position: relative;
   display: block;
-  margin: 25px auto;
+  margin: 15px auto;
   z-index: 10;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .header-logo {
-  width: 75px;
+  width: 50px;
   height: auto;
   margin-right: 20px;
 }
@@ -116,7 +116,6 @@
 .send-icon {
   width: 40px;
   cursor: pointer;
-  background-color: rgb(179, 181, 245) !important;
   border-radius: 50%;
   border: 1px solid black;
   padding: 5px;

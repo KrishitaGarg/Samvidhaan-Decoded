@@ -76,16 +76,6 @@ const Team = () => {
     <div className="page-container">
       <div className="team-container">
         <div className="team-header">
-          <h2 className="team-heading">
-            Meet Our Caffeine <span>Crew</span>
-          </h2>
-          <p className="team-description">
-            We are a dedicated team committed to making the constitution more
-            accessible through our simplified website, designed for ease of
-            understanding by all, with an additional feature of an interactive
-            game that offers a dynamic and engaging way to explore key
-            constitutional principles.
-          </p>
         </div>
         <div className="team-members">
           {teamMembers.map((member, index) => (

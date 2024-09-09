@@ -3,9 +3,9 @@
     width: 98%;
     margin: 16px 20px;
     padding: 20px;
-    border: 2px solid blue;
+    border: 2px solid #57383B;
     border-radius: 36px;
-    color: white!important;
+    color: black!important;
 }
 
 .game-header-run{
@@ -101,7 +101,7 @@
     align-items: center;
 }
 .game-main-run-question-timer span{
-    color: white;
+    color: black;
 }
 
 .QuestionBox{
@@ -111,6 +111,7 @@
     justify-content: center;
     align-items: center;
     gap: 0;
+    color: black;
 }
 
 .game-main-run-question{

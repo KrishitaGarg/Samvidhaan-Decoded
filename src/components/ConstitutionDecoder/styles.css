@@ -1,64 +1,156 @@
-body {
-  background-image: url("../../assets/bg-sih.png");
-  background-size: cover;
+.constitution-decoder-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #4a403a;
+}
+
+.first {
+  padding-bottom: 50px;
+}
+
+/* Wrapper for the text and image */
+.text-image-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  background-attachment: fixed;
+  padding: 20px 0;
 }
 
-h1,
-h2,
-h4 {
-  text-align: left;
+/* Title Image styling */
+.title-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
 }
 
-.second-p h1 {
+/* Text and Buttons on the Left */
+.simplified-guide-text-container {
+  flex: 1;
+  margin-left: 150px;
+}
+
+.simplified-guide-text {
+  font-size: 1.4rem;
+  color: #57383b;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 20px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 250px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  background-color: #57383b;
   color: white;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-}
-
-.main .content {
+.explore-btn:hover {
+  border: 2px solid #57383b;
   color: black;
-  border: 0.1rem solid rgb(8, 8, 254);
-  width: 70%;
-  margin-top: 3vh;
 }
 
-span {
-  color: yellow;
+.play-btn {
+  color: black;
+  border: 2px solid #57383b;
 }
 
-.image-1 {
-  border: 0.1rem solid rgb(8, 8, 254);
-  border-radius: 25px;
-  margin: 1rem;
+.play-btn:hover {
+  background: #57383b;
+  color: white;
 }
 
-.second {
-  border: 0.1rem solid rgb(8, 8, 254);
-  border-radius: 40px;
+/* Image on the Right */
+.main-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
 }
 
-.third {
-  border: 0.1rem solid rgb(8, 8, 254);
-  border-radius: 55px;
-}
-
-.logo {
+.main-img {
+  max-width: 500px;
   height: auto;
-  max-height: 75vh;
-  width: 100%;
-  border-radius: 60px;
+}
+
+/* Preamble Section */
+
+.preamble-section {
+  margin-top: 20px;
+  padding: 50px;
+  padding-bottom: 20px;
+  background: #332829;
+}
+
+.preamble-container {
+  padding: 20px;
+  width: 80%;
+  max-width: 490px;
+  margin: 0 auto;
+  line-height: 23px;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #36230d;
+}
+
+.preamble-div {
+  background-image: url("../../assets/preamble_bg.jpg");
+  background-size: 750px 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 300px;
+  min-height: 80vh;
+  text-align: center;
+  padding-bottom: 150px;
+  border-radius: 2rem;
+}
+
+.second-p {
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.wine {
+  color: #deab5f;
+}
+
+.second-p h1 {
+  font-weight: 600;
+  font-size: 40px;
+  color: white;
+}
+
+.word {
+  color: #36230d;
+  display: inline-block;
+}
+
+.word:hover {
+  cursor: pointer;
+  color: #36230dcd;
 }
 
 .meaning-box {
   position: absolute;
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #080bba;
+  background-color: white;
+  color: black;
+  border: 2px solid #deab5f;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -92,121 +184,21 @@ span {
   transform: translateY(-50%);
 }
 
-.word:hover {
-  cursor: pointer;
-  color: #36230dcd;
-}
-
-.preamble-container {
-  padding: 20px;
-  width: 80%;
-  max-width: 490px;
-  margin: 0 auto;
-  line-height: 23px;
-  font-size: 16px;
-  border-radius: 10px;
-  color: #36230d;
-}
-
-.preamble-div {
-  background-image: url("../../assets/preamble_bg.jpg");
-  background-size: 750px 800px;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 300px;
+/* Constitution Section */
+.constitution-section {
+  padding: 40px;
+  border-radius: 20px;
   min-height: 80vh;
   text-align: center;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   border-radius: 2rem;
 }
 
-.second-p {
-  color: white;
-  font-size: 1rem;
-  padding: 1rem;
+.constitution-content {
+  text-align: center;
+  color: #000;
 }
 
-.word {
-  color: #36230d;
-  display: inline-block;
-}
-
-@media (max-width: 800px) {
-  .hideOnMobile {
-    display: none;
-  }
-
-  .logo {
-    height: auto;
-    max-height: 8rem;
-  }
-
-  .btn-outline-primary {
-    position: relative;
-    font-size: 0.3rem;
-    top: 90%;
-  }
-
-  .preamble-container {
-    padding: 5px;
-    width: 90%;
-    line-height: 0.7rem;
-    font-size: 0.5rem;
-    padding-top: 3rem;
-    margin-top: 3rem;
-  }
-
-  .preamble-div {
-    background-size: 26rem 36rem;
-    padding-top: 7rem;
-  }
-
-  .second-p {
-    font-size: 0.5rem;
-    padding: 0.6rem;
-  }
-
-  .meaning-box {
-    display: none;
-    max-width: 130px;
-    max-height: 120px;
-    border: 4px solid #342f2f;
-    background-color: #756b52;
-    padding: 2px;
-    font-size: 0.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .preamble-container {
-    padding-top: 5rem;
-  }
-
-  .preamble-div {
-    padding-top: 12rem;
-  }
-
-  .second-p {
-    font-size: 0.5rem;
-    padding: 0.6rem;
-  }
-
-  .meaning-box {
-    max-width: 130px;
-    max-height: 120px;
-    font-size: 0.5rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .logo {
-    height: auto;
-    max-height: 16rem;
-  }
-
-  .btn-outline-primary {
-    position: relative;
-    font-size: 0.4rem;
-    top: 90%;
-  }
+.constitution-content h1 {
+  color: #000;
 }

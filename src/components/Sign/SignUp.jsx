@@ -10,6 +10,7 @@ import {
   signInWithPopup,
   updateProfile,
 } from "firebase/auth";
+import image from "../../assets/sign_image.png";
 import "./SignUp.css";
 import Google from "../../assets/google.png";
 import Github from "../../assets/github.png";
@@ -116,9 +117,12 @@ const SignUp = () => {
 
   return (
     <div className="sign-up-container">
+      <div className="sign-in-image">
+        <img src={image} alt="Image" />
+      </div>
       <div className="sign-up-box">
         <h1 className="title">
-          Welcome<span>e</span>
+          Welcom<span>e</span>
         </h1>
         <h2 className="subheading">Enter your details to sign up</h2>
         <form onSubmit={handleSubmit}>

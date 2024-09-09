@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import mainImg from "../../assets/img.png";
-import ConstitutionTreeGraph from "./ConstitutionTreeGraph";
+import mainImg from "../../assets/main_image.png";
+import textImg from "../../assets/text_image.png";
 
-const  ConstitutionDecoder = () => {
+const ConstitutionDecoder = () => {
   const [meaningVisible, setMeaningVisible] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [tooltipStyle, setTooltipStyle] = useState({});
@@ -27,30 +27,48 @@ const  ConstitutionDecoder = () => {
   };
 
   return (
-    <div>
-      <section className="main">
-        <div className="content">
-          <div className="image-1">
-            <div className="second">
-              <div className="third">
-                <img src={mainImg} className="logo mainimg" alt="Logo" />
-              </div>
+    <div className="constitution-decoder-container">
+      <section className="first">
+        <div className="text-image-wrapper">
+          <div className="simplified-guide-text-container">
+            <img src={textImg} className="title-img" alt="Title Image" />
+
+            <h2 className="simplified-guide-text">
+              Understanding the Indian Constitution:
+              <br />A Simplified Guide
+            </h2>
+
+            <div className="button-container">
+              <a href="/simplifier">
+                <button className="btn explore-btn">
+                  Explore Constitution
+                </button>
+              </a>
+              <a href="/startgame">
+                <button className="btn play-btn">Let's Play!</button>
+              </a>
             </div>
+          </div>
+
+          <div className="main-image-container">
+            <img src={mainImg} className="main-img" alt="Main Image" />
           </div>
         </div>
       </section>
 
-      <section className="main">
+      <section className="preamble-section">
         <div className="content">
           <div className="image-1">
             <div className="second-p">
               <h1>
-                Understanding <span>Preamble</span>
+                Understanding <span className="wine">Preamble</span>
               </h1>
-              <h2>With संविधान Decoded</h2>
+              <h2>
+                With संविधान Decode<span className="wine">d</span>
+              </h2>
               <h4>
                 "Complex words, Simplified for Everyone—Unlock Understanding
-                with <span>Mr.Hover!</span>"
+                with <span className="wine">Mr.Hover!</span>"
               </h4>
               <div className="preamble-div">
                 <div className="preamble-container">
@@ -184,25 +202,6 @@ const  ConstitutionDecoder = () => {
           <div className="tooltip-content">{meaning}</div>
         </div>
       )}
-
-      <section className="main">
-        <div className="content">
-          <div className="image-1">
-            <div className="second-p">
-              <h1>
-                Understanding <span>Constitution</span>
-              </h1>
-              <h2>With संविधान Decoded</h2>
-              <h4>
-                "The website provides a streamlined interface that presents
-                simplified summaries of all the articles in the constitution,
-                making it easy for users to understand complex legal texts.!"
-              </h4>
-            </div>
-          <ConstitutionTreeGraph />
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

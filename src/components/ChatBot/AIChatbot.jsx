@@ -115,43 +115,50 @@ const AIChatbot = () => {
   };
 
   return (
-    <div className="chatbot">
-      <div className="chatbot-header">
-        <div className="header-content">
-          <img src={botLogo} alt="bot logo" className="header-logo" />
-          <h1>Nyaya<span>.AI</span></h1>
+    <section className="ai-chatbot-section">
+      <div className="chatbot">
+        <div className="chatbot-header">
+          <div className="header-content">
+            <img src={botLogo} alt="bot logo" className="header-logo" />
+            <h1>
+              Nyaya<span>.AI</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="chatbot-messages">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`message ${msg.isBot ? "bot" : "user"}`}
+            >
+              {msg.isBot && (
+                <img src={botLogo} alt="bot logo" className="message-logo" />
+              )}
+              <span>{msg.text}</span>
+            </div>
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
+        <div className="chatbot-input">
+          <textarea
+            value={input}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            onInput={autoResize}
+            placeholder="Start Typing here..."
+            rows={1}
+            style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
+          />
+          <img
+            src={sendIcon}
+            alt="Send"
+            className="send-icon"
+            onClick={handleSendMessage}
+          />
         </div>
       </div>
-
-      <div className="chatbot-messages">
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.isBot ? "bot" : "user"}`}>
-            {msg.isBot && (
-              <img src={botLogo} alt="bot logo" className="message-logo" />
-            )}
-            <span>{msg.text}</span>
-          </div>
-        ))}
-        <div ref={messagesEndRef} />
-      </div>
-      <div className="chatbot-input">
-        <textarea
-          value={input}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          onInput={autoResize}
-          placeholder="Start Typing here..."
-          rows={1}
-          style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
-        />
-        <img
-          src={sendIcon}
-          alt="Send"
-          className="send-icon"
-          onClick={handleSendMessage}
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

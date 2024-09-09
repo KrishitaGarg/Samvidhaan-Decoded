@@ -3,33 +3,45 @@
   justify-content: center;
   align-items: center;
   height: 79vh;
-  background-image: url("../../assets/signin.png");
-  background-size: 70% auto;
   background-position: center;
   background-repeat: no-repeat;
   padding: 90px;
+  margin-right: 150px;
+  margin-top: 20px;
 }
 
-.signup {
-  color: white;
-  cursor: pointer;
-  position: relative;
-  z-index: 1000;
+.sign-in-image {
+  flex: 1;
+  text-align: center;
+}
+
+.sign-in-image img {
+  max-width: 100%; 
+  height: auto;
+  width: 650px;
+  margin-left: 0 !important;
 }
 
 .sign-in-box {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  flex: 2;
+  background-color: #FEF5E5;
+  padding: 20px; 
+  border-radius: 15px;
+  max-width: 450px;
   text-align: center;
   backdrop-filter: blur(10px) brightness(0.9) contrast(1.1);
   -webkit-backdrop-filter: blur(10px) brightness(0.9) contrast(1.1);
 }
 
+.signup {
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+
 .title {
-  color: white;
+  color: black !important;
   font-size: 24px;
   margin-bottom: 0;
   text-align: center;
@@ -41,7 +53,7 @@
 }
 
 .subheading {
-  color: white;
+  color: black !important;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -50,23 +62,23 @@
 }
 
 .input {
-  width: 100%;
+  width: 82% !important;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid black;
+  border: none !important;
   border-radius: 8px;
   background-color: white !important;
   font-size: 16px;
   color: black !important;
 }
 .input::placeholder {
-  color: black !important;
+  color: rgba(59, 59, 59, 0.5) !important;
 }
 .sign-in-button {
   width: 80%;
   padding: 12px;
   margin: 20px 0;
-  background-color: #2563ff;
+  background-color: #977272;
   color: white;
   border: none;
   border-radius: 8px;
@@ -75,15 +87,17 @@
   font-weight: bold;
 
   &:hover {
-    background-color: #2866cc;
+    background-color: #57383B;
+    color: black;
   }
 }
 
 .forgot-password {
-  color: white;
+  color: rgb(246, 111, 111);
   font-size: 14px;
   margin-bottom: 20px;
   display: block;
+  margin-right: 40px;
   text-align: right;
 
   &:hover {

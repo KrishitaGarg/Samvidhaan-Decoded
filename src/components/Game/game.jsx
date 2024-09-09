@@ -129,9 +129,6 @@ export default function Game() {
 
   return (
     <div style={{
-      backgroundImage: `url(${gameRunBG})`,
-      backgroundSize: "cover",
-      opacity: "0.8",
       minHeight: "89vh",
       display: "flex",
       justifyContent: "center",

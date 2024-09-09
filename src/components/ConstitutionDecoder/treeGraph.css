@@ -1,11 +1,11 @@
 .react-flow__node {
-    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+    border-image: linear-gradient(to right, #cd7171 0%, #57383B 100%) 1;
     border-radius: 30px;
     border-width: 4px;
     border-style: solid;
     padding: 2px;
     background: transparent;
-    color: white;
+    color: black;
     padding: 10px;
 }
 
