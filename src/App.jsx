@@ -10,9 +10,11 @@ import Articles from "./components/Articles/articles.jsx";
 import Game from "./components/Game/game.jsx";
 import About from "./components/About/about.jsx";
 import "./App.css";
+import { ReactFlowProvider } from "@xyflow/react";
 
 function App() {
   return (
+    <ReactFlowProvider>
     <Router>
       <Layout>
         <Routes>
@@ -27,6 +29,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </ReactFlowProvider>
   );
 }
 

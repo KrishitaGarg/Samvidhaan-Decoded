@@ -8,3 +8,7 @@
     color: white;
     padding: 10px;
 }
+
+.react-flow__panel.react-flow__attribution.bottom.right {
+    display: none;
+}
