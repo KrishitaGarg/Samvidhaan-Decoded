@@ -1,41 +1,43 @@
-.game-container-run{
+.game-container-run {
     height: fit-content;
     width: 98%;
     margin: 16px 20px;
     padding: 20px;
     border: 2px solid #57383B;
     border-radius: 36px;
-    color: black!important;
+    color: black !important;
 }
 
-.game-header-run{
+.game-header-run {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 0 20px 0;
 }
 
-.game-header-run-score{
+.game-header-run-score {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-.game-header-run-score svg{
+
+.game-header-run-score svg {
     width: 36px;
     height: 36px;
     padding-bottom: 5px;
 }
-.game-header-run-score span{
+
+.game-header-run-score span {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 5px 10px;
     margin-left: 10px;
-    border: 2px solid  blue;
+    border: 2px solid blue;
     border-radius: 5px;
 }
 
-.game-main-run{
+.game-main-run {
     width: 100%;
     flex-grow: 1;
     height: 100%;
@@ -44,20 +46,20 @@
     gap: 20px;
     margin: 20px 10px;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        
+
     }
 }
 
-.game-header-run-user-img{
+.game-header-run-user-img {
     width: 36px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin-right: 20px;
 }
 
-.game-main-run-game{
+.game-main-run-game {
     margin-top: 20px;
     width: 100%;
     height: 100%;
@@ -67,7 +69,7 @@
     align-items: center;
 }
 
-.game-main-run-questions{
+.game-main-run-questions {
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -76,7 +78,7 @@
     /* align-items: center; */
 }
 
-.game-main-run-questions-box{
+.game-main-run-questions-box {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -87,7 +89,7 @@
     border-radius: 5px;
 }
 
-.game-main-run-question-timer{
+.game-main-run-question-timer {
     font-size: 2rem;
     font-weight: 700;
     height: 80px;
@@ -100,11 +102,12 @@
     justify-content: center;
     align-items: center;
 }
-.game-main-run-question-timer span{
+
+.game-main-run-question-timer span {
     color: black;
 }
 
-.QuestionBox{
+.QuestionBox {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,13 +117,14 @@
     color: black;
 }
 
-.game-main-run-question{
-    flex : 1 0 auto;
+.game-main-run-question {
+    flex: 1 0 auto;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.game-main-run-options{
+
+.game-main-run-options {
     /* padding: 20px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -131,7 +135,7 @@
 /* QuestionBox.css */
 
 
-.game-main-run-game-board{
+.game-main-run-game-board {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -139,7 +143,7 @@
     /* border: 2px solid blue; */
 }
 
-.game-main-run-game-board-tile{
+.game-main-run-game-board-tile {
     width: 100%;
     height: 100%;
     display: flex;
@@ -148,13 +152,13 @@
     /* border: 1px solid blue; */
 }
 
-.game-main-run-game-board-tile-img{
+.game-main-run-game-board-tile-img {
     width: 30px;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
 
-.game-main-run-dice{
+.game-main-run-dice {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -163,21 +167,22 @@
     margin-top: 20px;
 }
 
-.game-action-run{
+.game-action-run {
     width: 100%;
     display: flex;
-    justify-content: flex-end ;
+    justify-content: flex-end;
 }
-.game-action-button-box{
+
+.game-action-button-box {
     display: flex;
     gap: 20px;
 }
 
-.game-action-button-box button{
+.game-action-button-box button {
     border-radius: 200px;
     padding: 0;
     width: 50px;
-    aspect-ratio: 1/1;  
+    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,35 +200,64 @@
 }
 
 
-  
-  .game-timer {
+
+.game-timer {
     font-family: "Montserrat";
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
- .game-timer .text {
+}
+
+.game-timer .text {
     color: #aaa;
     font-size: 16px;
-  }
-  
- .game-timer .value {
+}
+
+.game-timer .value {
     font-size: 50px;
-  }
-  
-  .game-timer .info {
+}
+
+.game-timer .info {
     max-width: 360px;
     margin: 40px auto 0;
     text-align: center;
     font-size: 16px;
-  }
+}
 
-  .game-timer-box{
+.game-timer-box {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-bottom: 60px;
     flex-grow: 1;
-  }
+}
+
+.game-main-run-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* button {
+    background-color: #57383B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #57383B;
+    color: white;
+}
+
+button.disabled {
+    background-color: #57383b65;
+    color: white;
+    cursor: not-allowed;
+} */

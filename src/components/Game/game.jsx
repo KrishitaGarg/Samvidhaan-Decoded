@@ -9,6 +9,8 @@ import { MdReplay } from "react-icons/md";
 import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
 import { FaQuestion } from "react-icons/fa6";
+import { useAuth } from "../AuthContex";
+import { questions as defaultQuestion } from "./constnat";
 
 
 
@@ -59,34 +61,48 @@ export default function Game() {
   const [gameState, setGameState] = useState("start");
   const [gameTimer, setGameTimer] = useState(10);
   const [score, setScore] = useState(0);
-  const [currentPos, setCurrentPos] = useState(12);
+  const [currentPos, setCurrentPos] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [finalPos, setFinalPos] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
   const [boardIndex, setBoardIndex] = useState(0);
   const [timmerKey, setTimmerKey] = useState(0);
-  const [questions, setQuestions] = useState([
-    {
-      question: "What is the capital of India?",
-      options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
-      answer: 1,
-    },
-    {
-      question: "What is the capital of Australia?",
-      options: ["Sydney", "Melbourne", "Canberra", "Perth"],
-      answer: 2,
-    },
-    {
-      question: "What is the capital of USA?",
-      options: ["New York", "Washington D.C.", "Los Angeles", "Chicago"],
-      answer: 1,
-    },
-  ]);
+  const [message, setMessage] = useState("Start the game");
+  const [nextQuestion, setNextQuestion] = useState({});
+
+  const { currentUser } = useAuth();
+
+  console.log(currentUser);
+
+  const [questions, setQuestions] = useState(defaultQuestion);
 
   const { width, height } = useWindowSize()
 
 
 
+  useEffect(() => {
+    let value = 3;
+    const interval = setInterval(() => {
+      if (value === 0) {
+        clearInterval(interval);
+        setMessage("Game Started, Answer the question");
+        return;
+      }
+      setMessage("Game Starting in " + value);
+      value--;
+
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(interval);
+      setGameState("run");
+      setMessage("Game Started");
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    }
+
+  }, []);
 
 
   useEffect(() => {
@@ -113,17 +129,40 @@ export default function Game() {
     const ladder = ladderPositions.find((ladder) => ladder.from === currentPos);
     console.log(ladder);
     if (ladder) {
+      setMessage("You got a ladder, Move to " + ladder.to);
       setCurrentPos(ladder.to);
       setFinalPos(ladder.to);
       return;
     }
     const snake = snakePositions.find((snake) => snake.from === currentPos);
     if (snake) {
+      setMessage("You got a snake, Move to " + snake.to);
       setCurrentPos(snake.to);
       setFinalPos(snake.to);
       return;
     }
   }, [currentPos]);
+
+
+  const handelAnswer = (option) => {
+    if(gameState === "run"){
+      if (option === questions[currentQuestion].answer) {
+        setScore(score + 1);
+        setGameState("diceRolling");
+        setMessage("Correct Answer, Roll the dice");
+      } else {
+        setMessage("Wrong Answer, Next Question");
+      
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+        }
+        else {
+          setGameState("end");
+          setCurrentQuestion(0);
+        }
+      }
+    }
+  }
 
 
 
@@ -148,8 +187,12 @@ export default function Game() {
       <div className="game-container-run">
         <header className="game-header-run">
           <div className="game-header-run-user">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User" className="game-header-run-user-img" />
-            <span>Hi, {"UserName"}</span>
+            <img src={
+              currentUser ? currentUser.photoURL : "https://www.w3schools.com/howto/img_avatar.png"
+            } alt="User" className="game-header-run-user-img" />
+            <span>Hi, {
+            currentUser ? currentUser.displayName : "User"
+          }</span>
           </div>
           <div className="game-header-run-score">
             <div className="game-header-run-score-item">
@@ -174,12 +217,16 @@ export default function Game() {
               onClick={() => {
                 setGameState((prev) => {
                   if (prev === "run") {
+                    setMessage("Game Started, Answer the question");
                     return "pause";
                   }
                   else if (prev === "end") {
+                    setMessage("Game Restarted");
+                    setCurrentPos(0);
                     return "run";
                   }
                   else {
+                    setMessage("Game Resumed");
                     return "run";
                   }
                 }
@@ -207,6 +254,8 @@ export default function Game() {
                 opacity: "1",
                 width: "80%",
                 aspectRatio: "304/317",
+                boxShadow: "27px 30px 41px 0px #FFFB0021"
+
               }}
             >
               {
@@ -221,7 +270,9 @@ export default function Game() {
                         index === boardIndex
                       ) && (
                         <img
-                          src="https://www.w3schools.com/howto/img_avatar.png"
+                          src={
+                            currentUser ? currentUser.photoURL : "https://www.w3schools.com/howto/img_avatar.png"
+                          }
                           alt="User"
                           className="game-main-run-game-board-tile-img"
                         />
@@ -249,8 +300,10 @@ export default function Game() {
                     if (gameState === "run" || gameState === "diceRolling") {
                       // setGameState("end");
                       if (currentQuestion < questions.length - 1) {
+                        setMessage("Time Out, Next Question");
                         setCurrentQuestion(currentQuestion + 1);
                       } else {
+                        setMessage("Time Out, Game Ended");
                         setGameState("end");
                         setCurrentQuestion(0);
                       }
@@ -278,32 +331,48 @@ export default function Game() {
                   {questions[currentQuestion].options.map((option, index) => (
                     <button
                       key={index}
-                      onClick={() => {
-                        if (gameState === "run") {
-                          setTimmerKey((prev) => prev + 1);
-                          setGameState("diceRolling");
-                        }
-                      }
-                      }
+                      // onClick={() => {
+                      //   if (gameState === "run") {
+                      //     setTimmerKey((prev) => prev + 1);
+                      //     setGameState("diceRolling");
+                      //   }
+                      // }
+                      // }
+                      onClick={() => handelAnswer(index)}
+                      style={{
+                        backgroundColor: gameState === "run" ? "#E4A951" : "#151932",
+                        color: gameState === "run" ? "#151932" : "#E4A951",
+                        cursor: gameState === "run" ? "pointer" : "not-allowed",
+                      }}
                     >
                       {option}
                     </button>
                   ))}
                 </div>
               </div>
+              {
+                message && (
+                  <div className="game-main-run-message">
+                    <span>{message}</span>
+                  </div>
+                )
+              }
               <div className="game-main-run-dice" style={{
                 opacity: gameState === "diceRolling" ? "1" : "0.5",
               }}>
                 <Dice onRoll={(value) => {
                   if (gameState === "diceRolling") {
                     setIsMoving(true);
+                    setMessage("Dice Rolled, Move " + value + " steps");
                     setTimeout(() => {
                       setIsMoving(false);
                       setCurrentPos(Math.min(100, currentPos + value));
                       if (currentQuestion < questions.length - 1) {
                         setCurrentQuestion(currentQuestion + 1);
+                        setMessage("Answer the question");
                       } else {
                         setGameState("end");
+                        setMessage("Game Ended");
                         setCurrentQuestion(0);
                         return;
                       }
@@ -317,6 +386,7 @@ export default function Game() {
                 // faceBg="blue"
                 />
               </div>
+              
             </div>
           </div>
         </main>
