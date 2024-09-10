@@ -1,0 +1,60 @@
+/* Base styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Content section */
+.content {
+  background-color: #fef6f1;
+  border: 1px solid #e5e5e5;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.title-section {
+  background-color: #4d2c26;
+  padding: 15px;
+}
+
+.title-section h1 {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+}
+
+/* List of details */
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.list li {
+  font-weight: 500;
+  margin: 10px 0;
+  color: black;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #f78b28;
+  font-weight: bold;
+}
+
+/* Description section */
+.description p {
+  margin: 15px 0;
+  color: #4d2c26;
+  line-height: 1.6;
+}
+
+.highlight-role {
+  color: #f78b28;
+  font-weight: bold;
+}

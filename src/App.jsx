@@ -8,8 +8,10 @@ import Simplifier from "./components/ConstitutionDecoder/Simplifier.jsx";
 import Layout from "./components/LayOut.jsx";
 import StartGame from "./components/Game/start-game.jsx";
 import Articles from "./components/Articles/articles.jsx";
+import GameOver from "./components/Game/game_over.jsx";
 import Game from "./components/Game/game.jsx";
 import About from "./components/About/about.jsx";
+import Summary from "./components/Summary/summary.jsx";
 import CategoryChatbot from "./components/ChatBot/CategoryChatbot";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
@@ -19,22 +21,24 @@ function App() {
   return (
     <ReactFlowProvider>
       <AuthProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<ConstitutionDecoder />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/chatbot" element={<AIChatbot />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/game" element={<Game />} />
-            <Route path="/startgame" element={<StartGame />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/categorychatbot" element={<CategoryChatbot />} />
-            <Route path="/simplifier" element={<Simplifier />} />
-          </Routes>
-        </Layout>
-      </Router>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<ConstitutionDecoder />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/chatbot" element={<AIChatbot />} />
+              <Route path="/articles" element={<Articles />} />
+              <Route path="/game" element={<Game />} />
+              <Route path="/startgame" element={<StartGame />} />
+              <Route path="/gameover" element={<GameOver />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/categorychatbot" element={<CategoryChatbot />} />
+              <Route path="/simplifier" element={<Simplifier />} />
+              <Route path="/summary" element={<Summary />} />
+            </Routes>
+          </Layout>
+        </Router>
       </AuthProvider>
     </ReactFlowProvider>
   );

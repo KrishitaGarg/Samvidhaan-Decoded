@@ -8,7 +8,7 @@ import {
 import ELK from "elkjs/lib/elk.bundled.js";
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import { initialEdges, initialNodes } from "./nodes-edges.js";
-
+/*import { useNavigate } from "react-router-dom";*/
 import "@xyflow/react/dist/style.css";
 import "./treeGraph.css";
 
@@ -409,6 +409,8 @@ function LayoutFlow() {
   const [key, setKey] = useState(0);
   const { fitView } = useReactFlow();
 
+  /*const navigate = useNavigate();*/
+
   const onConnect = useCallback(
     (params) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
@@ -479,6 +481,7 @@ function LayoutFlow() {
       setEdges(ProducresEdges);
     }
     setKey((prev) => prev + 1);
+    /*navigate("/summary");*/
   };
 
   return (

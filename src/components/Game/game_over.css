@@ -1,0 +1,33 @@
+.container {
+  background-image: url("../../assets/game_bg.png") !important;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  opacity: 1;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.titleImage {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: -50px;
+}
+
+.homeButton {
+  font-size: 20px;
+  margin-top: 0;
+  cursor: pointer;
+  background: #57383B;
+  border: 5px solid greenyellow;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  width: auto;
+  display: block;
+}
