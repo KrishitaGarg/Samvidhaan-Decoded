@@ -20,7 +20,8 @@ This README provides an overview of the project, including team details, relevan
 ## Project Links
 
 
-- **Final SIH Presentation:** [Final SIH Presentation](https://github.com/rzzdr/SIH_2024_Internal_Round_Submission_The_Caffeine_Crew/blob/main/files/SIH_PPT_The_Caffeine_Crew.pdf)
-- **Video Demonstration:** [Watch Video](https://youtu.be/AuqK24KTfTQ)
+- **Final SIH Presentation:** [Final SIH Presentation](https://docs.google.com/presentation/d/1VbhT6DJYUfDZArs9op2Ro65aN14XxzId/edit?usp=sharing&ouid=112634902180850517924&rtpof=true&sd=true)
+- **Video Demonstration:** [Watch Video](https://www.youtube.com/watch?v=GZAIKa-OsEA)
 - **Live Deployment:** [View Deployment](https://samvidhaan-decoded.vercel.app/)
 - **Source Code:** [GitHub Repository](https://github.com/KrishitaGarg/Samvidhaan-Decoded)
+
