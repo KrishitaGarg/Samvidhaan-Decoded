@@ -13,10 +13,12 @@ import About from "./components/About/about.jsx";
 import CategoryChatbot from "./components/ChatBot/CategoryChatbot";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
+import { AuthProvider } from "./components/AuthContex.jsx";
 
 function App() {
   return (
     <ReactFlowProvider>
+      <AuthProvider>
       <Router>
         <Layout>
           <Routes>
@@ -33,6 +35,7 @@ function App() {
           </Routes>
         </Layout>
       </Router>
+      </AuthProvider>
     </ReactFlowProvider>
   );
 }
