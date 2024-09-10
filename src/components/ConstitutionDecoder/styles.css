@@ -184,6 +184,10 @@
   transform: translateY(-50%);
 }
 
+.preamble-section .content {
+  background: #332829;
+}
+
 /* Constitution Section */
 .constitution-section {
   padding: 40px;
