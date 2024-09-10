@@ -25,3 +25,9 @@ This README provides an overview of the project, including team details, relevan
 - **Live Deployment:** [View Deployment](https://samvidhaan-decoded.vercel.app/)
 - **Source Code:** [GitHub Repository](https://github.com/KrishitaGarg/Samvidhaan-Decoded)
 
+```bash
+git clone https://github.com/KrishitaGarg/Samvidhaan-Decoded/
+cd Samvidhaan-Decoded/
+npm install
+npm start
+```
