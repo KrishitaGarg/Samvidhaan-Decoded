@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Samvidhaan Decoded
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This README provides an overview of the project, including team details, relevant links, tasks completed, tech stack, key features, and steps to run the project locally.
 
-## Available Scripts
+## Team Details
 
-In the project directory, you can run:
+**Team Name:** The Caffeine Crew
 
-### `npm start`
+**Team Leader:** [@rzzdr](https://github.com/rzzdr)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Team Members:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Rudr Pratap Singh** - 2023UEA6632 - [@rzzdr](https://github.com/rzzdr)
+- **Atishaya Jain** - 2023UCD3034 - [@atishayj2202](https://github.com/atishayj2202)
+- **Dheeraj Sharma** - 2023UEC2599 - [@Greatnerve](https://github.com/Greatnerve)
+- **Krishita Garg** - 2023UEA6643 - [@KrishitaGarg](https://github.com/KrishitaGarg)
+- **Anushree Roy** - 2023UEA6647 - [@anR-29](https://github.com/anR-29)
+- **Kriti Singh** - 2023UEA6509 - [@kritiug23](https://github.com/kritiug23)
 
-### `npm test`
+## Project Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Final SIH Presentation:** [Final SIH Presentation](https://github.com/rzzdr/SIH_2024_Internal_Round_Submission_The_Caffeine_Crew/blob/main/files/SIH_PPT_The_Caffeine_Crew.pdf)
+- **Video Demonstration:** [Watch Video](https://youtu.be/AuqK24KTfTQ)
+- **Live Deployment:** [View Deployment](https://samvidhaan-decoded.vercel.app/)
+- **Source Code:** [GitHub Repository](https://github.com/KrishitaGarg/Samvidhaan-Decoded)
