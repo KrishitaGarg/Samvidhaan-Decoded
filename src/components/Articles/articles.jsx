@@ -21,7 +21,7 @@ const Articles = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://your-backend-api-url.com/articles?category=${category}`
+        `https://your-backend-api-url.com/articles?c=${category}`
       );
       const data = await response.json();
       setArticles(data.articles); // Assuming backend returns an array of article numbers

@@ -8,7 +8,7 @@ import {
 import ELK from "elkjs/lib/elk.bundled.js";
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import { initialEdges, initialNodes } from "./nodes-edges.js";
-/*import { useNavigate } from "react-router-dom";*/
+import { useNavigate } from "react-router-dom";
 import "@xyflow/react/dist/style.css";
 import "./treeGraph.css";
 
@@ -180,12 +180,12 @@ const PresidentVicePresidentNode = [
   },
   {
     id: "The-President",
-    data: { label: "The President" },
+    data: { label: "The President" , link : "401ed9aa-8bc1-49fb-9044-8119532fa094"},
     position,
   },
   {
     id: "The-Vice-President",
-    data: { label: "The Vice-President" },
+    data: { label: "The Vice-President" , link:  "bc0276d3-1df1-4639-9bf0-592309710ed5"},
     position,
   },
 ];
@@ -409,7 +409,7 @@ function LayoutFlow() {
   const [key, setKey] = useState(0);
   const { fitView } = useReactFlow();
 
-  /*const navigate = useNavigate();*/
+  const navigate = useNavigate();
 
   const onConnect = useCallback(
     (params) => setEdges((eds) => addEdge(params, eds)),
@@ -441,6 +441,12 @@ function LayoutFlow() {
 
   const onNodeClick = (event, node) => {
     console.log("click", node);
+    let nodeData = node.data
+    if(nodeData?.link){
+      console.log(nodeData.link)
+      navigate(`/summary?category=${nodeData?.link}`)
+    }
+
     if (node.id === "state") {
       setNodes(StateNode);
       setEdges(StateEdges);
