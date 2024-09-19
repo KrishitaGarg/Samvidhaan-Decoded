@@ -12,7 +12,6 @@ import GameOver from "./components/Game/game_over.jsx";
 import Game from "./components/Game/game.jsx";
 import About from "./components/About/about.jsx";
 import Summary from "./components/Summary/summary.jsx";
-import CategoryChatbot from "./components/ChatBot/CategoryChatbot";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
 import { AuthProvider } from "./components/AuthContex.jsx";
@@ -33,7 +32,6 @@ function App() {
               <Route path="/startgame" element={<StartGame />} />
               <Route path="/gameover" element={<GameOver />} />
               <Route path="/about" element={<About />} />
-              <Route path="/categorychatbot" element={<CategoryChatbot />} />
               <Route path="/simplifier" element={<Simplifier />} />
               <Route path="/summary" element={<Summary />} />
             </Routes>

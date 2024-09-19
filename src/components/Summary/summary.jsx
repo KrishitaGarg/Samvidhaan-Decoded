@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./summary.css";
 import {useParams} from 'react-router-dom'
-import categoryChatbot from "../ChatBot/CategoryChatbot";
 
 // import { useSearchParams } from "react-router-dom";
 import Markdownrender from "../markdownrender";

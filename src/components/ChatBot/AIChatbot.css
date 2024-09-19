@@ -1,5 +1,5 @@
 .ai-chatbot-section {
-  background: #332829 !important;
+  background: #332829;
 }
 
 .markdown-body {
@@ -28,24 +28,24 @@
 .chatbot {
   width: 900px;
   height: 630px !important;
-  background-color: #fffbf5 !important;
-  color: black !important;
+  background-color: #fffbf5;
+  color: black;
   border-radius: 15px;
   overflow: hidden;
   font-family: "Arial", sans-serif;
   position: relative;
   display: block;
-  border: 5px solid white !important;
+  border: 5px solid white;
   margin: 25px auto;
   z-index: 10;
 }
 
 .chatbot-header {
-  background-color: #f7e7ca !important;
+  background-color: #f7e7ca;
   padding: 20px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #57383b !important;
+  border-bottom: 2px solid #57383b;
 }
 
 .header-content {
@@ -63,7 +63,7 @@
 
 .chatbot-header h1 {
   margin: 0;
-  color: black !important;
+  color: black;
   font-weight: 600;
   font-size: 22px;
   text-align: right;
@@ -73,14 +73,14 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 400px;
+  height: 440px;
   overflow-y: auto;
 }
 
 .message {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   width: fit-content;
@@ -92,19 +92,19 @@
 }
 
 .message.bot {
-  background-color: #977272 !important;
+  background-color: #977272;
   align-self: flex-start;
-  color: white !important;
+  color: white;
   border: 2px solid white;
   border-radius: 10px;
 }
 
 .message.user {
-  background-color: #57383b !important;
+  background-color: #57383b;
   border: 2px solid white;
   align-self: flex-end;
   border-radius: 10px;
-  color: white !important;
+  color: white;
 }
 
 .message-logo {
@@ -119,8 +119,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  border-top: 2px solid #57383b !important;
-  background-color: #f7e7ca !important;
+  border-top: 2px solid #57383b;
+  background-color: #f7e7ca;
   padding: 10px;
 }
 
@@ -144,9 +144,10 @@
 .send-icon {
   width: 40px;
   cursor: pointer;
-  border: 1px solid black;
-  background-color: none !important;
-  padding: 0 !important;
+  border: 1px solid #2c2f48;
+  border-radius: 5px;
+  background-color: none;
+  padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -165,16 +166,19 @@
 
   .header-content {
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .header-logo {
     width: 50px;
-    margin-right: 10px;
+    margin-right: 0;
   }
 
   .chatbot-header h1 {
     font-size: 20px;
-    text-align: left;
+    text-align: center;
   }
 
   .chatbot-messages {
