@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { auth } from "../firebase";
 import "./CompleteRegistration.css";
 
 const BASE_URL =
@@ -52,17 +51,29 @@ const CompleteRegistration = () => {
     }
   };
 
+  const handleCancel = () => {
+    navigate("/signin");
+  };
+
   return (
     <div className="complete-registration-container">
       <h1>Complete Your Registration</h1>
+      <h2>Enter your Username.</h2>
       <input
         type="text"
-        placeholder="Enter Username"
+        placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         className="input"
         required
       />
+      <button
+        onClick={handleCancel}
+        className="cancel-button"
+        disabled={loading}
+      >
+        Cancel
+      </button>
       <button
         onClick={handleRegister}
         className="register-button"
