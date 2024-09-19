@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./AIChatbot.css";
+import ReactMarkdown from "react-markdown";
+import rehypeSanitize from "rehype-sanitize";
 import botLogo from "../../assets/logo.png";
 import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
@@ -135,7 +137,12 @@ const AIChatbot = () => {
               {msg.isBot && (
                 <img src={botLogo} alt="bot logo" className="message-logo" />
               )}
-              <span>{msg.text}</span>
+              <ReactMarkdown
+                className="markdown-body"
+                rehypePlugins={[rehypeSanitize]}
+              >
+                {msg.text}
+              </ReactMarkdown>
             </div>
           ))}
           <div ref={messagesEndRef} />
