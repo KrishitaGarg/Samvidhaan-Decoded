@@ -50,7 +50,7 @@ const AIChatbot = () => {
       setMessages(
         data.map((msg) => ({
           text: msg.message,
-          isBot: msg.role === "bot",
+          isBot: msg.role === "AI",
         }))
       );
     } catch (error) {
