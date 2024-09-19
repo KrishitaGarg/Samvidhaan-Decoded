@@ -1,6 +1,6 @@
 /* Base styling */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,20 +12,38 @@ body {
   border: 1px solid #e5e5e5;
   padding: 30px;
   margin-top: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 151.5%;
+  text-align: justify;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #57383b;
 }
 
 .title-section {
-  background-color: #4d2c26;
   padding: 15px;
+  width: 100%;
+  height: 66.12px;
+  background: #57383b;
+  border-radius: 10px;
 }
 
 .title-section h1 {
   margin: 0;
-  margin-left: 5px;
-  font-size: 24px;
+  margin-left: 50px;
   font-weight: bold;
   text-align: left;
-  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 151.5%;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #fffbf5;
 }
 
 /* List of details */
@@ -38,7 +56,7 @@ body {
 .list li {
   font-weight: 500;
   margin: 10px 0;
-  color: black;
+  color: white;
   font-weight: 600;
 }
 
@@ -48,6 +66,29 @@ body {
 }
 
 /* Description section */
+
+.description h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 151.5%;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.description h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 151.5%;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #000000;
+}
+
 .description p {
   margin: 15px 0;
   color: #4d2c26;

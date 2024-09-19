@@ -37,25 +37,21 @@ const GameComponent = () => {
 
           <div className={styles.instructionsText}>
             <p>
-              <span>I.</span> If the player reaches a ladder or a snake, a
-              question will appear on the screen.
+              I. A question will appear on the
+              screen. You will get 10 seconds to answer the question.
             </p>
             <p>
-              <span>II.</span> In case you reach a ladder:
-            </p>
-            <p style={{ fontSize: "19px" }}>
-              <span>a)</span> If you answer correctly, you can climb the ladder.
-              <br />
-              <span>b)</span> Otherwise, you can’t go up.
+              II. If you answer the question
+              correctly, you will get to roll the dice.
             </p>
             <p>
-              <span>III.</span> In case you reach a snake:
+              III. If the answer is wrong, you can’t
+              roll the dice and another question will be displayed on the
+              screen.
             </p>
-            <p style={{ fontSize: "19px" }}>
-              <span>a)</span> If you answer correctly, you will not slither down
-              the snake.
-              <br />
-              <span>b)</span> Otherwise, you will go down the snake.
+            <p>
+              IV. Game will be over if you answer
+              three consecutive questions incorrectly.
             </p>
           </div>
         </div>

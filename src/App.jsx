@@ -12,6 +12,7 @@ import GameOver from "./components/Game/game_over.jsx";
 import Game from "./components/Game/game.jsx";
 import About from "./components/About/about.jsx";
 import Summary from "./components/Summary/summary.jsx";
+import CompleteRegistration from "./components/Sign/CompleteRegistration";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
 import { AuthProvider } from "./components/AuthContex.jsx";
@@ -24,6 +25,10 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<ConstitutionDecoder />} />
+              <Route
+                path="/complete-registration"
+                element={<CompleteRegistration />}
+              />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/chatbot" element={<AIChatbot />} />

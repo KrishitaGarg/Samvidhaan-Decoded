@@ -6,17 +6,17 @@ import {
   githubProvider,
   facebookProvider,
 } from "../firebase";
-import image from "../../assets/sign_image.png"
 import {
   signInWithPopup,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import "./SignIn.css";
+import image from "../../assets/sign_image.png";
 import Github from "../../assets/github.png";
 import Facebook from "../../assets/facebook.png";
 import Google from "../../assets/google.png";
 import Or from "../../assets/SignOr.png";
+import "./SignIn.css";
 
 const BASE_URL =
   "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
@@ -34,14 +34,18 @@ const SignIn = () => {
           Authorization: `Bearer ${user.accessToken}`,
         },
       });
+
       if (response.status === 200) {
         const data = await response.json();
-        alert("User details fetched successfully!");
-        console.log("User details:", data); // Optionally log or use the data
+        alert("Signed in successfully!");
+        console.log("User details:", data);
+        navigate("/");
+      } else if (response.status === 404) {
+        navigate("/complete-registration", { state: { user } });
       } else if (response.status === 422) {
         const errorData = await response.json();
         console.error("Validation Error:", errorData);
-        alert("Validation error: " + JSON.stringify(errorData.detail)); // Show specific validation error
+        alert("Validation error: " + JSON.stringify(errorData.detail));
       } else {
         throw new Error("Failed to fetch user details from backend.");
       }
@@ -52,9 +56,7 @@ const SignIn = () => {
   };
 
   const handleSignInSuccess = async (user) => {
-    alert("Signed in successfully!");
     await sendSignInDetailsToBackend(user);
-    navigate("/");
   };
 
   const handleSignIn = async (e) => {
@@ -106,7 +108,7 @@ const SignIn = () => {
   return (
     <div className="sign-in-container">
       <div className="sign-in-image">
-        <img src={image} alt="Image" />
+        <img src={image} alt="Sign In" />
       </div>
       <div className="sign-in-box">
         <h1 className="title">
