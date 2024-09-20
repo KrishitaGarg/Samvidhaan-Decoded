@@ -60,6 +60,7 @@ nav {
 .header-buttons {
   display: flex;
   gap: 20px;
+  margin-left: 700px;
 }
 
 .header-btn {
