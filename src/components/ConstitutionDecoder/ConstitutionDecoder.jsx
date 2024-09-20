@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import mainImg from "../../assets/main_image.png";
-import textImg from "../../assets/text_image.png";
+import textImgLight from "../../assets/text_image_light.png";
+import textImgDark from "../../assets/text_image_dark.png";
+import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
 const ConstitutionDecoder = () => {
   const [meaningVisible, setMeaningVisible] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [tooltipStyle, setTooltipStyle] = useState({});
+  const { theme } = useTheme();
 
   const handleMouseOver = (event) => {
     const meaningText = event.target.getAttribute("data-meaning");
@@ -27,12 +30,15 @@ const ConstitutionDecoder = () => {
   };
 
   return (
-    <div className="constitution-decoder-container">
+    <div className={`constitution-decoder-container ${theme}-theme`}>
       <section className="first">
         <div className="text-image-wrapper">
           <div className="simplified-guide-text-container">
-            <img src={textImg} className="title-img" alt="Title Image" />
-
+            <img
+              src={theme === "dark" ? textImgDark : textImgLight}
+              className="title-img"
+              alt="Title Image"
+            />
             <h2 className="simplified-guide-text">
               Understanding the Indian Constitution:
               <br />A Simplified Guide
@@ -190,7 +196,7 @@ const ConstitutionDecoder = () => {
       {meaningVisible && (
         <div
           id="meaning-box"
-          className="meaning-box"
+          className={`meaning-box ${theme}-theme`}
           style={{
             position: "absolute",
             left: tooltipStyle.left,

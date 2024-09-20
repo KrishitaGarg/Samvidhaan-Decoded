@@ -16,32 +16,37 @@ import CompleteRegistration from "./components/Sign/CompleteRegistration";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
 import { AuthProvider } from "./components/AuthContex.jsx";
+import { ThemeProvider } from "./components/ThemeToggle/ThemeProvider"; // Correct path
 
 function App() {
   return (
     <ReactFlowProvider>
       <AuthProvider>
-        <Router>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<ConstitutionDecoder />} />
-              <Route
-                path="/complete-registration"
-                element={<CompleteRegistration />}
-              />
-              <Route path="/signin" element={<SignIn />} />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/chatbot" element={<AIChatbot />} />
-              <Route path="/articles" element={<Articles />} />
-              <Route path="/game" element={<Game />} />
-              <Route path="/startgame" element={<StartGame />} />
-              <Route path="/gameover" element={<GameOver />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/simplifier" element={<Simplifier />} />
-              <Route path="/summary" element={<Summary />} />
-            </Routes>
-          </Layout>
-        </Router>
+        <ThemeProvider>
+          {" "}
+          {/* Wrap Router with ThemeProvider */}
+          <Router>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<ConstitutionDecoder />} />
+                <Route
+                  path="/complete-registration"
+                  element={<CompleteRegistration />}
+                />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/chatbot" element={<AIChatbot />} />
+                <Route path="/articles" element={<Articles />} />
+                <Route path="/game" element={<Game />} />
+                <Route path="/startgame" element={<StartGame />} />
+                <Route path="/gameover" element={<GameOver />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/simplifier" element={<Simplifier />} />
+                <Route path="/summary" element={<Summary />} />
+              </Routes>
+            </Layout>
+          </Router>
+        </ThemeProvider>
       </AuthProvider>
     </ReactFlowProvider>
   );

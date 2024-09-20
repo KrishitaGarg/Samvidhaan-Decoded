@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 import mainLogo from "../assets/main_logo.png";
 import logo from "../assets/logo.png";
+import ThemeToggle from "./ThemeToggle/ThemeToggle.jsx";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
@@ -67,6 +68,7 @@ const Layout = ({ children }) => {
               >
                 About Us
               </Link>
+              <ThemeToggle />
               <Link
                 to="/signin"
                 className={`header-btn ${

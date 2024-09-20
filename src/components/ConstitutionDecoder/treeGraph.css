@@ -1,14 +1,68 @@
 .react-flow__node {
-    border-image: linear-gradient(to right, #cd7171 0%, #57383B 100%) 1;
-    border-radius: 30px;
-    border-width: 4px;
-    border-style: solid;
-    padding: 2px;
-    background: transparent;
-    color: black;
-    padding: 10px;
+  border-image: linear-gradient(to right, #cd7171 0%, #57383b 100%) 1;
+  border-radius: 30px;
+  border-width: 4px;
+  border-style: solid;
+  padding: 2px;
+  background: transparent;
+  color: black;
+  padding: 10px;
 }
 
 .react-flow__panel.react-flow__attribution.bottom.right {
-    display: none;
+  display: none;
+}
+
+.constitution-section .title {
+  padding: 15px;
+  padding-left: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 66.12px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.constitution-section .subtitle {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.constitution-section .description {
+  margin-left: 40px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+
+.highlight {
+  color: #d68d44;
+}
+
+.light-theme .constitution-section .title {
+  background: #57383b;
+  color: white !important;
+}
+
+.dark-theme .constitution-section .title {
+  background-color: #D68D44;
+  color: black;
+}
+
+.dark-theme .constitution-section .subtitle {
+  text-align: left;
+  margin-left: 50px;
+  color: white;
+}
+
+.dark-theme .constitution-section .description {
+  color: white;
+}
+
+.dark-theme .react-flow__node {
+  color: white;
 }

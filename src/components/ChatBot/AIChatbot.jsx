@@ -5,6 +5,7 @@ import rehypeSanitize from "rehype-sanitize";
 import botLogo from "../../assets/logo.png";
 import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
+import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
 const autoResize = (e) => {
   e.target.style.height = "auto";
@@ -21,6 +22,7 @@ const autoResize = (e) => {
 const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const { theme } = useTheme();
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
@@ -117,55 +119,57 @@ const AIChatbot = () => {
   };
 
   return (
-    <section className="ai-chatbot-section">
-      <div className="chatbot">
-        <div className="chatbot-header">
-          <div className="header-content">
-            <img src={botLogo} alt="bot logo" className="header-logo" />
-            <h1>
-              Nyaya<span>.AI</span>
-            </h1>
+    <div className={`${theme}-theme`}>
+      <section className="ai-chatbot-section">
+        <div className="chatbot">
+          <div className="chatbot-header">
+            <div className="header-content">
+              <img src={botLogo} alt="bot logo" className="header-logo" />
+              <h1>
+                Nyaya<span>.AI</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="chatbot-messages">
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`message ${msg.isBot ? "bot" : "user"}`}
+              >
+                {msg.isBot && (
+                  <img src={botLogo} alt="bot logo" className="message-logo" />
+                )}
+                <ReactMarkdown
+                  className="markdown-body"
+                  rehypePlugins={[rehypeSanitize]}
+                >
+                  {msg.text}
+                </ReactMarkdown>
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+          <div className="chatbot-input">
+            <textarea
+              value={input}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              onInput={autoResize}
+              placeholder="Start Typing here..."
+              rows={1}
+              style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
+            />
+            <img
+              src={sendIcon}
+              alt="Send"
+              className="send-icon"
+              onClick={handleSendMessage}
+            />
           </div>
         </div>
-
-        <div className="chatbot-messages">
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`message ${msg.isBot ? "bot" : "user"}`}
-            >
-              {msg.isBot && (
-                <img src={botLogo} alt="bot logo" className="message-logo" />
-              )}
-              <ReactMarkdown
-                className="markdown-body"
-                rehypePlugins={[rehypeSanitize]}
-              >
-                {msg.text}
-              </ReactMarkdown>
-            </div>
-          ))}
-          <div ref={messagesEndRef} />
-        </div>
-        <div className="chatbot-input">
-          <textarea
-            value={input}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-            onInput={autoResize}
-            placeholder="Start Typing here..."
-            rows={1}
-            style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
-          />
-          <img
-            src={sendIcon}
-            alt="Send"
-            className="send-icon"
-            onClick={handleSendMessage}
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

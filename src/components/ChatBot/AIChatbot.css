@@ -1,5 +1,9 @@
-.ai-chatbot-section {
+.dark-theme .ai-chatbot-section {
   background: #332829;
+}
+
+.light-theme .ai-chatbot-section {
+  background: #F7E7CA;
 }
 
 .markdown-body {
@@ -75,6 +79,10 @@
   padding: 20px;
   height: 440px;
   overflow-y: auto;
+}
+
+.dark-theme .chatbot-messages {
+  background-color: #D68D44;
 }
 
 .message {
