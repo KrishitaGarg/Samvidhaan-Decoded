@@ -77,13 +77,15 @@
 }
 
 .dark-theme .explore-btn:hover {
-  color: #D68D44;
-  background-color: white;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #D68D44;
 }
 
 .dark-theme .play-btn {
-  color: #D68D44;
-  background-color: white;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #D68D44;
 }
 
 .dark-theme .play-btn:hover {
@@ -124,7 +126,7 @@
 
 .preamble-div {
   background-image: url("../../assets/preamble_bg.jpg");
-  background-size: 750px 800px;
+  background-size: 800px 800px;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 300px;
@@ -148,8 +150,19 @@
 
 .second-p h1 {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 35px;
   color: white;
+  margin: 0;
+}
+
+.second-p h2 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.second-p h4 {
+  font-size: 18px;
 }
 
 .word {
@@ -224,7 +237,7 @@
 
 .light-theme {
   color: #4a403a;
-  background-color: white;
+  background-color: #fffbf5;
 }
 
 .light-theme .meaning-box {

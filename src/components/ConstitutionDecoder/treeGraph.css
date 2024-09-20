@@ -1,5 +1,4 @@
 .react-flow__node {
-  border-image: linear-gradient(to right, #cd7171 0%, #57383b 100%) 1;
   border-radius: 30px;
   border-width: 4px;
   border-style: solid;
@@ -13,30 +12,34 @@
   display: none;
 }
 
-.constitution-section .title {
-  padding: 15px;
-  padding-left: 50px;
-  width: 100%;
-  margin-bottom: 10px;
-  height: 66.12px;
-  text-align: left;
-  border-radius: 10px;
+.constitution-section {
+  padding: 0;
+  padding-top: 50px;
 }
 
-.constitution-section .subtitle {
+.constitution-section .title {
+  padding: 15px;
+  padding-left: 80px;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 60px;
   text-align: left;
-  margin-left: 50px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .constitution-section .description {
   margin-left: 40px;
-  font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 22px;
   line-height: 33px;
   letter-spacing: 0.03em;
   text-transform: capitalize;
+  padding-bottom: 0;
+  padding-top: 20px;
 }
 
 .highlight {
@@ -49,8 +52,8 @@
 }
 
 .dark-theme .constitution-section .title {
-  background-color: #D68D44;
-  color: black;
+  background-color: #57383b;
+  color: #fffbf5 !important;
 }
 
 .dark-theme .constitution-section .subtitle {
@@ -63,6 +66,11 @@
   color: white;
 }
 
+.light-theme .react-flow__node {
+  border-image: linear-gradient(to right, #cd7171 0%, #57383b 100%) 1;
+}
+
 .dark-theme .react-flow__node {
+  border-image: linear-gradient(to right, rgb(247, 231, 202) 1.9%, rgb(200, 125, 76) 49.7%) 1;
   color: white;
 }
