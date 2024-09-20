@@ -1,10 +1,6 @@
-// src/components/ThemeToggle/ThemeProvider.jsx
 import React, { createContext, useState, useEffect } from "react";
-
-// Create a context for theme
 export const ThemeContext = createContext();
 
-// Create a ThemeProvider component
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 

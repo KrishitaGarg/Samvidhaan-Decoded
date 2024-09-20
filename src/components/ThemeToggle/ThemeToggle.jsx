@@ -1,6 +1,5 @@
-// src/components/ThemeToggle/ThemeToggle.jsx
 import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeProvider"; // Import the correct path
+import { ThemeContext } from "./ThemeProvider";
 
 export const useTheme = () => {
   return useContext(ThemeContext);

@@ -1,6 +1,5 @@
 :root {
-  /* Light theme variables */
-  --background-color: #fffbf5; /* Light background */
+  --background-color: #fffbf5;
   --text-color: black;
   --header-background: #fffbf5;
   --button-background: none;
@@ -9,8 +8,7 @@
 }
 
 [data-theme="dark"] {
-  /* Dark theme variables */
-  --background-color: #413233; /* Dark background */
+  --background-color: #413233;
   --text-color: white;
   --header-background: #332829;
   --button-background: #333;
@@ -140,7 +138,6 @@ nav {
   background-color: #977272;
 }
 
-/* Media queries remain unchanged */
 @media (max-width: 800px) {
   .header-content {
     flex-direction: column;

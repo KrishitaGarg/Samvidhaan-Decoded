@@ -1,9 +1,8 @@
-/* Base Styles */
 .constitution-decoder-container {
   padding: 20px;
   font-family: "Poppins", sans-serif;
-  color: #4a403a; /* Default text color */
-  background-color: white; /* Default background */
+  color: #4a403a; 
+  background-color: white; 
 }
 
 .first {
@@ -32,7 +31,7 @@
 
 .simplified-guide-text {
   font-size: 1.4rem;
-  color: #57383b; /* Default text color */
+  color: #57383b;
   margin-bottom: 20px;
 }
 
@@ -109,7 +108,7 @@
   margin-top: 20px;
   padding: 50px;
   padding-bottom: 20px;
-  background: #332829; /* Default background */
+  background: #332829;
 }
 
 .preamble-container {
@@ -120,7 +119,7 @@
   line-height: 23px;
   font-size: 16px;
   border-radius: 10px;
-  color: #36230d; /* Default text color */
+  color: #36230d;
 }
 
 .preamble-div {
@@ -154,7 +153,7 @@
 }
 
 .word {
-  color: #36230d; /* Default text color */
+  color: #36230d;
   display: inline-block;
 }
 
@@ -163,11 +162,10 @@
   color: #36230dcd;
 }
 
-/* Tooltip Styles */
 .meaning-box {
   position: absolute;
-  background-color: white; /* Default background */
-  color: black; /* Default text color */
+  background-color: white;
+  color: black;
   border: 2px solid #deab5f;
   border-radius: 5px;
   padding: 10px;
@@ -224,28 +222,27 @@
   color: #000;
 }
 
-/* Theme-Specific Styles */
 .light-theme {
-  color: #4a403a; /* Light text color */
-  background-color: white; /* Light background */
+  color: #4a403a;
+  background-color: white;
 }
 
 .light-theme .meaning-box {
-  background-color: white; /* Light tooltip background */
-  color: black; /* Light tooltip text color */
+  background-color: white;
+  color: black;
 }
 
 .light-theme .preamble-section {
-  background: #f8f9fa; /* Light section background */
+  background: #f8f9fa;
 }
 
 .light-theme .preamble-container {
-  color: #36230d; /* Darker text for readability */
+  color: #36230d;
 }
 
 .dark-theme {
-  color: white; /* Dark text color */
-  background-color: #332829; /* Dark background */
+  color: white;
+  background-color: #332829;
 }
 
 .dark-theme .simplified-guide-text {
@@ -253,19 +250,18 @@
 }
 
 .dark-theme .meaning-box {
-  background-color: #444; /* Dark tooltip background */
-  color: white; /* Dark tooltip text color */
+  background-color: #444;
+  color: white;
 }
 
 .dark-theme .preamble-section {
-  background: #332829; /* Dark section background */
+  background: #332829;
 }
 
 .dark-theme .preamble-container {
-  color: black; /* Lighter text for readability */
+  color: black;
 }
 
-/* Responsive Styles */
 @media (max-width: 800px) {
   .text-image-wrapper {
     flex-direction: column;
