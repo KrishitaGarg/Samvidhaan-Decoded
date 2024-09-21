@@ -84,7 +84,7 @@ const AIChatbot = () => {
       setMessages((prevMessages) => [
         ...prevMessages,
         {
-          text: "Welcome to Nyaya.ai! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!",
+          text: "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!",
           isBot: true,
         },
       ]);

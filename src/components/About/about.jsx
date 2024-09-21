@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: "Atishaya Jain",
     role: "Backend Developer",
-    description: "I give life to machines, cuz low key humans are overrated!",
+    description: "Innovating backend solutions with precision.",
     image: atishayaImage,
     linkedin: "http://linkedin.com/in/atishayj2202",
     github: "http://github.com/atishayj2202",
@@ -42,7 +42,8 @@ const teamMembers = [
   {
     name: "Anushree Roy",
     role: "UI/UX Designer",
-    description: "I give life to machines, cuz low key humans are overrated!",
+    description:
+      "I believe good design is like a good joke- if you have to explain it, it's not working!",
     image: anushreeImage,
     linkedin: "https://www.linkedin.com/in/anushree-roy-082370204",
     github: "#",
@@ -52,7 +53,8 @@ const teamMembers = [
   {
     name: "Dheeraj Sharma",
     role: "Frontend Developer",
-    description: "I give life to machines, cuz low key humans are overrated!",
+    description:
+      "Full Stack Developer with expertise in building scalable web applications, blending front-end creativity with back-end efficiency and performance.",
     image: dheerajImage,
     linkedin: "https://www.linkedin.com/in/greatnerve/",
     github: "https://github.com/greatnerve",
@@ -62,7 +64,7 @@ const teamMembers = [
   {
     name: "Kriti Singh",
     role: "Presentation Designer",
-    description: "I give life to machines, cuz low key humans are overrated!",
+    description: "Created PPT",
     image: kritiImage,
     linkedin: "https://www.linkedin.com/in/kriti-singh-402866290",
     github: "https://github.com/kritiug23",
