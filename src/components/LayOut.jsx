@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
                 About Us
               </Link>
               <Link
-                to="/signin"
+                to="/sign"
                 className={`header-btn ${
                   activeButton === "Sign In" ? "button_color_change" : ""
                 }`}

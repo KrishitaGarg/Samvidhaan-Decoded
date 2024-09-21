@@ -58,6 +58,7 @@
 
 .light-theme .explore-btn:hover {
   border: 2px solid #57383b;
+  background-color: transparent;
   color: black;
 }
 

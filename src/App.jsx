@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AIChatbot from "./components/ChatBot/AIChatbot.jsx";
-import SignIn from "./components/Sign/SignIn";
-import SignUp from "./components/Sign/SignUp";
 import ConstitutionDecoder from "./components/ConstitutionDecoder/ConstitutionDecoder.jsx";
 import Simplifier from "./components/ConstitutionDecoder/Simplifier.jsx";
 import Layout from "./components/LayOut.jsx";
@@ -12,29 +10,21 @@ import GameOver from "./components/Game/game_over.jsx";
 import Game from "./components/Game/game.jsx";
 import About from "./components/About/about.jsx";
 import Summary from "./components/Summary/summary.jsx";
-import CompleteRegistration from "./components/Sign/CompleteRegistration";
+import Sign from "./components/Sign/sign.jsx";
 import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
 import { AuthProvider } from "./components/AuthContex.jsx";
-import { ThemeProvider } from "./components/ThemeToggle/ThemeProvider"; // Correct path
+import { ThemeProvider } from "./components/ThemeToggle/ThemeProvider"; 
 
 function App() {
   return (
     <ReactFlowProvider>
       <AuthProvider>
         <ThemeProvider>
-          {" "}
-          {/* Wrap Router with ThemeProvider */}
           <Router>
             <Layout>
               <Routes>
                 <Route path="/" element={<ConstitutionDecoder />} />
-                <Route
-                  path="/complete-registration"
-                  element={<CompleteRegistration />}
-                />
-                <Route path="/signin" element={<SignIn />} />
-                <Route path="/signup" element={<SignUp />} />
                 <Route path="/chatbot" element={<AIChatbot />} />
                 <Route path="/articles" element={<Articles />} />
                 <Route path="/game" element={<Game />} />
@@ -43,6 +33,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/simplifier" element={<Simplifier />} />
                 <Route path="/summary" element={<Summary />} />
+                <Route path="/sign" element={<Sign />} />
               </Routes>
             </Layout>
           </Router>
