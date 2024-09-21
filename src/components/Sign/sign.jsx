@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import Github from "../../assets/github.png";
@@ -18,6 +18,17 @@ import {
 } from "firebase/auth";
 import "./styles.css";
 import bg from "../../assets/complete-reg.png";
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   border-radius: 10px;
@@ -178,6 +189,7 @@ const RightOverlayPanel = styled(OverlayPanel)`
 
 const WelcomeTitle = styled.h1`
   color: white;
+  animation: ${fadeIn} 0.6s ease-in-out forwards;
 `;
 
 const Paragraph = styled.p`
@@ -198,11 +210,37 @@ const Line = styled.h2`
   border-radius: 11px;
 `;
 
+const TypingEffect = ({ text, speed }) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    setDisplayedText("");
+    let index = -1;
+    const interval = setInterval(() => {
+      if (index < text.length - 1) {
+        index++;
+        setDisplayedText((prev) => prev + text.charAt(index));
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return <Title>{displayedText}</Title>;
+};
+
 const SignInSignUp = () => {
   const [signIn, toggle] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [typingText, setTypingText] = useState("Sign In");
+
+  const handleToggle = (isSignIn) => {
+    toggle(isSignIn);
+    setTypingText(isSignIn ? "Sign In" : "Create Account");
+  };
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -240,7 +278,7 @@ const SignInSignUp = () => {
     <Container>
       <SignUpContainer signingIn={signIn}>
         <Form onSubmit={handleSignUp}>
-          <Title>Create Account</Title>
+          <TypingEffect text={typingText} speed={150} />
           <Input type="text" placeholder="Name" required />
           <Input
             type="email"
@@ -261,7 +299,7 @@ const SignInSignUp = () => {
       </SignUpContainer>
       <SignInContainer signingIn={signIn}>
         <Form onSubmit={handleSignIn}>
-          <Title>Sign in</Title>
+          <TypingEffect text={typingText} speed={150} />
           <Input
             type="email"
             placeholder="Email"
@@ -321,13 +359,17 @@ const SignInSignUp = () => {
             <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
             <Line></Line>
             <Paragraph>Complete registration to continue to sign up.</Paragraph>
-            <GhostButton onClick={() => toggle(true)}>Sign In</GhostButton>
+            <GhostButton onClick={() => handleToggle(true)}>
+              Sign In
+            </GhostButton>
           </LeftOverlayPanel>
           <RightOverlayPanel signingIn={signIn}>
             <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
             <Line></Line>
             <Paragraph>Sign in to continue to your account</Paragraph>
-            <GhostButton onClick={() => toggle(false)}>Sign Up</GhostButton>
+            <GhostButton onClick={() => handleToggle(false)}>
+              Sign Up
+            </GhostButton>
           </RightOverlayPanel>
         </Overlay>
       </OverlayContainer>
