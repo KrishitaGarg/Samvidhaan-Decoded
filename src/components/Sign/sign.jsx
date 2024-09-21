@@ -92,7 +92,10 @@ const Form = styled.form`
 
 const Title = styled.h1`
   font-weight: bold;
+  font-size: 1.7rem;
+  color: #413233;
   margin: 0;
+  margin-bottom: 20px;
 `;
 
 const Input = styled.input`
@@ -104,9 +107,9 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #57383B;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -129,6 +132,7 @@ const GhostButton = styled(Button)`
 
 const Anchor = styled.a`
   color: #333;
+  left: 0%;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
@@ -190,23 +194,29 @@ const RightOverlayPanel = styled(OverlayPanel)`
 const WelcomeTitle = styled.h1`
   color: white;
   animation: ${fadeIn} 0.6s ease-in-out forwards;
+  font-size: 1.7rem;
+  text-align: left;
+  padding-left: 35px;
+  margin-bottom: 0px;
 `;
 
 const Paragraph = styled.p`
   font-weight: 500px;
+  padding-left: 30px;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: 0.5px;
-  margin: 20px 0 30px;
+  margin: 60px 0 30px;
 `;
 
 const Line = styled.h2`
   position: absolute;
-  width: 275px;
-  margin-top: 20px;
+  width: 175px;
+  text-align: left;
+  margin-top: -200px;
   height: 9px;
   background: #d68d44;
-  left: 20%;
+  left: 17%;
   border-radius: 11px;
 `;
 
@@ -314,7 +324,14 @@ const SignInSignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Anchor href="#">Forgot your password?</Anchor>
+          <Anchor href="#">Forgot password?</Anchor>
+
+          <img
+            src={Or}
+            alt="Or"
+            style={{ width: "300px", margin: "20px 10px 0px" }}
+          />
+
           <div
             style={{
               display: "flex",
@@ -343,12 +360,6 @@ const SignInSignUp = () => {
             />
           </div>
 
-          <img
-            src={Or}
-            alt="Or"
-            style={{ width: "300px", margin: "20px 10px 0px" }}
-          />
-
           <Button type="submit">Sign In</Button>
         </Form>
       </SignInContainer>
@@ -357,9 +368,12 @@ const SignInSignUp = () => {
         <Overlay signingIn={signIn}>
           <LeftOverlayPanel signingIn={signIn}>
             <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
-            <Line></Line>
-            <Paragraph>Complete registration to continue to sign up.</Paragraph>
-            <GhostButton onClick={() => handleToggle(true)}>
+            <Line className="line2"></Line>
+            <Paragraph>Sign up to continue to your account</Paragraph>
+            <GhostButton
+              className="overlay-button1"
+              onClick={() => handleToggle(true)}
+            >
               Sign In
             </GhostButton>
           </LeftOverlayPanel>
@@ -367,7 +381,10 @@ const SignInSignUp = () => {
             <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
             <Line></Line>
             <Paragraph>Sign in to continue to your account</Paragraph>
-            <GhostButton onClick={() => handleToggle(false)}>
+            <GhostButton
+              className="overlay-button2"
+              onClick={() => handleToggle(false)}
+            >
               Sign Up
             </GhostButton>
           </RightOverlayPanel>

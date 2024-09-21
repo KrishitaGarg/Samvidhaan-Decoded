@@ -30,6 +30,18 @@ input::placeholder {
 }
 
 button:hover {
-    background-color: #eab4b4;
-    color: black;
+  background-color: white;
+  color: black;
+}
+
+.overlay-button2 {
+  margin-top: 170px;
+}
+
+.overlay-button1 {
+  margin-top: 90px;
+}
+
+.line2 {
+  margin-top: -120px !important;
 }
