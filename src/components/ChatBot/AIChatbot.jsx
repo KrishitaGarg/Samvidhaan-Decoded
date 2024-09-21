@@ -83,7 +83,10 @@ const AIChatbot = () => {
       console.error("Error:", error);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: "Sorry, something went wrong.", isBot: true },
+        {
+          text: "Welcome to Nyaya.ai! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!",
+          isBot: true,
+        },
       ]);
     }
   };
