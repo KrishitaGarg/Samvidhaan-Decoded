@@ -70,7 +70,7 @@ const TopEdges = [];
 const StateNode = [
   {
     id: "state",
-    data: { label: "State" },
+    data: { label: "State" , parentNode : TopNode, ParentEdge : TopEdges},
     position,
   },
   {
@@ -99,7 +99,7 @@ const StateEdges = [
 const UnionNode = [
   {
     id: "union",
-    data: { label: "Union" },
+    data: { label: "Union" , parentNode : TopNode, ParentEdge : TopEdges},
     position,
   },
   {
@@ -114,12 +114,12 @@ const UnionNode = [
   },
   {
     id: "The-Unions-Judiciary",
-    data: { label: "The Union's Judiciary" },
+    data: { label: "The Union's Judiciary" , link : "c44f8217-eda5-40b4-9f64-3fc0d096e5e7"},
     position,
   },
   {
     id: "Control-of-Union",
-    data: { label: "Control and Auditor-General of India" },
+    data: { label: "Control and Auditor-General of India" , link : "055c0166-6dc4-4e9e-87c6-a49effbc48b7"},
     position,
   },
 ];
@@ -134,7 +134,7 @@ const UnionEdges = [
 const TheUnionExecutiveNode = [
   {
     id: "The-Unions-Executive",
-    data: { label: "The Executive" },
+    data: { label: "The Executive" , parentNode : UnionNode, ParentEdge : UnionEdges},
     position,
   },
   {
@@ -144,12 +144,12 @@ const TheUnionExecutiveNode = [
   },
   {
     id: "Council-of-Ministers",
-    data: { label: "Council of Ministers" },
+    data: { label: "Council of Ministers" , link : "54129150-c732-42cc-bbd5-de308d271ada"},
     position,
   },
   {
     id: "The-Attorney-General",
-    data: { label: "The Attorney-General" },
+    data: { label: "The Attorney-General" , link : "abf12335-74f7-46ef-99be-d7ca627afe8c"},
     position,
   },
 ];
@@ -175,17 +175,17 @@ const TheUnionExecutiveEdges = [
 const PresidentVicePresidentNode = [
   {
     id: "The-President & Vice-President",
-    data: { label: "The President & Vice-President" },
+    data: { label: "The President & Vice-President" , parentNode : TheUnionExecutiveNode, ParentEdge : TheUnionExecutiveEdges},
     position,
   },
   {
     id: "The-President",
-    data: { label: "The President" , link : "401ed9aa-8bc1-49fb-9044-8119532fa094"},
+    data: { label: "The President" , link : "6cfcd5a2-28a1-4368-9511-a5b2b02b2d34"},
     position,
   },
   {
     id: "The-Vice-President",
-    data: { label: "The Vice-President" , link:  "bc0276d3-1df1-4639-9bf0-592309710ed5"},
+    data: { label: "The Vice-President" , link:  "fe4109e2-050f-4ad6-b88d-3a069563a087"},
     position,
   },
 ];
@@ -207,22 +207,22 @@ const PresidentVicePresidentEdges = [
 const TheStateExecutiveNode = [
   {
     id: "The-State-Executive",
-    data: { label: "The Executive" },
+    data: { label: "The Executive" , parentNode : StateNode, ParentEdge : StateEdges},
     position,
   },
   {
     id: "The-Governor",
-    data: { label: "The Governor" },
+    data: { label: "The Governor" , link : "18971506-ca2b-4992-85e1-c252be897b8c"},
     position,
   },
   {
     id: "The-Council-of-Ministers",
-    data: { label: "The Council of Ministers" },
+    data: { label: "The Council of Ministers" , link : "7caf688e-88ac-4b8b-9ff6-acaba8ab3ada"},
     position,
   },
   {
     id: "The-Attorney-General",
-    data: { label: "The Attorney-General" },
+    data: { label: "The Attorney-General" , link : "abf12335-74f7-46ef-99be-d7ca627afe8c"},
     position,
   },
 ];
@@ -248,17 +248,17 @@ const TheStateExecutiveEdges = [
 const TheStateLegislatureNode = [
   {
     id: "The-State-Legislature",
-    data: { label: "The State Legislature" },
+    data: { label: "The State Legislature" , parentNode : StateNode, ParentEdge : StateEdges},
     position, 
   },
   {
     id: "The-Officeo-of-state-legislature",
-    data: { label: "The Office of State Legislature" },
+    data: { label: "The Office of State Legislature" , link : "e923b6c5-e402-4fcc-b5ee-0bda04ab0a9b"},
     position,
   },
   {
     id: "The-Powers-Privileges-and-Immunities",
-    data: { label: "The Powers, Privileges and Immunities" },
+    data: { label: "The Powers, Privileges and Immunities" , link : "59385e17-4eb2-4aad-a97d-62cb5974ab15"},  
     position,
   },
   {
@@ -271,17 +271,17 @@ const TheStateLegislatureNode = [
 const TheStateJudiciaryNode = [
   {
     id: "The-State-Judiciary",
-    data: { label: "The State Judiciary" },
+    data: { label: "The State Judiciary"  , parentNode : StateNode, ParentEdge : StateEdges},
     position
   },
   {
     id: "The-High-Courts",
-    data: { label: "The High Courts" },
+    data: { label: "The High Courts" , link : "d32ec07c-2c86-40f1-9285-bd0a57bbb14d"},
     position,
   },
   {
     id: "The-Subordinate-Courts",
-    data: { label: "The Subordinate Courts" },
+    data: { label: "The Subordinate Courts" , link : "7253e34a-2dfb-4de0-94d6-0b62bb5f7a43"},
     position,
   },
 ];
@@ -321,22 +321,22 @@ const TheStateLegislatureEdges = [
 const TheParliamentNode = [
   {
     id: "The-Parliament",
-    data: { label: "The Parliament" },
+    data: { label: "The Parliament" , parentNode : UnionNode, ParentEdge : UnionEdges},
     position,
   },
   {
     id: "Officers-of-Parliament",
-    data: { label: "Officers of Parliament" },
+    data: { label: "Officers of Parliament" , link : "f7ee2e48-225f-4285-bb66-910295858c43"},
     position,
   },
   {
     id: "Power-Privileges-and-Immunities",
-    data: { label: "Power, Privileges and Immunities" },
+    data: { label: "Power, Privileges and Immunities" , link : "04f086ea-a40f-4f30-ac41-7ebdae914f4f"},
     position,
   },
   {
     id: "Procedures",
-    data: { label: "Procedures" },
+    data: { label: "Procedures" , link : "ce5d10ef-ae5d-48ec-85ca-c5c04fc6c90f"},
     position,
   },
 ];
@@ -362,22 +362,22 @@ const TheParliamentEdges = [
 const ProducresNode = [
   {
     id: "Producres",
-    data: { label: "Procedures" },
+    data: { label: "Procedures" , parentNode : UnionNode, ParentEdge : UnionEdges},
     position,
   },
   {
     id: "The-Legislative-Procedure",
-    data: { label: "The Legislative Procedure" },
+    data: { label: "The Legislative Procedure" , link : "5ca584f8-e62c-4690-a32b-df1432774219"},
     position,
   },
   {
     id: "The-Financial-Procedure",
-    data: { label: "The Financial Procedure" },
+    data: { label: "The Financial Procedure" , link : "f7ee2e48-225f-4285-bb66-910295858c43"},  
     position,
   },
   {
     id: "The-Procedures-Gerneral",
-    data: { label: "The Procedures General" },
+    data: { label: "The Procedures General" , link : "a099a5a5-599b-46e8-a931-64e680a4453e"},
     position,
   },
 ];
@@ -446,7 +446,17 @@ function LayoutFlow() {
       console.log(nodeData.link)
       navigate(`/summary?category=${nodeData?.link}`)
     }
+    console.log(nodeData.parentNode)
+    if(nodeData?.parentNode){
+      setNodes(nodeData.parentNode);
+      setEdges(nodeData.ParentEdge);
+      setKey((prev) => prev + 1);
+      return;
+    }
 
+
+  
+    
     if (node.id === "state") {
       setNodes(StateNode);
       setEdges(StateEdges);
@@ -491,7 +501,7 @@ function LayoutFlow() {
   };
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
+    <div style={{ height: 600, width: "100%" }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
