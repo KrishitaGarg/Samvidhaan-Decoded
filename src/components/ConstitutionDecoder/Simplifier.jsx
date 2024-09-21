@@ -12,9 +12,6 @@ const ConstitutionSection = () => {
           <h1 className="title">
             Understanding <span>Constitution</span>
           </h1>
-          <h2 className="subtitle">
-            With संविधान <span className="highlight">Decoded</span>
-          </h2>
           <h4 className="description">
             "The website provides a streamlined interface that presents
             simplified summaries of all the articles in the constitution, making

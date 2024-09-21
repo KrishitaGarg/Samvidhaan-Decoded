@@ -7,18 +7,6 @@ import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
-const autoResize = (e) => {
-  e.target.style.height = "auto";
-  const scrollHeight = e.target.scrollHeight;
-  const maxHeight = 3 * parseFloat(getComputedStyle(e.target).lineHeight);
-
-  if (scrollHeight <= maxHeight) {
-    e.target.style.height = `${scrollHeight}px`;
-  } else {
-    e.target.style.height = `${maxHeight}px`;
-  }
-};
-
 const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -46,8 +34,7 @@ const AIChatbot = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-      if (!response.ok)
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      if (!response.ok) throw new Error("Error fetching messages");
       const data = await response.json();
       setMessages(
         data.map((msg) => ({
@@ -88,18 +75,16 @@ const AIChatbot = () => {
         }),
       });
 
-      if (!response.ok)
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      if (!response.ok) throw new Error("Error fetching reply");
       const data = await response.json();
       const botMessage = { text: data.message, isBot: true };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error) {
       console.error("Error:", error);
-      const errorMessage = {
-        text: "Sorry, something went wrong.",
-        isBot: true,
-      };
-      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: "Sorry, something went wrong.", isBot: true },
+      ]);
     }
   };
 
@@ -108,28 +93,25 @@ const AIChatbot = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      if (e.shiftKey) {
-        return;
-      } else {
-        e.preventDefault();
-        handleSendMessage();
-      }
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
     }
   };
 
   return (
     <div className={`${theme}-theme`}>
-      <section className="ai-chatbot-section">
+      <div className="ai-chatbot-section">
+        <div className="sidebar">
+          <div className="history-header">History</div>
+          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
+          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
+          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
+          <button className="clear-history">Clear History</button>
+        </div>
+
         <div className="chatbot">
-          <div className="chatbot-header">
-            <div className="header-content">
-              <img src={botLogo} alt="bot logo" className="header-logo" />
-              <h1>
-                Nyaya<span>.AI</span>
-              </h1>
-            </div>
-          </div>
+          <div className="chatbot-header">Nyaya.AI</div>
 
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
@@ -150,25 +132,21 @@ const AIChatbot = () => {
             ))}
             <div ref={messagesEndRef} />
           </div>
+
           <div className="chatbot-input">
             <textarea
               value={input}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              onInput={autoResize}
               placeholder="Start Typing here..."
               rows={1}
-              style={{ maxHeight: "6em", overflowY: "auto", width: "300px" }}
             />
-            <img
-              src={sendIcon}
-              alt="Send"
-              className="send-icon"
-              onClick={handleSendMessage}
-            />
+            <div className="send-icon" onClick={handleSendMessage}>
+              <img src={sendIcon} alt="send icon" />
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

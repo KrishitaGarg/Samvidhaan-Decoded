@@ -11,9 +11,9 @@
   --background-color: #413233;
   --text-color: white;
   --header-background: #332829;
-  --button-background: #333;
-  --button-hover-background: #444;
-  --button-hover-color: #ffbb33;
+  --button-background: none;
+  --button-hover-background: #977272;
+  --button-hover-color: white;
 }
 
 body {
@@ -60,6 +60,7 @@ nav {
 .header-buttons {
   display: flex;
   gap: 20px;
+  margin-left: 700px;
 }
 
 .header-btn {
@@ -69,7 +70,6 @@ nav {
   padding: 5px 10px;
   text-decoration: none;
   cursor: pointer;
-  font-family: "Poppins" !important;
   font-style: normal;
   display: inline-flex;
   align-items: center;
@@ -136,6 +136,11 @@ nav {
 .close-button:hover {
   color: #ff0000;
   background-color: #977272;
+}
+
+.button_color_change {
+  color: #d68d44;
+  font-weight: 700;
 }
 
 @media (max-width: 800px) {

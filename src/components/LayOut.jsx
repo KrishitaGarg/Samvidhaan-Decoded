@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
               <Link
                 to="/simplifier"
                 className={`header-btn ${
-                  activeButton === "Home" ? "yellow" : ""
+                  activeButton === "Home" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("Home")}
               >
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
               <Link
                 to="/startgame"
                 className={`header-btn ${
-                  activeButton === "Game" ? "yellow" : ""
+                  activeButton === "Game" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("Game")}
               >
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
               <Link
                 to="/chatbot"
                 className={`header-btn ${
-                  activeButton === "Nyaya.AI" ? "yellow" : ""
+                  activeButton === "Nyaya.AI" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("Nyaya.AI")}
               >
@@ -62,22 +62,22 @@ const Layout = ({ children }) => {
               <Link
                 to="/about"
                 className={`header-btn ${
-                  activeButton === "About Us" ? "yellow" : ""
+                  activeButton === "About Us" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("About Us")}
               >
                 About Us
               </Link>
-              <ThemeToggle />
               <Link
-                to="/signin"
+                to="/sign"
                 className={`header-btn ${
-                  activeButton === "Sign In" ? "yellow" : ""
+                  activeButton === "Sign In" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("Sign In")}
               >
                 Sign In
               </Link>
+              <ThemeToggle />
             </div>
           </div>
         </nav>

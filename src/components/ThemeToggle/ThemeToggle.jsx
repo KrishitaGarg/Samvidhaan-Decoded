@@ -10,7 +10,7 @@ const ThemeToggle = () => {
 
   return (
     <button onClick={toggleTheme} className="header-btn">
-      {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      {theme === "light" ? "🌞" : "🌛"}
     </button>
   );
 };

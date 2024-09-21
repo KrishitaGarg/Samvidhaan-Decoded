@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  background-color: white !important;
+  border: none !important;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+  border: 2px solid #ff4b2b;
+  box-shadow: 0 0 8px rgba(255, 75, 43, 0.5);
+  background-color: #fff;
+}
+
+input::placeholder {
+  color: #999 !important;
+  font-style: italic;
+}
+
+button:hover {
+    background-color: #eab4b4;
+    color: black;
+}
