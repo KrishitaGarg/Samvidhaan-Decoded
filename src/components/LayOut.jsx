@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div>
+    <div>  
       <header className="header">
         <nav>
           <div className="header-content">
