@@ -5,6 +5,9 @@ import "./Layout.css";
 import mainLogo from "../assets/main_logo.png";
 import logo from "../assets/logo.png";
 import ThemeToggle from "./ThemeToggle/ThemeToggle.jsx";
+import { useAuth } from "./AuthContex.jsx";
+import { auth } from "./firebase.js";
+import { FaUserAlt } from "react-icons/fa";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
@@ -22,8 +25,10 @@ const Layout = ({ children }) => {
     setShowText(false);
   };
 
+  const { userLoggedIn, currentUser } = useAuth();
+
   return (
-    <div>  
+    <div>
       <header className="header">
         <nav>
           <div className="header-content">
@@ -68,15 +73,54 @@ const Layout = ({ children }) => {
               >
                 About Us
               </Link>
-              <Link
-                to="/sign"
-                className={`header-btn ${
-                  activeButton === "Sign In" ? "button_color_change" : ""
-                }`}
-                onClick={() => handleButtonClick("Sign In")}
-              >
-                Sign In
-              </Link>
+              {userLoggedIn ? (
+                <>
+                  {
+                    <div className="header-btn profile-btn">
+                      <img
+                        src={
+                          currentUser?.photoURL ||
+                          "https://www.w3schools.com/howto/img_avatar.png"
+                        }
+                        alt="User"
+                        className="user-image"
+                      />
+
+                      <div className="profile-dropdown">
+                        {/* <Link to="/sign" className="profile-dropdown-item">
+                  <FaUserAlt className="profile-icon" />
+                  Sign In
+                </Link> */}
+                        {/* <Link to="/sign" className="profile-dropdown-item">
+                  <FaUserAlt className="profile-icon" />
+                  Sign Out
+                </Link> */}
+                        <button
+                          className="profile-dropdown-item"
+                          onClick={() => {
+                            auth.signOut();
+                            handleButtonClick("Sign Out");
+                          }}
+                        >
+                          <FaUserAlt className="profile-icon" />
+                          Sign Out
+                        </button>
+                      </div>
+                    </div>
+                  }
+                </>
+              ) : (
+                <Link
+                  to="/sign"
+                  className={`header-btn ${
+                    activeButton === "Sign In" ? "button_color_change" : ""
+                  }`}
+                  onClick={() => handleButtonClick("Sign In")}
+                >
+                  Sign In
+                </Link>
+              )}
+
               <ThemeToggle />
             </div>
           </div>

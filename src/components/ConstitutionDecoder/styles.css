@@ -380,3 +380,10 @@
     padding-bottom: 20px;
   }
 }
+
+
+.react-flow__node {
+  height: auto!important;
+  box-shadow: none!important;
+}
+
