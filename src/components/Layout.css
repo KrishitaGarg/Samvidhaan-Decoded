@@ -199,3 +199,47 @@ nav {
     height: 40px;
   }
 }
+
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-btn {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border-radius: 5px;
+  padding: 2px;
+  display: none;
+  background-color: var(--background-color);
+  border: 2px solid #ccc;
+}
+.profile-btn:hover .profile-dropdown {
+  display: block;
+}
+.profile-dropdown-item {
+  background-color: transparent;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: left;
+  padding: 5px 10px;
+  margin: 8px 0;
+}
+
+.profile-dropdown-item:hover {
+  background-color: var(--button-hover-background)
+}

@@ -11,6 +11,8 @@ import { initialEdges, initialNodes } from "./nodes-edges.js";
 import { useNavigate } from "react-router-dom";
 import "@xyflow/react/dist/style.css";
 import "./treeGraph.css";
+import useWindowSize from "react-use/lib/useWindowSize";
+
 
 
 const disabled = true;
@@ -433,11 +435,12 @@ function LayoutFlow() {
     },
     [nodes, edges, setNodes, setEdges, fitView]
   );
+  const { width } = useWindowSize();
 
   useLayoutEffect(() => {
     onLayout({ direction: "DOWN", useInitialNodes: false });
     console.log("layout");
-  }, [key]);
+  }, [key, width]);
 
   const onNodeClick = (event, node) => {
     console.log("click", node);
