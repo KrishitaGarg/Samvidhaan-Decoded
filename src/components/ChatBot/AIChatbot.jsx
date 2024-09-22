@@ -114,7 +114,10 @@ const AIChatbot = () => {
         </div>
 
         <div className="chatbot">
-          <div className="chatbot-header">Nyaya.AI</div>
+          <div className="chatbot-header">
+            <img src={botLogo} alt="bot logo" className="message-logo" />
+            Nyaya.AI
+          </div>
 
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
