@@ -55,6 +55,35 @@ const AIChatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  const streamBotMessage = (message) => {
+    const wordsArray = message.split(" ");
+    let currentIndex = 0;
+
+    const newMessage = { text: "", isBot: true };
+
+    const intervalId = setInterval(() => {
+      if (currentIndex < wordsArray.length) {
+        newMessage.text +=
+          (newMessage.text ? " " : "") + wordsArray[currentIndex];
+
+        setMessages((prevMessages) => {
+          if (
+            prevMessages.length === 0 ||
+            !prevMessages[prevMessages.length - 1].isBot
+          ) {
+            return [...prevMessages, newMessage];
+          } else {
+            return [...prevMessages.slice(0, -1), newMessage];
+          }
+        });
+
+        currentIndex++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 150);
+  };
+
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
 
@@ -77,17 +106,13 @@ const AIChatbot = () => {
 
       if (!response.ok) throw new Error("Error fetching reply");
       const data = await response.json();
-      const botMessage = { text: data.message, isBot: true };
-      setMessages((prevMessages) => [...prevMessages, botMessage]);
+
+      streamBotMessage(data.message);
     } catch (error) {
       console.error("Error:", error);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          text: "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!",
-          isBot: true,
-        },
-      ]);
+      streamBotMessage(
+        "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!"
+      );
     }
   };
 
