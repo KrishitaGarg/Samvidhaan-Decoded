@@ -1,0 +1,17 @@
+.image-trivia {
+  margin-top: 50px !important;
+  width: 300px !important;
+}
+
+.trivia-container {
+  background-color: #fffaee;
+  position: sticky;
+}
+
+.trivia-h1 {
+  font-size: 20px;
+}
+
+.header-h1 {
+  background: none !important;
+}

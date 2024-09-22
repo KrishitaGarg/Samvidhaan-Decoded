@@ -57,18 +57,19 @@
 }
 
 .light-theme .explore-btn:hover {
-  border: 2px solid #57383b;
-  background-color: transparent;
+  border: 2px solid #57383b !important;
+  background-color: transparent !important;
   color: black;
 }
 
 .light-theme .play-btn {
   color: black;
+  background-color: white !important;
   border: 2px solid #57383b;
 }
 
 .light-theme .play-btn:hover {
-  background: #57383b;
+  background-color: #57383b !important;
   color: white;
 }
 

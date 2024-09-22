@@ -56,6 +56,15 @@ const Layout = ({ children }) => {
                 Game
               </Link>
               <Link
+                to="/trivia-app"
+                className={`header-btn ${
+                  activeButton === "Trivia" ? "button_color_change" : ""
+                }`}
+                onClick={() => handleButtonClick("Trivia")}
+              >
+                Trivia
+              </Link>
+              <Link
                 to="/chatbot"
                 className={`header-btn ${
                   activeButton === "Nyaya.AI" ? "button_color_change" : ""

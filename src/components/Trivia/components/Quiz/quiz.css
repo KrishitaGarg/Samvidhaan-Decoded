@@ -1,0 +1,24 @@
+.question-timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  margin-left: auto;
+}
+
+.ques_header {
+  background: #f7e7ca !important;
+  height: 150px !important;
+}
+
+.question {
+  background: #f7e7ca !important;
+}
+
+button {
+  background-color: #57383b !important;
+}

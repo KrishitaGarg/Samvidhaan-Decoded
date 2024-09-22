@@ -1,0 +1,12 @@
+@import '~semantic-ui-css/semantic.min.css';
+
+
+.dark-theme {
+  color: white;
+  background-color: #332829;
+}
+
+.light-theme {
+  color: #4a403a;
+  background-color: #fffbf5;
+}

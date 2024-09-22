@@ -1,0 +1,1157 @@
+[
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the maximum term duration of the Lok Sabha?",
+    "correct_answer": "5 years",
+    "incorrect_answers": ["4 years", "6 years", "7 years"],
+    "options": ["4 years", "5 years", "6 years", "7 years"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which house is considered the Upper House in the Indian Parliament?",
+    "correct_answer": "Rajya Sabha",
+    "incorrect_answers": ["Lok Sabha", "Vidhan Sabha", "Zila Parishad"],
+    "options": ["Lok Sabha", "Rajya Sabha", "Vidhan Sabha", "Zila Parishad"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many members are there in the Rajya Sabha?",
+    "correct_answer": "245",
+    "incorrect_answers": ["543", "250", "275"],
+    "options": ["245", "543", "250", "275"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "The Rajya Sabha can have a maximum of how many members?",
+    "correct_answer": "250",
+    "incorrect_answers": ["245", "543", "230"],
+    "options": ["250", "245", "543", "230"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the ex-officio Chairman of the Rajya Sabha?",
+    "correct_answer": "Vice President of India",
+    "incorrect_answers": [
+      "President of India",
+      "Prime Minister",
+      "Chief Justice of India"
+    ],
+    "options": [
+      "Vice President of India",
+      "President of India",
+      "Prime Minister",
+      "Chief Justice of India"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the minimum age to become a member of the Lok Sabha?",
+    "correct_answer": "25 years",
+    "incorrect_answers": ["21 years", "30 years", "35 years"],
+    "options": ["21 years", "25 years", "30 years", "35 years"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which part of the Indian Constitution deals with the Union Legislature?",
+    "correct_answer": "Part V",
+    "incorrect_answers": ["Part IV", "Part VI", "Part VII"],
+    "options": ["Part V", "Part IV", "Part VI", "Part VII"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following bills CANNOT be introduced first in the Rajya Sabha?",
+    "correct_answer": "Money Bill",
+    "incorrect_answers": [
+      "Ordinary Bill",
+      "Constitutional Amendment Bill",
+      "Finance Bill"
+    ],
+    "options": [
+      "Money Bill",
+      "Ordinary Bill",
+      "Constitutional Amendment Bill",
+      "Finance Bill"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many members of the Rajya Sabha are nominated by the President of India?",
+    "correct_answer": "12",
+    "incorrect_answers": ["10", "14", "15"],
+    "options": ["12", "10", "14", "15"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many members of the Lok Sabha are elected directly by the people?",
+    "correct_answer": "543",
+    "incorrect_answers": ["545", "250", "243"],
+    "options": ["543", "545", "250", "243"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In the Indian Parliament, which body has the authority to initiate impeachment proceedings against the President?",
+    "correct_answer": "Either House of Parliament",
+    "incorrect_answers": [
+      "Lok Sabha only",
+      "Rajya Sabha only",
+      "Supreme Court"
+    ],
+    "options": [
+      "Either House of Parliament",
+      "Lok Sabha only",
+      "Rajya Sabha only",
+      "Supreme Court"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who appoints the members of the Finance Commission in India?",
+    "correct_answer": "President of India",
+    "incorrect_answers": [
+      "Prime Minister",
+      "Parliament",
+      "Chief Justice of India"
+    ],
+    "options": [
+      "President of India",
+      "Prime Minister",
+      "Parliament",
+      "Chief Justice of India"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which type of bill requires the recommendation of the President before being introduced in Parliament?",
+    "correct_answer": "Money Bill",
+    "incorrect_answers": [
+      "Ordinary Bill",
+      "Private Member's Bill",
+      "Constitutional Amendment Bill"
+    ],
+    "options": [
+      "Money Bill",
+      "Ordinary Bill",
+      "Private Member's Bill",
+      "Constitutional Amendment Bill"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "The President can dissolve the Lok Sabha on the recommendation of which body?",
+    "correct_answer": "Council of Ministers",
+    "incorrect_answers": ["Supreme Court", "Rajya Sabha", "Attorney General"],
+    "options": [
+      "Council of Ministers",
+      "Supreme Court",
+      "Rajya Sabha",
+      "Attorney General"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which article of the Indian Constitution gives the Parliament the power to amend the Constitution?",
+    "correct_answer": "Article 368",
+    "incorrect_answers": ["Article 370", "Article 352", "Article 356"],
+    "options": ["Article 368", "Article 370", "Article 352", "Article 356"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "How many sessions of the Parliament of India are held in a year?",
+    "correct_answer": "3",
+    "incorrect_answers": ["2", "4", "5"],
+    "options": ["3", "2", "4", "5"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In case of a joint sitting of both Houses of Parliament, who presides over the session?",
+    "correct_answer": "Speaker of the Lok Sabha",
+    "incorrect_answers": [
+      "Vice President of India",
+      "President of India",
+      "Prime Minister"
+    ],
+    "options": [
+      "Speaker of the Lok Sabha",
+      "Vice President of India",
+      "President of India",
+      "Prime Minister"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the minimum age required to become a member of the Rajya Sabha?",
+    "correct_answer": "30 years",
+    "incorrect_answers": ["25 years", "35 years", "21 years"],
+    "options": ["30 years", "25 years", "35 years", "21 years"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which constitutional amendment introduced the Anti-Defection Law in India?",
+    "correct_answer": "52nd Amendment",
+    "incorrect_answers": ["44th Amendment", "73rd Amendment", "86th Amendment"],
+    "options": [
+      "52nd Amendment",
+      "44th Amendment",
+      "73rd Amendment",
+      "86th Amendment"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the quorum required for a meeting of either House of Parliament in India?",
+    "correct_answer": "One-tenth of the total members",
+    "incorrect_answers": [
+      "Half of the total members",
+      "One-fifth of the total members",
+      "One-third of the total members"
+    ],
+    "options": [
+      "One-tenth of the total members",
+      "Half of the total members",
+      "One-fifth of the total members",
+      "One-third of the total members"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum strength of the Rajya Sabha?",
+    "correct_answer": "250",
+    "incorrect_answers": ["200", "300", "275"],
+    "options": ["200", "250", "275", "300"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following bills can only be introduced in the Lok Sabha?",
+    "correct_answer": "Money Bill",
+    "incorrect_answers": [
+      "Ordinary Bill",
+      "Constitution Amendment Bill",
+      "Finance Bill"
+    ],
+    "options": [
+      "Money Bill",
+      "Ordinary Bill",
+      "Finance Bill",
+      "Constitution Amendment Bill"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who has the authority to summon a session of Parliament?",
+    "correct_answer": "The President of India",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Speaker of the Lok Sabha",
+      "The Leader of the Opposition"
+    ],
+    "options": [
+      "The President of India",
+      "The Prime Minister",
+      "The Speaker of the Lok Sabha",
+      "The Leader of the Opposition"
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the term duration of the Lok Sabha?",
+    "correct_answer": "5 years",
+    "incorrect_answers": ["4 years", "6 years", "3 years"],
+    "options": ["4 years", "5 years", "6 years", "3 years"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a part of the Parliament?",
+    "correct_answer": "The Prime Minister",
+    "incorrect_answers": ["Lok Sabha", "Rajya Sabha", "President"],
+    "options": ["The Prime Minister", "Lok Sabha", "Rajya Sabha", "President"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the minimum age required to become a member of the Rajya Sabha?",
+    "correct_answer": "30 years",
+    "incorrect_answers": ["25 years", "35 years", "40 years"],
+    "options": ["25 years", "30 years", "35 years", "40 years"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article of the Constitution deals with the composition of the Rajya Sabha?",
+    "correct_answer": "Article 80",
+    "incorrect_answers": ["Article 81", "Article 79", "Article 75"],
+    "options": ["Article 79", "Article 80", "Article 75", "Article 81"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In which house of Parliament does the Speaker have a casting vote?",
+    "correct_answer": "Lok Sabha",
+    "incorrect_answers": ["Rajya Sabha", "Both houses", "Neither house"],
+    "options": ["Lok Sabha", "Rajya Sabha", "Both houses", "Neither house"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following statements is correct regarding a No-Confidence Motion?",
+    "correct_answer": "It can only be introduced in the Lok Sabha.",
+    "incorrect_answers": [
+      "It requires a two-thirds majority in Rajya Sabha.",
+      "It can be introduced in both houses.",
+      "It requires the President's approval."
+    ],
+    "options": [
+      "It can only be introduced in the Lok Sabha.",
+      "It requires a two-thirds majority in Rajya Sabha.",
+      "It can be introduced in both houses.",
+      "It requires the President's approval."
+    ]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article gives the President the power to dissolve the Lok Sabha?",
+    "correct_answer": "Article 85",
+    "incorrect_answers": ["Article 80", "Article 75", "Article 86"],
+    "options": ["Article 85", "Article 80", "Article 75", "Article 86"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the head of the state in India?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Governor",
+      "The Chief Justice"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Governor",
+      "The Chief Justice"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the tenure of the President of India?",
+    "correct_answer": "5 years",
+    "incorrect_answers": ["4 years", "6 years", "7 years"],
+    "options": ["5 years", "4 years", "6 years", "7 years"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who appoints the Prime Minister of India?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Vice President",
+      "The Chief Justice",
+      "The Speaker"
+    ],
+    "options": [
+      "The President",
+      "The Vice President",
+      "The Chief Justice",
+      "The Speaker"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the head of the Union Executive?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Vice President",
+      "The Prime Minister",
+      "The Chief Justice"
+    ],
+    "options": [
+      "The President",
+      "The Vice President",
+      "The Prime Minister",
+      "The Chief Justice"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which article of the Indian Constitution deals with the President's power to pardon?",
+    "correct_answer": "Article 72",
+    "incorrect_answers": ["Article 74", "Article 76", "Article 78"],
+    "options": ["Article 72", "Article 74", "Article 76", "Article 78"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the Commander-in-Chief of the Indian Armed Forces?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Defence Minister",
+      "The Chief of Defence Staff"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Defence Minister",
+      "The Chief of Defence Staff"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who represents India in international forums and foreign relations?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Foreign Minister",
+      "The Chief Justice"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Foreign Minister",
+      "The Chief Justice"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the ex-officio chairperson of the Rajya Sabha?",
+    "correct_answer": "The Vice President",
+    "incorrect_answers": ["The President", "The Prime Minister", "The Speaker"],
+    "options": [
+      "The Vice President",
+      "The President",
+      "The Prime Minister",
+      "The Speaker"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is the real executive head of India?",
+    "correct_answer": "The Prime Minister",
+    "incorrect_answers": [
+      "The President",
+      "The Vice President",
+      "The Chief Minister"
+    ],
+    "options": [
+      "The Prime Minister",
+      "The President",
+      "The Vice President",
+      "The Chief Minister"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the minimum age to be elected as the President of India?",
+    "correct_answer": "35 years",
+    "incorrect_answers": ["30 years", "40 years", "25 years"],
+    "options": ["35 years", "30 years", "40 years", "25 years"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Under which article of the Constitution can the President of India declare a national emergency?",
+    "correct_answer": "Article 352",
+    "incorrect_answers": ["Article 356", "Article 360", "Article 365"],
+    "options": ["Article 352", "Article 356", "Article 360", "Article 365"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who has the authority to dissolve the Lok Sabha?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Speaker",
+      "The Chief Justice"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Speaker",
+      "The Chief Justice"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the primary function of the Union Council of Ministers?",
+    "correct_answer": "To aid and advise the President",
+    "incorrect_answers": [
+      "To make laws",
+      "To supervise the judiciary",
+      "To represent the state governments"
+    ],
+    "options": [
+      "To aid and advise the President",
+      "To make laws",
+      "To supervise the judiciary",
+      "To represent the state governments"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who appoints the Governors of Indian states?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Chief Justice",
+      "The Vice President"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Chief Justice",
+      "The Vice President"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In case of a conflict between the Union and the States, whose decision prevails?",
+    "correct_answer": "The Union Executive",
+    "incorrect_answers": [
+      "The State Executive",
+      "The Judiciary",
+      "The Lok Sabha"
+    ],
+    "options": [
+      "The Union Executive",
+      "The State Executive",
+      "The Judiciary",
+      "The Lok Sabha"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which article of the Indian Constitution allows the President to summon or prorogue the Parliament?",
+    "correct_answer": "Article 85",
+    "incorrect_answers": ["Article 80", "Article 90", "Article 92"],
+    "options": ["Article 85", "Article 80", "Article 90", "Article 92"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the maximum number of members in the Council of Ministers in India?",
+    "correct_answer": "15% of Lok Sabha members",
+    "incorrect_answers": [
+      "10% of Lok Sabha members",
+      "12% of Lok Sabha members",
+      "20% of Lok Sabha members"
+    ],
+    "options": [
+      "15% of Lok Sabha members",
+      "10% of Lok Sabha members",
+      "12% of Lok Sabha members",
+      "20% of Lok Sabha members"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which body assists the President of India in discharging his functions during a national emergency?",
+    "correct_answer": "The Union Council of Ministers",
+    "incorrect_answers": [
+      "The Chief Justice of India",
+      "The Vice President",
+      "The Attorney General"
+    ],
+    "options": [
+      "The Union Council of Ministers",
+      "The Chief Justice of India",
+      "The Vice President",
+      "The Attorney General"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who appoints the Attorney General of India?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Chief Justice",
+      "The Vice President",
+      "The Prime Minister"
+    ],
+    "options": [
+      "The President",
+      "The Chief Justice",
+      "The Vice President",
+      "The Prime Minister"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which committee recommends the appointment of the Chief Election Commissioner?",
+    "correct_answer": "The Prime Minister-led Committee",
+    "incorrect_answers": [
+      "The President-led Committee",
+      "The Rajya Sabha Committee",
+      "The Lok Sabha Committee"
+    ],
+    "options": [
+      "The Prime Minister-led Committee",
+      "The President-led Committee",
+      "The Rajya Sabha Committee",
+      "The Lok Sabha Committee"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Under which Article of the Indian Constitution can the President be impeached?",
+    "correct_answer": "Article 61",
+    "incorrect_answers": ["Article 56", "Article 62", "Article 64"],
+    "options": ["Article 61", "Article 56", "Article 62", "Article 64"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following articles deals with the President’s power to promulgate ordinances?",
+    "correct_answer": "Article 123",
+    "incorrect_answers": ["Article 124", "Article 120", "Article 122"],
+    "options": ["Article 123", "Article 124", "Article 120", "Article 122"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which body advises the President of India on matters related to disqualification of MPs under the Tenth Schedule?",
+    "correct_answer": "The Election Commission of India",
+    "incorrect_answers": [
+      "The Supreme Court",
+      "The Lok Sabha",
+      "The Rajya Sabha"
+    ],
+    "options": [
+      "The Election Commission of India",
+      "The Supreme Court",
+      "The Lok Sabha",
+      "The Rajya Sabha"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "The power to grant a pardon or commute a death sentence in India is vested in the President under which Article?",
+    "correct_answer": "Article 72",
+    "incorrect_answers": ["Article 74", "Article 70", "Article 76"],
+    "options": ["Article 72", "Article 74", "Article 70", "Article 76"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article allows the President to refer matters to the Supreme Court for its advisory opinion?",
+    "correct_answer": "Article 143",
+    "incorrect_answers": ["Article 141", "Article 142", "Article 144"],
+    "options": ["Article 143", "Article 141", "Article 142", "Article 144"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who recommends the removal of a Governor from office before the expiration of their term?",
+    "correct_answer": "The Union Council of Ministers",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The President",
+      "The Parliament"
+    ],
+    "options": [
+      "The Union Council of Ministers",
+      "The Prime Minister",
+      "The President",
+      "The Parliament"
+    ]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Under which article can the President of India proclaim a financial emergency?",
+    "correct_answer": "Article 360",
+    "incorrect_answers": ["Article 352", "Article 356", "Article 365"],
+    "options": ["Article 360", "Article 352", "Article 356", "Article 365"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "The President can return a non-money bill for reconsideration to the Parliament under which Article?",
+    "correct_answer": "Article 111",
+    "incorrect_answers": ["Article 113", "Article 112", "Article 110"],
+    "options": ["Article 111", "Article 113", "Article 112", "Article 110"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article specifies the conditions under which the President can declare an emergency due to failure of constitutional machinery in a state?",
+    "correct_answer": "Article 356",
+    "incorrect_answers": ["Article 352", "Article 360", "Article 365"],
+    "options": ["Article 356", "Article 352", "Article 360", "Article 365"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Under which article can the Vice President act as the President in the event of the President's death, resignation, or removal?",
+    "correct_answer": "Article 65",
+    "incorrect_answers": ["Article 62", "Article 64", "Article 67"],
+    "options": ["Article 65", "Article 62", "Article 64", "Article 67"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Under which article of the Constitution is the Supreme Court of India established?",
+    "correct_answer": "Article 124",
+    "incorrect_answers": ["Article 126", "Article 136", "Article 128"],
+    "options": ["Article 124", "Article 126", "Article 136", "Article 128"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a ground for the removal of a Supreme Court judge?",
+    "correct_answer": "Incapacity to perform administrative duties",
+    "incorrect_answers": [
+      "Misbehavior",
+      "Insolvency",
+      "Violation of the Constitution"
+    ],
+    "options": [
+      "Incapacity to perform administrative duties",
+      "Misbehavior",
+      "Insolvency",
+      "Violation of the Constitution"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article of the Indian Constitution provides for the appointment of the Chief Justice of India?",
+    "correct_answer": "Article 124",
+    "incorrect_answers": ["Article 128", "Article 126", "Article 132"],
+    "options": ["Article 124", "Article 128", "Article 126", "Article 132"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following powers is NOT exercised by the Supreme Court?",
+    "correct_answer": "To appoint the Prime Minister",
+    "incorrect_answers": [
+      "To interpret the Constitution",
+      "To issue writs",
+      "To review laws"
+    ],
+    "options": [
+      "To appoint the Prime Minister",
+      "To interpret the Constitution",
+      "To issue writs",
+      "To review laws"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum number of judges that can be appointed to the Supreme Court of India?",
+    "correct_answer": "30",
+    "incorrect_answers": ["25", "27", "32"],
+    "options": ["30", "25", "27", "32"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of the following is a feature of the Collegium System in India?",
+    "correct_answer": "It recommends appointments and transfers of judges",
+    "incorrect_answers": [
+      "It is mentioned in the Constitution",
+      "It is headed by the President",
+      "It has legislative powers"
+    ],
+    "options": [
+      "It recommends appointments and transfers of judges",
+      "It is mentioned in the Constitution",
+      "It is headed by the President",
+      "It has legislative powers"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article empowers the Supreme Court to issue directions for the enforcement of fundamental rights?",
+    "correct_answer": "Article 32",
+    "incorrect_answers": ["Article 226", "Article 136", "Article 142"],
+    "options": ["Article 32", "Article 226", "Article 136", "Article 142"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "How many High Courts are there currently in India?",
+    "correct_answer": "25",
+    "incorrect_answers": ["22", "24", "26"],
+    "options": ["25", "22", "24", "26"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "The concept of Judicial Review in India is borrowed from which country's Constitution?",
+    "correct_answer": "The United States",
+    "incorrect_answers": ["The United Kingdom", "Canada", "Australia"],
+    "options": [
+      "The United States",
+      "The United Kingdom",
+      "Canada",
+      "Australia"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which article allows the Supreme Court to hear appeals against judgments of High Courts?",
+    "correct_answer": "Article 136",
+    "incorrect_answers": ["Article 134", "Article 137", "Article 131"],
+    "options": ["Article 136", "Article 134", "Article 137", "Article 131"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the highest court in India?",
+    "correct_answer": "Supreme Court",
+    "incorrect_answers": ["High Court", "District Court", "Sessions Court"],
+    "options": [
+      "Supreme Court",
+      "High Court",
+      "District Court",
+      "Sessions Court"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which Article of the Constitution allows the Supreme Court to issue writs?",
+    "correct_answer": "Article 32",
+    "incorrect_answers": ["Article 226", "Article 136", "Article 14"],
+    "options": ["Article 32", "Article 226", "Article 136", "Article 14"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who has the authority to appoint the Chief Justice of India?",
+    "correct_answer": "The President",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Attorney General",
+      "The Parliament"
+    ],
+    "options": [
+      "The President",
+      "The Prime Minister",
+      "The Attorney General",
+      "The Parliament"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the minimum age to be appointed as a High Court judge in India?",
+    "correct_answer": "35 years",
+    "incorrect_answers": ["30 years", "40 years", "45 years"],
+    "options": ["35 years", "30 years", "40 years", "45 years"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following is a type of writ issued by the Supreme Court?",
+    "correct_answer": "Habeas Corpus",
+    "incorrect_answers": ["Mandamus", "Injunction", "All of the above"],
+    "options": ["Habeas Corpus", "Mandamus", "Injunction", "All of the above"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which Article empowers the Supreme Court to review its own judgments?",
+    "correct_answer": "Article 137",
+    "incorrect_answers": ["Article 136", "Article 132", "Article 134"],
+    "options": ["Article 137", "Article 136", "Article 132", "Article 134"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following courts has the power to adjudicate disputes between states?",
+    "correct_answer": "Supreme Court",
+    "incorrect_answers": ["High Court", "District Court", "Family Court"],
+    "options": ["Supreme Court", "High Court", "District Court", "Family Court"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the role of the Attorney General of India?",
+    "correct_answer": "To advise the government on legal matters",
+    "incorrect_answers": [
+      "To represent the Supreme Court",
+      "To prosecute cases",
+      "To defend cases against the government"
+    ],
+    "options": [
+      "To advise the government on legal matters",
+      "To represent the Supreme Court",
+      "To prosecute cases",
+      "To defend cases against the government"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which amendment provided for the establishment of a National Judicial Appointments Commission?",
+    "correct_answer": "99th Amendment",
+    "incorrect_answers": [
+      "98th Amendment",
+      "100th Amendment",
+      "97th Amendment"
+    ],
+    "options": [
+      "99th Amendment",
+      "98th Amendment",
+      "100th Amendment",
+      "97th Amendment"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who was the first female Chief Justice of India?",
+    "correct_answer": "There has been no female Chief Justice yet",
+    "incorrect_answers": ["Leila Seth", "Indu Malhotra", "Fatima Beevi"],
+    "options": [
+      "There has been no female Chief Justice yet",
+      "Leila Seth",
+      "Indu Malhotra",
+      "Fatima Beevi"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the highest court in India?",
+    "correct_answer": "Supreme Court",
+    "incorrect_answers": ["High Court", "District Court", "Civil Court"],
+    "options": ["Supreme Court", "High Court", "District Court", "Civil Court"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many judges are there in the Supreme Court of India?",
+    "correct_answer": "31",
+    "incorrect_answers": ["25", "30", "35"],
+    "options": ["31", "25", "30", "35"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who appoints the Chief Justice of India?",
+    "correct_answer": "The President of India",
+    "incorrect_answers": [
+      "The Prime Minister",
+      "The Parliament",
+      "The Vice President"
+    ],
+    "options": [
+      "The President of India",
+      "The Prime Minister",
+      "The Parliament",
+      "The Vice President"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which article of the Constitution guarantees the right to approach the Supreme Court for enforcement of Fundamental Rights?",
+    "correct_answer": "Article 32",
+    "incorrect_answers": ["Article 21", "Article 14", "Article 19"],
+    "options": ["Article 32", "Article 21", "Article 14", "Article 19"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which writ is issued to release a person from unlawful detention?",
+    "correct_answer": "Habeas Corpus",
+    "incorrect_answers": ["Mandamus", "Prohibition", "Certiorari"],
+    "options": ["Habeas Corpus", "Mandamus", "Prohibition", "Certiorari"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the term for a High Court judge in India?",
+    "correct_answer": "62 years",
+    "incorrect_answers": ["60 years", "65 years", "70 years"],
+    "options": ["62 years", "60 years", "65 years", "70 years"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following is a constitutional court in India?",
+    "correct_answer": "Supreme Court",
+    "incorrect_answers": [
+      "Family Court",
+      "Consumer Court",
+      "Small Claims Court"
+    ],
+    "options": [
+      "Supreme Court",
+      "Family Court",
+      "Consumer Court",
+      "Small Claims Court"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which article provides for the establishment of the High Courts in India?",
+    "correct_answer": "Article 214",
+    "incorrect_answers": ["Article 213", "Article 215", "Article 216"],
+    "options": ["Article 214", "Article 213", "Article 215", "Article 216"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is known as the 'Father of Indian Judiciary'?",
+    "correct_answer": "Justice Harilal Jekisundas Kania",
+    "incorrect_answers": [
+      "Justice M. Patanjali Sastri",
+      "Justice B. P. Sinha",
+      "Justice R. C. Lahoti"
+    ],
+    "options": [
+      "Justice Harilal Jekisundas Kania",
+      "Justice M. Patanjali Sastri",
+      "Justice B. P. Sinha",
+      "Justice R. C. Lahoti"
+    ]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which Article empowers the Supreme Court to issue directions to any person or authority?",
+    "correct_answer": "Article 142",
+    "incorrect_answers": ["Article 136", "Article 141", "Article 138"],
+    "options": ["Article 142", "Article 136", "Article 141", "Article 138"]
+  }
+]

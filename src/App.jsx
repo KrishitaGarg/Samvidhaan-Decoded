@@ -15,6 +15,7 @@ import "./App.css";
 import { ReactFlowProvider } from "@xyflow/react";
 import { AuthProvider } from "./components/AuthContex.jsx";
 import { ThemeProvider } from "./components/ThemeToggle/ThemeProvider"; 
+import TriviaApp from "./components/Trivia/components/App/index.js";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/simplifier" element={<Simplifier />} />
                 <Route path="/summary" element={<Summary />} />
                 <Route path="/sign" element={<Sign />} />
+                <Route path="/trivia-app" element={<TriviaApp />} />
               </Routes>
             </Layout>
           </Router>

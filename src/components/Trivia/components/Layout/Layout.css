@@ -1,0 +1,16 @@
+.layout-main {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px; 
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    padding: 10px;
+    margin: 10px;
+  }
+}
