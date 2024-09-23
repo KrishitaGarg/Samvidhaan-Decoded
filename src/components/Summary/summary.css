@@ -40,7 +40,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   padding: 12px;
-  background: #D68D44;
+  background: #D68D44 !important;
   border-radius: 10px;
   margin: 0;
   margin-top: 50px;
@@ -53,7 +53,7 @@ body {
 }
 
 .related-articles-button:hover {
-  background-color:  #a76972;
+  background-color:  #a76972 !important;
   color: white;
 }
 
@@ -125,21 +125,22 @@ body {
 
 .search-container {
   display: flex;
-  justify-content: flex-end; /* Aligns items to the right */
+  justify-content: flex-end;
   width: 100%;
   gap: 15px;
 }
 
 .search-input {
-  padding: 5px; /* Reduced padding for height */
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid #57383b !important; 
   width: 25% !important; 
-  height: 45px; /* Set a fixed height */
+  height: 45px;
+  margin-top: 10px;
 }
 
 .go-button {
-  padding: 5px; /* Match the input's padding */
+  padding: 5px;
   background: #57383b;
   color: #fffbf5;
   border: none;
@@ -147,7 +148,7 @@ body {
   margin-top: 9px !important;
   cursor: pointer;
   width: 10%;
-  height: 45px; /* Set a fixed height */
+  height: 45px;
 }
 
 .go-button:hover {

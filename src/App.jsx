@@ -17,6 +17,10 @@ import { AuthProvider } from "./components/AuthContex.jsx";
 import { ThemeProvider } from "./components/ThemeToggle/ThemeProvider"; 
 import TriviaApp from "./components/Trivia/components/App/index.js";
 import StartTrivia from "./components/Trivia/components/StartQuiz/start-quiz.jsx";
+import MatchingApp from "./components/MatchGame/MatchingGame.jsx";
+import MatchOver from "./components/MatchGame/MatchOver.jsx";
+import MatchStart from "./components/MatchGame/MatchStart.jsx";
+import StartPlay from "./components/Play/Play.jsx";
 
 function App() {
   return (
@@ -38,6 +42,10 @@ function App() {
                 <Route path="/sign" element={<Sign />} />
                 <Route path="/trivia-app" element={<TriviaApp />} />
                 <Route path="/start-trivia" element={<StartTrivia />} />
+                <Route path="/matching-game" element={<MatchingApp />} />
+                <Route path="/match-over" element={<MatchOver />} />
+                <Route path="/match-start" element={<MatchStart />} />
+                <Route path="/start-play" element={<StartPlay />} />
               </Routes>
             </Layout>
           </Router>

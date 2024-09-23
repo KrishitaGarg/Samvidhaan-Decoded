@@ -39,7 +39,6 @@
   width: 80%;
   height: 100%;
   background-color: #faf1e6;
-  color: #333;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e9ecef;
@@ -115,7 +114,7 @@
   flex-direction: column;
 }
 
-.message {
+.messages {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -125,15 +124,16 @@
   word-wrap: break-word;
 }
 
-.message.bot {
+.messages.bot {
   background-color: #fff5eb;
   align-self: flex-start;
   border: 1px solid black;
+  color: #57383b !important;
 }
 
-.message.user {
+.messages.user {
   background-color: #57383b;
-  color: white;
+  color: white !important;
   align-self: flex-end;
   padding: 10px 20px;
 }

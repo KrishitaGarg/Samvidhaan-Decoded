@@ -50,7 +50,7 @@ const ConstitutionDecoder = () => {
                   Explore Constitution
                 </button>
               </a>
-              <a href="/startgame">
+              <a href="/start-play">
                 <button className="btn play-btn">Let's Play!</button>
               </a>
             </div>

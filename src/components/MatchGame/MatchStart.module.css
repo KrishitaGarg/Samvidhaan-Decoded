@@ -1,9 +1,9 @@
 .container {
-  background-image: url("../../assets/game_bg.png") !important;
+  background-image: url("../../assets/match_bg.png") !important;
   background-size: 100% auto;
   background-repeat: no-repeat;
   opacity: 1;
-  height: 90vh;
+  height: 91vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -56,8 +56,8 @@
   width: 450px;
   max-height: 500px;
   background-color: #57383B;
-  color: greenyellow;
-  border: 2px solid blue;
+  color: white;
+  border: 2px solid #894E2A;
   border-radius: 10px;
   padding: 20px;
   opacity: 1;
@@ -66,10 +66,11 @@
 
 .instructionsHeader {
   font-family: 'Poppins', sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   text-align: left;
-  color: white !important;
-  text-decoration: underline;
+  color: greenyellow;
+  text-decoration: none !important;
+  font-weight: 600;
 }
 
 .instructionsText {
@@ -77,8 +78,6 @@
   font-size: 18px;
   line-height: 28px;
   text-align: justify;
-  color: white !important;
-  background-color: rgb(240, 220, 220) !important;
   padding: 5px;
 }
 

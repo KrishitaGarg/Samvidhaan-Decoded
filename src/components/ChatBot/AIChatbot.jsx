@@ -148,7 +148,7 @@ const AIChatbot = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`message ${msg.isBot ? "bot" : "user"}`}
+                className={`messages ${msg.isBot ? "bot" : "user"}`}
               >
                 {msg.isBot && (
                   <img src={botLogo} alt="bot logo" className="message-logo" />

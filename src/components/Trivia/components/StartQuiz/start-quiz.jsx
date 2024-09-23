@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import titleImage from "../../../../assets/trivia-title.png";
 import infoIcon from "../../../../assets/info_icon.png";
 import styles from "./TriviaComponent.module.css";
+import { useTheme } from "../../../ThemeToggle/ThemeToggle.jsx";
 
 const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
   <div className={styles.instructionBox}>
@@ -38,11 +39,11 @@ const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
   </div>
 );
 
-
 const GameComponent = () => {
   const [showInstructions, setShowInstructions] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const utteranceRef = React.useRef(null);
+  const { theme } = useTheme();
 
   const handleToggleInstructions = () => {
     setShowInstructions((prevState) => !prevState);
@@ -62,39 +63,44 @@ const GameComponent = () => {
         You are ready to gamify your learnings. Enjoy!
       `;
 
-
       utteranceRef.current = new SpeechSynthesisUtterance(instructionsText);
       utteranceRef.current.lang = "en-US";
-      utteranceRef.current.onend = () => setIsSpeaking(false); // Reset state when speech ends
+      utteranceRef.current.onend = () => setIsSpeaking(false);
       window.speechSynthesis.speak(utteranceRef.current);
       setIsSpeaking(true);
     }
   };
 
   return (
-    <div className={styles.container}>
-      <img src={titleImage} alt="Trivia Title" className={styles.titleImage} />
-
-      <Link to="/trivia-app" style={{ textDecoration: "none" }}>
-        <button className={styles.startButton}>
-          Start <span>Quiz</span>
-        </button>
-      </Link>
-
-      <button
-        onClick={handleToggleInstructions}
-        className={styles.instructionButton}
-      >
-        Read <span style={{ marginLeft: "5px" }}>Instructions</span>
-        <img src={infoIcon} alt="Info Icon" className={styles.infoIcon} />
-      </button>
-
-      {showInstructions && (
-        <Instructions
-          onToggleReadAloud={handleToggleReadAloud}
-          isSpeaking={isSpeaking}
+    <div className={`${theme}-theme`}>
+      <div className={styles.container}>
+        <img
+          src={titleImage}
+          alt="Trivia Title"
+          className={styles.titleImage}
         />
-      )}
+
+        <Link to="/trivia-app" style={{ textDecoration: "none" }}>
+          <button className={styles.startButton}>
+            Start <span>Quiz</span>
+          </button>
+        </Link>
+
+        <button
+          onClick={handleToggleInstructions}
+          className={styles.instructionButton}
+        >
+          Read <span style={{ marginLeft: "5px" }}>Instructions</span>
+          <img src={infoIcon} alt="Info Icon" className={styles.infoIcon} />
+        </button>
+
+        {showInstructions && (
+          <Instructions
+            onToggleReadAloud={handleToggleReadAloud}
+            isSpeaking={isSpeaking}
+          />
+        )}
+      </div>
     </div>
   );
 };

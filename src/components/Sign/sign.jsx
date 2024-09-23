@@ -18,6 +18,7 @@ import {
 } from "firebase/auth";
 import "./styles.css";
 import bg from "../../assets/complete-reg.png";
+import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
 const fadeIn = keyframes`
   0% {
@@ -44,7 +45,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  height: 600px;
 `;
 
 const SignUpContainer = styled.div`
@@ -109,7 +110,7 @@ const Input = styled.input`
 const Button = styled.button`
   border-radius: 10px;
   border: 1px solid black;
-  background-color: #57383B;
+  background-color: #57383b;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -222,6 +223,7 @@ const Line = styled.h2`
 
 const TypingEffect = ({ text, speed }) => {
   const [displayedText, setDisplayedText] = useState("");
+  const { theme } = useTheme();
 
   useEffect(() => {
     setDisplayedText("");
@@ -246,6 +248,7 @@ const SignInSignUp = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [typingText, setTypingText] = useState("Sign In");
+  const { theme } = useTheme();
 
   const handleToggle = (isSignIn) => {
     toggle(isSignIn);
@@ -285,112 +288,122 @@ const SignInSignUp = () => {
   };
 
   return (
-    <Container>
-      <SignUpContainer signingIn={signIn}>
-        <Form onSubmit={handleSignUp}>
-          <TypingEffect text={typingText} speed={150} />
-          <Input type="text" placeholder="Name" required />
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <Button type="submit">Sign Up</Button>
-        </Form>
-      </SignUpContainer>
-      <SignInContainer signingIn={signIn}>
-        <Form onSubmit={handleSignIn}>
-          <TypingEffect text={typingText} speed={150} />
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <Anchor href="#">Forgot password?</Anchor>
-
-          <img
-            src={Or}
-            alt="Or"
-            style={{ width: "300px", margin: "20px 10px 0px" }}
-          />
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "20px",
-              gap: "50px",
-            }}
-          >
-            <img
-              src={Google}
-              alt="Sign in with Google"
-              onClick={() => handleSocialSignIn(googleProvider)}
-              style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
+    <div className={`${theme}-theme`}>
+      <Container>
+        <SignUpContainer signingIn={signIn}>
+          <Form onSubmit={handleSignUp}>
+            <TypingEffect text={typingText} speed={150} />
+            <Input type="text" placeholder="Name" required />
+            <Input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <img
-              src={Github}
-              alt="Sign in with GitHub"
-              onClick={() => handleSocialSignIn(githubProvider)}
-              style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
+            <Input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
-            <img
-              src={Facebook}
-              alt="Sign in with Facebook"
-              onClick={() => handleSocialSignIn(facebookProvider)}
-              style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
-            />
-          </div>
-
-          <Button type="submit">Sign In</Button>
-        </Form>
-      </SignInContainer>
-
-      <OverlayContainer signingIn={signIn}>
-        <Overlay signingIn={signIn}>
-          <LeftOverlayPanel signingIn={signIn}>
-            <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
-            <Line className="line2"></Line>
-            <Paragraph>Sign up to continue to your account</Paragraph>
-            <GhostButton
-              className="overlay-button1"
-              onClick={() => handleToggle(true)}
-            >
-              Sign In
-            </GhostButton>
-          </LeftOverlayPanel>
-          <RightOverlayPanel signingIn={signIn}>
-            <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
-            <Line></Line>
-            <Paragraph>Sign in to continue to your account</Paragraph>
-            <GhostButton
-              className="overlay-button2"
-              onClick={() => handleToggle(false)}
-            >
+            <Button type="submit" className="button-click">
               Sign Up
-            </GhostButton>
-          </RightOverlayPanel>
-        </Overlay>
-      </OverlayContainer>
-    </Container>
+            </Button>
+          </Form>
+        </SignUpContainer>
+        <SignInContainer signingIn={signIn}>
+          <Form onSubmit={handleSignIn}>
+            <TypingEffect text={typingText} speed={150} />
+            <Input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <Anchor href="#">Forgot password?</Anchor>
+
+            <img
+              src={Or}
+              alt="Or"
+              style={{ width: "300px", margin: "20px 10px 0px" }}
+            />
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "20px",
+                gap: "50px",
+              }}
+            >
+              <img
+                src={Google}
+                alt="Sign in with Google"
+                onClick={() => handleSocialSignIn(googleProvider)}
+                style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
+              />
+              <img
+                src={Github}
+                alt="Sign in with GitHub"
+                onClick={() => handleSocialSignIn(githubProvider)}
+                style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
+              />
+              <img
+                src={Facebook}
+                alt="Sign in with Facebook"
+                onClick={() => handleSocialSignIn(facebookProvider)}
+                style={{ width: "40px", cursor: "pointer", margin: "0 10px" }}
+              />
+            </div>
+
+            <Button type="submit" className="button-click">
+              Sign In
+            </Button>
+          </Form>
+        </SignInContainer>
+
+        <OverlayContainer signingIn={signIn}>
+          <Overlay signingIn={signIn}>
+            <LeftOverlayPanel signingIn={signIn}>
+              <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
+              <Line className="line2"></Line>
+              <Paragraph className="para">
+                Sign up to continue to your account
+              </Paragraph>
+              <GhostButton
+                className="overlay-button1"
+                onClick={() => handleToggle(true)}
+              >
+                Sign In
+              </GhostButton>
+            </LeftOverlayPanel>
+            <RightOverlayPanel signingIn={signIn}>
+              <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
+              <Line></Line>
+              <Paragraph className="para">
+                Sign in to continue to your account
+              </Paragraph>
+              <GhostButton
+                className="overlay-button2"
+                onClick={() => handleToggle(false)}
+              >
+                Sign Up
+              </GhostButton>
+            </RightOverlayPanel>
+          </Overlay>
+        </OverlayContainer>
+      </Container>
+    </div>
   );
 };
 

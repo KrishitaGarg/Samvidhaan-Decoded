@@ -1,0 +1,143 @@
+.matching-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  color: #333;
+}
+
+.paragraph {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.articles, .institutions, .titles {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-btn, .institution-btn, .title-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.article-btn:hover, .institution-btn:hover, .title-btn:hover {
+  background-color: #ddd;
+}
+
+.selected {
+  background-color: #007bff !important;
+  color: white;
+}
+
+.matched {
+  background-color: #28a745;
+  color: white;
+  animation: matchedAnimation 0.5s ease-in-out;
+}
+
+@keyframes matchedAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.check-btn, .play-again-btn, .home-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn:hover, .play-again-btn:hover, .home-btn:hover {
+  background-color: #0056b3;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.feedback.correct {
+  color: #28a745;
+}
+
+.feedback.incorrect {
+  color: #dc3545;
+}
+
+.feedback-icon {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.feedback.correct::before {
+  content: "✔";
+  color: #28a745;
+}
+
+.feedback.incorrect::before {
+  content: "✘";
+  color: #dc3545;
+}
+
+.game-over {
+  margin-top: 20px;
+}
+
+.game-over h3 {
+  color: #333;
+  font-size: 1.5em;
+}
+
+.trophy-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: #ffd700;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}

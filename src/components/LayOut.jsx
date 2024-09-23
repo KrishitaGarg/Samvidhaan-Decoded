@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   };
 
   const handleLogoClick = () => {
-    setActiveButton("Home"); // Reset to default when logo is clicked
+    setActiveButton("Home"); 
   };
 
   const handleCloseText = () => {
@@ -51,22 +51,13 @@ const Layout = ({ children }) => {
                 Explore
               </Link>
               <Link
-                to="/startgame"
+                to="/start-play"
                 className={`header-btn ${
                   activeButton === "Game" ? "button_color_change" : ""
                 }`}
                 onClick={() => handleButtonClick("Game")}
               >
                 Game
-              </Link>
-              <Link
-                to="/start-trivia"
-                className={`header-btn ${
-                  activeButton === "Trivia" ? "button_color_change" : ""
-                }`}
-                onClick={() => handleButtonClick("Trivia")}
-              >
-                Trivia
               </Link>
               <Link
                 to="/chatbot"

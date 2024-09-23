@@ -1153,5 +1153,815 @@
     "correct_answer": "Article 142",
     "incorrect_answers": ["Article 136", "Article 141", "Article 138"],
     "options": ["Article 142", "Article 136", "Article 141", "Article 138"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Prime Minister is the head of the government in India.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President of India is elected by the citizens directly.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President of India can appoint the Chief Justice of India.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Council of Ministers is responsible to the President of India.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Prime Minister can recommend the dissolution of the Lok Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President has the authority to declare a state of emergency.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Prime Minister is a member of the Rajya Sabha.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President of India serves a term of five years.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President can appoint the Governors of the states.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Prime Minister is not allowed to hold any other office of profit.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Parliament of India consists of two houses: the Lok Sabha and the Rajya Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Lok Sabha is also known as the Upper House of Parliament.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "Members of the Rajya Sabha are elected by the elected members of the State Legislative Assemblies.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The President of India can summon and prorogue Parliament.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The maximum strength of the Lok Sabha is 550 members.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Speaker of the Lok Sabha is elected by the members of the Rajya Sabha.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "A bill must be passed by both houses of Parliament to become law.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Rajya Sabha has a fixed term of six years.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Parliament of India meets only once a year.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Prime Minister is a member of the Lok Sabha.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Rajya Sabha is known as the House of the People.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "A member of the Rajya Sabha serves a term of six years.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Lok Sabha can be dissolved by the President of India.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "Money bills can only be introduced in the Lok Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Speaker of the Lok Sabha is a member of the ruling party.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "A bill passed by the Lok Sabha can be rejected by the Rajya Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Vice President of India is the ex-officio Chairman of the Rajya Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President of India can veto a bill passed by Parliament.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Parliament of India consists of the Lok Sabha, Rajya Sabha, and the Prime Minister.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The process of impeachment of the President is initiated in the Lok Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Rajya Sabha can be dissolved by the President of India.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Constitution of India specifies a maximum of 250 members for the Rajya Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Speaker of the Lok Sabha has the authority to decide on the admissibility of a bill.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "No-confidence motions can only be introduced in the Rajya Sabha.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Finance Bill is a type of Money Bill that must be introduced in the Lok Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President can return a bill passed by Parliament for reconsideration.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The term of the Lok Sabha is fixed at five years unless extended by the President.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "A joint session of Parliament can be called by the Speaker of the Lok Sabha alone.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Constitution allows for the establishment of a single house in Parliament.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Legislature of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Parliament has the power to legislate on matters in the Concurrent List.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Prime Minister is the leader of the ruling party in the Lok Sabha.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President can appoint the Prime Minister without consulting anyone.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Cabinet Secretary is the highest-ranking civil servant in the country.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Prime Minister can be removed by the President at any time.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President has the power to appoint members of the Finance Commission.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Prime Minister must be a member of either house of Parliament.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President of India can appoint the Chief Election Commissioner.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Prime Minister does not have the authority to advise the President.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President acts on the advice of the Council of Ministers.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The President can grant pardons under Article 72 of the Constitution.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President can declare a National Emergency under Article 352.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Prime Minister can be a member of only one house of Parliament at a time.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President's role is purely ceremonial and has no real power.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Prime Minister can also hold the office of the Minister of Defence.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President of India has the authority to appoint the governors of the states.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Prime Minister is responsible for the appointment of the Attorney General of India.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President can appoint a commission to investigate the conditions of a specific community.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President is not required to act according to the advice of the Council of Ministers in all cases.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Prime Minister can recommend the dissolution of the Rajya Sabha.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Executive of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President can unilaterally appoint members to the Planning Commission.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Supreme Court is the highest court in India.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Chief Justice of India is appointed by the President.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The High Courts are subordinate to the Supreme Court.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "Judges of the Supreme Court hold office for a term of five years.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Supreme Court has the power to review its own judgments.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Constitution of India provides for a single unified judiciary.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Supreme Court can hear appeals against decisions of the High Courts.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Chief Justice of India is the highest-ranking judge in the Supreme Court.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The judiciary in India is independent of the executive.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "The Supreme Court can issue writs for the enforcement of fundamental rights.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court consists of the Chief Justice and 30 other judges.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "Judges of the High Court are appointed by the President.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court has the power to interpret the Constitution.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court can be approached directly for enforcement of any law.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court can issue a certificate of fitness for appeal to the Supreme Court.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Chief Justice of India can be impeached.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court has original jurisdiction in disputes between states.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "Judges of the Supreme Court can be transferred to High Courts.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court has the authority to strike down laws that violate the Constitution.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "medium",
+    "question": "The Supreme Court's decisions are binding on all lower courts.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court can review its own judgments only under special circumstances.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Constitution mandates the appointment of a minimum number of judges in the Supreme Court.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court has advisory jurisdiction under Article 143.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The President can appoint judges to the Supreme Court without any recommendation.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court has the authority to issue directions to enforce fundamental rights.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court consists of a fixed number of judges as per the Constitution.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court can entertain public interest litigation.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "Judges of the Supreme Court cannot be removed from office.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Supreme Court has the power to declare a law unconstitutional.",
+    "correct_answer": "true",
+    "incorrect_answers": ["false"],
+    "options": ["true", "false"]
+  },
+  {
+    "category": "Judiciary of India",
+    "type": "boolean",
+    "difficulty": "hard",
+    "question": "The Chief Justice of India has no role in judicial appointments.",
+    "correct_answer": "false",
+    "incorrect_answers": ["true"],
+    "options": ["true", "false"]
   }
 ]
