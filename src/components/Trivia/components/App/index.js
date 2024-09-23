@@ -51,7 +51,7 @@ const App = () => {
   const replayQuiz = () => {
     setLoading(true);
     setLoadingMessage({
-      title: "Getting ready for round two.",
+      title: "Getting ready for next round.",
       message: "It won't take long!",
     });
 

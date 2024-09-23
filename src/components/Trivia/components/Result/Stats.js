@@ -50,7 +50,7 @@ const Stats = ({
           style={{
             marginRight: 45,
             marginBottom: 8,
-            width: "500px",
+            width: "489px",
             height: "70px",
           }} 
         />
@@ -60,8 +60,8 @@ const Stats = ({
           onClick={resetQuiz}
           size="big"
           icon="home"
-          labelPosition="left"
-          style={{ marginBottom: 8, width: "500px", height: "70px" }}
+          labelPosition="right"
+          style={{ marginBottom: 8, width: "489px", height: "70px" }}
         />
       </div>
     </Segment>

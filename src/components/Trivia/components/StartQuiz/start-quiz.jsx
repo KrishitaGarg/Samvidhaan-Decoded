@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import titleImage from "../../assets/game_title.png";
-import infoIcon from "../../assets/info_icon.png";
-import styles from "./GameComponent.module.css";
+import titleImage from "../../../../assets/trivia-title.png";
+import infoIcon from "../../../../assets/info_icon.png";
+import styles from "./TriviaComponent.module.css";
 
 const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
   <div className={styles.instructionBox}>
     <div className={styles.headerContainer}>
       <h3 className={styles.instructionsHeader}>
-        Read the instructions carefully before
-        starting the game.
+        Test your knowledge of the Constitution with this fun and informative
+        quiz!
+        <br />
       </h3>
       <button onClick={onToggleReadAloud} className={styles.readAloudButton}>
         {isSpeaking ? "🔇" : "🔊"}
@@ -17,19 +18,21 @@ const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
     </div>
     <div className={styles.instructionsText}>
       <p>
-        I. A question will appear on the screen. You will get 10 seconds to
-        answer the question.
+        I. Select your quiz settings: choose the category, number of questions,
+        difficulty level, question type, and total time to play the quiz.
       </p>
       <p>
-        II. If you answer the question correctly, you will get to roll the dice.
+        II. One question will appear on the screen at a time, and you will have
+        the specified time to answer it. You cannot move ahead until you answer
+        the question.
       </p>
       <p>
-        III. If the answer is wrong, you can’t roll the dice and another
-        question will be displayed on the screen.
+        III. The quiz ends when you've completed all questions or when the time
+        is over.
       </p>
       <p>
-        IV. The game will be over if you answer three consecutive questions
-        incorrectly.
+        IV. After finishing, review your performance, including your total score
+        and the correct answers for learning.
       </p>
     </div>
   </div>
@@ -51,13 +54,14 @@ const GameComponent = () => {
       setIsSpeaking(false);
     } else {
       const instructionsText = `
-        Listen to the instructions carefully before starting the game.
-        First rule: A question will appear on the screen. You will get 10 seconds to answer the question.
-        Second rule: If you answer the question correctly, you will get to roll the dice.
-        Third rule: If the answer is wrong, you can’t roll the dice and another question will be displayed on the screen.
-        Fourth rule: The game will be over if you answer three consecutive questions incorrectly.
+        Listen to the instructions carefully before starting the quiz.
+        First rule: Select your quiz settings: choose the category, number of questions, difficulty level, question type, and total time to play the quiz.
+        Second rule: One question will appear on the screen at a time, and you will have the chosen time to answer it. You cannot move ahead until you answer the question.
+        Third rule: The quiz ends when you've completed all questions or when the time is over.
+        Finally, review your performance, including your total score and the correct answers.
         You are ready to gamify your learnings. Enjoy!
       `;
+
 
       utteranceRef.current = new SpeechSynthesisUtterance(instructionsText);
       utteranceRef.current.lang = "en-US";
@@ -69,11 +73,11 @@ const GameComponent = () => {
 
   return (
     <div className={styles.container}>
-      <img src={titleImage} alt="Game Title" className={styles.titleImage} />
+      <img src={titleImage} alt="Trivia Title" className={styles.titleImage} />
 
-      <Link to="/game" style={{ textDecoration: "none" }}>
+      <Link to="/trivia-app" style={{ textDecoration: "none" }}>
         <button className={styles.startButton}>
-          Start <span>Game</span>
+          Start <span>Quiz</span>
         </button>
       </Link>
 

@@ -59,40 +59,40 @@
 .light-theme .explore-btn:hover {
   border: 2px solid #57383b !important;
   background-color: transparent !important;
-  color: black;
+  color: black !important;
 }
 
 .light-theme .play-btn {
-  color: black;
+  color: black !important;
   background-color: white !important;
   border: 2px solid #57383b;
 }
 
 .light-theme .play-btn:hover {
   background-color: #57383b !important;
-  color: white;
+  color: white !important;
 }
 
 .dark-theme .explore-btn {
-  background-color: #D68D44;
-  color: white;
+  background-color: #D68D44 !important;
+  color: white !important;
 }
 
 .dark-theme .explore-btn:hover {
-  color: white;
-  background-color: transparent;
-  border: 2px solid #D68D44;
+  color: white !important;
+  background-color: transparent !important;
+  border: 2px solid #D68D44 !important;
 }
 
 .dark-theme .play-btn {
-  color: white;
-  background-color: transparent;
-  border: 2px solid #D68D44;
+  color: white !important;
+  background-color: transparent !important;
+  border: 2px solid #D68D44 !important;
 }
 
 .dark-theme .play-btn:hover {
-  background-color: #D68D44;
-  color: white;
+  background-color: #D68D44 !important;
+  color: white !important;
 }
 
 

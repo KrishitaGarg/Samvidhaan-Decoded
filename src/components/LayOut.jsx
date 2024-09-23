@@ -21,6 +21,10 @@ const Layout = ({ children }) => {
     setActiveButton(buttonName);
   };
 
+  const handleLogoClick = () => {
+    setActiveButton("Home"); // Reset to default when logo is clicked
+  };
+
   const handleCloseText = () => {
     setShowText(false);
   };
@@ -32,7 +36,7 @@ const Layout = ({ children }) => {
       <header className="header">
         <nav>
           <div className="header-content">
-            <Link to="/" className="nav-li name">
+            <Link to="/" className="nav-li name" onClick={handleLogoClick}>
               <img src={mainLogo} height="55" width="55" alt="Logo" /> संविधान
               Decode<span>d</span>
             </Link>
@@ -56,7 +60,7 @@ const Layout = ({ children }) => {
                 Game
               </Link>
               <Link
-                to="/trivia-app"
+                to="/start-trivia"
                 className={`header-btn ${
                   activeButton === "Trivia" ? "button_color_change" : ""
                 }`}
@@ -83,41 +87,28 @@ const Layout = ({ children }) => {
                 About Us
               </Link>
               {userLoggedIn ? (
-                <>
-                  {
-                    <div className="header-btn profile-btn">
-                      <img
-                        src={
-                          currentUser?.photoURL ||
-                          "https://www.w3schools.com/howto/img_avatar.png"
-                        }
-                        alt="User"
-                        className="user-image"
-                      />
-
-                      <div className="profile-dropdown">
-                        {/* <Link to="/sign" className="profile-dropdown-item">
-                  <FaUserAlt className="profile-icon" />
-                  Sign In
-                </Link> */}
-                        {/* <Link to="/sign" className="profile-dropdown-item">
-                  <FaUserAlt className="profile-icon" />
-                  Sign Out
-                </Link> */}
-                        <button
-                          className="profile-dropdown-item"
-                          onClick={() => {
-                            auth.signOut();
-                            handleButtonClick("Sign Out");
-                          }}
-                        >
-                          <FaUserAlt className="profile-icon" />
-                          Sign Out
-                        </button>
-                      </div>
-                    </div>
-                  }
-                </>
+                <div className="header-btn profile-btn">
+                  <img
+                    src={
+                      currentUser?.photoURL ||
+                      "https://www.w3schools.com/howto/img_avatar.png"
+                    }
+                    alt="User"
+                    className="user-image"
+                  />
+                  <div className="profile-dropdown">
+                    <button
+                      className="profile-dropdown-item"
+                      onClick={() => {
+                        auth.signOut();
+                        handleButtonClick("Sign Out");
+                      }}
+                    >
+                      <FaUserAlt className="profile-icon" />
+                      Sign Out
+                    </button>
+                  </div>
+                </div>
               ) : (
                 <Link
                   to="/sign"
@@ -129,7 +120,6 @@ const Layout = ({ children }) => {
                   Sign In
                 </Link>
               )}
-
               <ThemeToggle />
             </div>
           </div>
@@ -148,9 +138,15 @@ const Layout = ({ children }) => {
               </span>
             </span>
           )}
-          <a href="/chatbot" className="sticky-logo-link">
+          <Link
+            to="/chatbot"
+            className={`sticky-logo-link ${
+              activeButton === "Nyaya.AI" ? "button_color_change" : ""
+            }`}
+            onClick={() => handleButtonClick("Nyaya.AI")}
+          >
             <img src={logo} alt="Logo" className="sticky-logo" />
-          </a>
+          </Link>
         </div>
       )}
     </div>

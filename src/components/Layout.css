@@ -139,6 +139,8 @@ nav {
   font-weight: 700;
 }
 
+
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .header-buttons {
@@ -219,7 +221,7 @@ nav {
   border-radius: 5px;
   padding: 2px;
   display: none;
-  background-color: var(--background-color);
+  background-color: var(--button-background) !important;
   border: 2px solid #ccc;
 }
 .profile-btn:hover .profile-dropdown {
@@ -233,13 +235,14 @@ nav {
   gap: 10px;
   padding: 5px;
   cursor: pointer;
-  color: var(--text-color);
   text-decoration: none;
   text-align: left;
   padding: 5px 10px;
   margin: 8px 0;
+  color: #f7e7ca;
 }
 
 .profile-dropdown-item:hover {
-  background-color: var(--button-hover-background)
+  background-color: var(--button-hover-background);
+  color: var(--button-hover-color);
 }
