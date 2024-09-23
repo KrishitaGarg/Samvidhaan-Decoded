@@ -88,7 +88,7 @@ const Team = () => {
                 className="team-member-image"
               />
               <div className="team-member-info">
-                <h3>{member.name}</h3>
+                <h3 className="name-member">{member.name}</h3>
                 <p className="team-member-role">{member.role}</p>
                 <p className="team-member-description">{member.description}</p>
                 <div className="team-member-social">

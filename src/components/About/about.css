@@ -5,6 +5,10 @@
   margin-top: 0;
 }
 
+.name-member {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .page-container {
     margin: 10px;

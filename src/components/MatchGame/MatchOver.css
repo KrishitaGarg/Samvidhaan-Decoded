@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh; 
-  background-color: #f8f9fa; 
+  background-image: url("../../assets/match_bg.png") !important;
   color: #333; 
   text-align: center;
 }
