@@ -15,3 +15,8 @@
 .header-h1 {
   background: none !important;
 }
+
+
+.playNowButton .icon{
+  background-image: none;
+}

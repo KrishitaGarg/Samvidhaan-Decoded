@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MatchingGame.css";
 import { useNavigate } from "react-router-dom";
-import { FaTrophy } from "react-icons/fa";
+import { FaTrophy, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import backgroundMusic from "../../assets/background.mp3";
 
 const allArticles = [
   {
@@ -77,9 +78,23 @@ function MatchingGame() {
   const [score, setScore] = useState(0);
   const [gameCompleted, setGameCompleted] = useState(false);
   const navigate = useNavigate();
+  const [feedbackColor, setFeedbackColor] = useState("");
+  const [isMuted, setIsMuted] = useState(false);
+
+  const backgroundAudioRef = useRef(new Audio(backgroundMusic));
 
   useEffect(() => {
     loadNewQuestions();
+
+    backgroundAudioRef.current.loop = true;
+    backgroundAudioRef.current.volume = 0.5;
+    backgroundAudioRef.current
+      .play()
+      .catch((error) => console.error("Audio play error:", error));
+
+    return () => {
+      backgroundAudioRef.current.pause();
+    };
   }, []);
 
   const loadNewQuestions = () => {
@@ -98,6 +113,7 @@ function MatchingGame() {
     setSelectedInstitution(null);
     setSelectedTitle(null);
     setFeedback("");
+    setFeedbackColor("");
     setMatched([]);
     setScore(0);
     setGameCompleted(false);
@@ -147,9 +163,11 @@ function MatchingGame() {
         setMatched((prevMatched) => [...prevMatched, matchedArticle.id]);
         setScore(score + 3);
         setFeedback("Correct match!✅");
+        setFeedbackColor("green");
       } else {
         setScore(score - 1);
         setFeedback("Incorrect match. Try again.❌");
+        setFeedbackColor("red");
       }
 
       setSelectedArticle(null);
@@ -157,6 +175,7 @@ function MatchingGame() {
       setSelectedTitle(null);
     } else {
       setFeedback("Please select all three fields.");
+      setFeedbackColor("");
     }
 
     if (matched.length + 1 >= currentArticles.length) {
@@ -168,8 +187,21 @@ function MatchingGame() {
     loadNewQuestions();
   };
 
+  const toggleMute = () => {
+    setIsMuted((prev) => !prev);
+    if (isMuted) {
+      backgroundAudioRef.current.play();
+    } else {
+      backgroundAudioRef.current.pause();
+    }
+  };
+
   return (
     <div className="matching-game">
+      <div className="mute-button2" onClick={toggleMute}>
+        {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+      </div>
+
       <h2>Match Articles to Institutions and Titles</h2>
       <p className="paragraph">
         Match the articles from Part V & Part VI of the Constitution with their
@@ -238,7 +270,11 @@ function MatchingGame() {
         Check Match
       </button>
 
-      {feedback && <p className="feedback">{feedback}</p>}
+      {feedback && (
+        <p className="feedback" style={{ color: feedbackColor }}>
+          {feedback}
+        </p>
+      )}
     </div>
   );
 }

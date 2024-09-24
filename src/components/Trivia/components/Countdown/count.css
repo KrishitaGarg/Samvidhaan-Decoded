@@ -1,7 +1,14 @@
-@import '~semantic-ui-css/semantic.min.css';
+@import "~semantic-ui-css/semantic.min.css";
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 .timer {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .timer .ui.button {
@@ -16,5 +23,12 @@
 }
 
 .timer .ui.button:hover {
-  background-color: #1678c2; 
+  background-color: #1678c2;
+}
+
+.mute-button {
+  background: black;
+  opacity: 0.8;
+  padding: 0.5rem;
+  border: none;
 }

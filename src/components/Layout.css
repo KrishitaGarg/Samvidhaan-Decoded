@@ -55,6 +55,10 @@ nav {
   font-weight: 700;
 }
 
+.name:hover {
+  color: var(--button-hover-color);
+}
+
 .header-buttons {
   display: flex;
   align-items: center;
@@ -139,9 +143,6 @@ nav {
   font-weight: 700;
 }
 
-
-
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .header-buttons {
     gap: 10px;
@@ -230,7 +231,6 @@ nav {
 .profile-dropdown-item {
   background-color: transparent;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 10px;
   padding: 5px;

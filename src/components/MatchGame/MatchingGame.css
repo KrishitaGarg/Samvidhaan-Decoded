@@ -125,7 +125,7 @@ button {
 }
 
 .trophy-icon {
-  font-size: 1.5em;
+  font-size: 2rem;
   margin-right: 10px;
   color: #ffd700;
 }
@@ -135,9 +135,23 @@ button {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .correct {
   background-color: green;
   color: white;
+}
+
+.mute-button2 {
+  position: absolute;
+  top: 80px;
+  right: 380px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f0a9a9;
+  background: #57383B;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
 }

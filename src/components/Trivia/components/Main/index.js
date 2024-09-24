@@ -232,6 +232,7 @@ const Main = ({ startQuiz }) => {
               <Item.Extra>
                 <Button
                   primary
+                  className="playNowButton"
                   size="big"
                   icon="play"
                   labelPosition="left"
