@@ -69,7 +69,7 @@ const SignUp = () => {
       }
 
       alert("Sign Up successful!");
-      // navigate("/");
+      navigate("/");
     } catch (error) {
       console.error("Error during Sign Up:", error);
       alert(`Failed to sign up. Error: ${error.message}`);
