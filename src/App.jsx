@@ -22,6 +22,7 @@ import MatchingApp from "./components/MatchGame/MatchingGame.jsx";
 import MatchOver from "./components/MatchGame/MatchOver.jsx";
 import MatchStart from "./components/MatchGame/MatchStart.jsx";
 import StartPlay from "./components/Play/Play.jsx";
+import Loading from "./components/Loading/Loading.jsx";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/match-over" element={<MatchOver />} />
                 <Route path="/match-start" element={<MatchStart />} />
                 <Route path="/start-play" element={<StartPlay />} />
+                <Route path="/loading" element={<Loading />} />
               </Routes>
             </Layout>
           </Router>

@@ -15,7 +15,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
+
+
 import "./styles.css";
 import bg from "../../assets/complete-reg.png";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
@@ -242,13 +245,45 @@ const TypingEffect = ({ text, speed }) => {
   return <Title>{displayedText}</Title>;
 };
 
+const BASE_URL =
+  "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
+
 const SignInSignUp = () => {
   const [signIn, toggle] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const navigate = useNavigate();
   const [typingText, setTypingText] = useState("Sign In");
   const { theme } = useTheme();
+
+  const sendSignInDetailsToBackend = async (user) => {
+    try {
+      const data = {
+        email: user.email,
+        name: user.displayName,
+        firebase_user_id: user.uid,
+      };
+      const response = await fetch(`${BASE_URL}/user/create-user/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        const errorMessage =
+          errorData?.detail?.[0]?.msg || "Failed to send data to backend.";
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.error("Error fetching user details from backend", error);
+      alert("Failed to fetch user details from backend.");
+    }
+  };
+
 
   const handleToggle = (isSignIn) => {
     toggle(isSignIn);
@@ -258,7 +293,10 @@ const SignInSignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await updateProfile(user, { displayName: username });
+      await sendSignInDetailsToBackend(user);
       alert("We officially welcome you to sign in to S.Decoded !");
       navigate("/sign");
     } catch (error) {
@@ -269,7 +307,9 @@ const SignInSignUp = () => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await sendSignInDetailsToBackend(user);
       alert("We officially welcome you to S.Decoded !");
       navigate("/");
     } catch (error) {
@@ -279,7 +319,9 @@ const SignInSignUp = () => {
 
   const handleSocialSignIn = async (provider) => {
     try {
-      await signInWithPopup(auth, provider);
+      const userCredential = await signInWithPopup(auth, provider);
+      const user = userCredential.user
+      await sendSignInDetailsToBackend(user);
       alert("We officially welcome you to S.Decoded !");
       navigate("/");
     } catch (error) {
@@ -293,7 +335,7 @@ const SignInSignUp = () => {
         <SignUpContainer signingIn={signIn}>
           <Form onSubmit={handleSignUp}>
             <TypingEffect text={typingText} speed={150} />
-            <Input type="text" placeholder="Name" required />
+            <Input type="text" placeholder="Name" required value={username} onChange={(e) => setUsername(e.target.value)} />
             <Input
               type="email"
               placeholder="Email"

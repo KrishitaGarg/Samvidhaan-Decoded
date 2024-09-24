@@ -31,6 +31,8 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    console.log("Signing up...");
+    console.log("Username:", username);
     try {
       // Create user with Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(
@@ -42,14 +44,14 @@ const SignUp = () => {
 
       // Update profile with username
       await updateProfile(user, { displayName: username });
-
+      
       // Prepare data to send to backend
       const data = {
         email: user.email,
         name: user.displayName,
         firebase_user_id: user.uid,
       };
-
+      
       // Send user details to backend
       const response = await fetch(`${BASE_URL}/user/create-user/`, {
         method: "POST",
