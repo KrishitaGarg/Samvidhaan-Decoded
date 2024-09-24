@@ -154,3 +154,35 @@ body {
 .go-button:hover {
   background-color: #a76972;
 }
+
+.chatbot-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--button-background);
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.chatbot-link:hover {
+  background-color: var(--button-hover-background);
+  color: var(--button-hover-color);
+}
+
+.chatbot-logo {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.chatbot-text {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+}

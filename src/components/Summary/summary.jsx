@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./summary.css";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams, Link } from "react-router-dom";
 import MarkdownRender from "../markdownrender";
+import logo from "../../assets/logo.png";
 
 const DetailsPage = () => {
-  const { categoryId } = useParams();
+  const { categoryId: categoryIdParam } = useParams();
+
   const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [articles, setArticles] = useState([]);
@@ -13,9 +15,7 @@ const DetailsPage = () => {
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
 
-  const category_id =
-    searchParams.get("category") ||
-    categoryId;
+  const category_id = searchParams.get("category") || categoryIdParam;
 
   useEffect(() => {
     fetchArticles(category_id);
@@ -155,6 +155,15 @@ const DetailsPage = () => {
           </>
         )}
       </section>
+      <div className="chatbot-link">
+        <Link
+          to={`/category-chatbot/${category_id}`}
+          className="chatbot-button"
+        >
+          <img src={logo} alt="Chatbot Logo" className="chatbot-logo" />
+          <span className="chatbot-text">Ask about {name}</span>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AIChatbot from "./components/ChatBot/AIChatbot.jsx";
+import CategoryChatbot from "./components/ChatBot/CategoryChatbot.jsx";
 import ConstitutionDecoder from "./components/ConstitutionDecoder/ConstitutionDecoder.jsx";
 import Simplifier from "./components/ConstitutionDecoder/Simplifier.jsx";
 import Layout from "./components/LayOut.jsx";
@@ -32,6 +33,11 @@ function App() {
               <Routes>
                 <Route path="/" element={<ConstitutionDecoder />} />
                 <Route path="/chatbot" element={<AIChatbot />} />
+                <Route
+                  path="/category-chatbot/:categoryId"
+                  element={<CategoryChatbot />}
+                />
+
                 <Route path="/articles" element={<Articles />} />
                 <Route path="/game" element={<Game />} />
                 <Route path="/startgame" element={<StartGame />} />
