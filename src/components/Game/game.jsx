@@ -50,6 +50,13 @@ export default function Game() {
   const [nextQuestion, setNextQuestion] = useState();
   const [loading, setLoading] = useState(true);
   const [timmerMaxTime, setTimmerMaxTime] = useState(10);
+  const [correctAnswer, setCorrectAnswer] = useState(null);
+  const[ slelectedOption, setSelectedOption] = useState(null);  
+
+  useEffect(() => {
+    setCorrectAnswer(null);
+    setSelectedOption(null);
+  }, [currentQuestion]);
 
   // API Working
   const [gameID, setGameID] = useState("");
@@ -65,6 +72,7 @@ export default function Game() {
   }, [gameState, currentQuestion]);
 
   const handelAnswer = async (answer, skipAnswer) => {
+    setSelectedOption(answer);
     setLoading(true);
     if(gameID === "") return;
     if(gameState === "end") return;
@@ -76,6 +84,7 @@ export default function Game() {
       });
       const data = response.data;
       console.log(data);
+      setCorrectAnswer(data.correct_answer_code);
       setNextQuestion(data.next_question);
 
       setLoading(false);
@@ -135,6 +144,9 @@ export default function Game() {
 
     startGame();
   }, []);
+
+
+  
 
   useEffect(() => {
     let value = 4;
@@ -436,9 +448,10 @@ export default function Game() {
                     onClick={() => handelAnswer("A")}
                     style={{
                       backgroundColor:
-                        gameState === "run" ? "#E4A951" : "#e1ad5f54",
+                        correctAnswer ? correctAnswer === "A" ? "green" : "red" : gameState === "run" ? "#E4A951" : "#e1ad5f54",
                       color: "#151932",
                       cursor: gameState === "run" ? "pointer" : "not-allowed",
+                      outline: slelectedOption === "A" ? "4px solid #FFD233" : "none",
                     }}
                   >
                     {currentQuestion.option_a || "Loading..."}
@@ -447,9 +460,10 @@ export default function Game() {
                     onClick={() => handelAnswer("B")}
                     style={{
                       backgroundColor:
-                        gameState === "run" ? "#E4A951" : "#e1ad5f54",
+                        correctAnswer ? correctAnswer === "B" ? "green" : "red" : gameState === "run" ? "#E4A951" : "#e1ad5f54",
                       color: "#151932",
                       cursor: gameState === "run" ? "pointer" : "not-allowed",
+                      outline: slelectedOption === "B" ? "4px solid #FFD233" : "none",
                     }}
                   >
                     {currentQuestion.option_b || "Loading..."}
@@ -459,9 +473,10 @@ export default function Game() {
                     onClick={() => handelAnswer("C")}
                     style={{
                       backgroundColor:
-                        gameState === "run" ? "#E4A951" : "#e1ad5f54",
+                        correctAnswer ? correctAnswer === "C" ? "green" : "red" : gameState === "run" ? "#E4A951" : "#e1ad5f54",
                       color: "#151932",
                       cursor: gameState === "run" ? "pointer" : "not-allowed",
+                      outline: slelectedOption === "C" ? "4px solid #FFD233" : "none",
                     }}
                   >
                     {currentQuestion.option_c || "Loading..."}
@@ -471,9 +486,10 @@ export default function Game() {
                     onClick={() => handelAnswer("D")}
                     style={{
                       backgroundColor:
-                        gameState === "run" ? "#E4A951" : "#e1ad5f54",
+                        correctAnswer ? correctAnswer === "D" ? "green" : "red" : gameState === "run" ? "#E4A951" : "#e1ad5f54",
                       color: "#151932",
                       cursor: gameState === "run" ? "pointer" : "not-allowed",
+                      outline: slelectedOption === "D" ? "4px solid #FFD233" : "none",
                     }}
                   >
                     {currentQuestion.option_d || "Loading..."}
