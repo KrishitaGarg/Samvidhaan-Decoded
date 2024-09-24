@@ -152,17 +152,12 @@ const AIChatbot = () => {
     <div className={`${theme}-theme`}>
       <div className="ai-chatbot-section">
         <div className="sidebar">
-          <div className="history-header">History</div>
-          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
-          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
-          <div className="history-item">DD/MM/YYYY - Lorem Ipsum</div>
-          <button className="clear-history">Clear History</button>
         </div>
 
         <div className="chatbot">
           <div className="chatbot-header">
             <img src={botLogo} alt="bot logo" className="message-logo" />
-            Nyaya.AI
+            Nyaya<span className="highlight-text">.AI</span>
           </div>
 
           <div className="chatbot-messages">
