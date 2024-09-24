@@ -144,7 +144,7 @@ const CategoryChatbot = () => {
       streamBotMessage(data.message);
     } catch (error) {
       console.error("Error:", error);
-      streamBotMessage("Error occurred while sending message.");
+      streamBotMessage("Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!");
     }
   };
 
