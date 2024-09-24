@@ -6,16 +6,22 @@ body {
 }
 
 .content {
-  background-color: #fef6f1;
-  border: 1px solid #e5e5e5;
+  background-color: transparent;
   padding: 30px;
   font-size: 21px;
   line-height: 1.5;
   text-align: justify;
   letter-spacing: 0.03em;
   text-transform: capitalize;
-  color: #57383b;
   border-radius: 10px;
+}
+
+.light-theme .content{
+  color: #57383b;
+}
+
+.dark-theme .content {
+  color: white;
 }
 
 .title-section h1 {
@@ -32,8 +38,15 @@ body {
 }
 
 .title-section p {
-  color: #4d2c26;
   font-size: 20px;
+}
+
+.light-theme .title-section p{
+  color: #57383b;
+}
+
+.dark-theme .title-section p {
+  color: white;
 }
 
 .related-articles-button {
@@ -66,7 +79,7 @@ body {
   margin: 10px 0;
   cursor: pointer;
   transition: color 0.3s;
-  border-bottom: 3px solid #f78b28; 
+  border-bottom: 3px solid #D68D44; 
 }
 
 .article-title:hover {
@@ -101,20 +114,38 @@ body {
 .description h1 {
   font-weight: 700;
   font-size: 27px;
-  color: #4d2c26;
   padding-left: 60px;
+}
+
+.light-theme .description{
+  color: #57383b;
+}
+
+.dark-theme .description h1{
+  color: white !important;
+}
+
+.dark-theme .description h2{
+  color: white !important;
+}
+
+.light-theme .article-title {
+  color: #57383b !important;
+}
+
+.dark-theme .article-title {
+  color: #f78b28 !important;
+  background: #F9D8B8;
 }
 
 .description h2 {
   font-weight: 500;
   margin: 60px;
   font-size: 24px;
-  color: #000;
 }
 
 .description p {
   margin: 60px;
-  color: #4d2c26;
   line-height: 1.6;
 }
 
@@ -159,7 +190,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--button-background);
+  background-color: #f78b28;
   opacity: 0.8;
   border-radius: 5px;
   padding: 10px 15px;
@@ -171,8 +202,7 @@ body {
 }
 
 .chatbot-link:hover {
-  background-color: var(--button-hover-background);
-  color: var(--button-hover-color);
+  background-color: rgb(44, 13, 23);
 }
 
 .chatbot-logo {
@@ -182,7 +212,7 @@ body {
 }
 
 .chatbot-text {
-  color: var(--text-color);
+  color: white;
   font-weight: 600;
   font-size: 1rem;
 }

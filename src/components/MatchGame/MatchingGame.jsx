@@ -65,7 +65,101 @@ const allArticles = [
     institution: "Judiciary",
     title: "Original jurisdiction of the Supreme Court",
   },
+  {
+    id: 11,
+    article: "Article 137",
+    institution: "Judiciary",
+    title: "Review of judgments or orders by the Supreme Court",
+  },
+  {
+    id: 12,
+    article: "Article 148",
+    institution: "Executive",
+    title: "Comptroller and Auditor-General of India",
+  },
+  {
+    id: 13,
+    article: "Article 150",
+    institution: "Executive",
+    title: "Form of accounts of the Union and States",
+  },
+  {
+    id: 14,
+    article: "Article 168",
+    institution: "Legislature",
+    title: "Constitution of Legislatures in States",
+  },
+  {
+    id: 15,
+    article: "Article 169",
+    institution: "Legislature",
+    title: "Abolition or creation of Legislative Councils in States",
+  },
+  {
+    id: 16,
+    article: "Article 170",
+    institution: "Legislature",
+    title: "Composition of the Legislative Assemblies",
+  },
+  {
+    id: 17,
+    article: "Article 213",
+    institution: "Executive",
+    title:
+      "Power of Governor to promulgate Ordinances during recess of Legislature",
+  },
+  {
+    id: 18,
+    article: "Article 217",
+    institution: "Judiciary",
+    title:
+      "Appointment and conditions of the office of a Judge of a High Court",
+  },
+  {
+    id: 19,
+    article: "Article 226",
+    institution: "Judiciary",
+    title: "Power of High Courts to issue certain writs",
+  },
+  {
+    id: 20,
+    article: "Article 233",
+    institution: "Judiciary",
+    title: "Appointment of district judges",
+  },
+  {
+    id: 21,
+    article: "Article 235",
+    institution: "Judiciary",
+    title: "Control over subordinate courts",
+  },
+  {
+    id: 22,
+    article: "Article 239",
+    institution: "Executive",
+    title: "Administration of Union Territories",
+  },
+  {
+    id: 23,
+    article: "Article 243A",
+    institution: "Legislature",
+    title: "Powers of Gram Sabha",
+  },
+  {
+    id: 24,
+    article: "Article 244",
+    institution: "Legislature",
+    title: "Administration of Scheduled Areas and Tribal Areas",
+  },
+  {
+    id: 25,
+    article: "Article 246",
+    institution: "Legislature",
+    title:
+      "Subject-matter of laws made by Parliament and by the Legislatures of States",
+  },
 ];
+
 
 function MatchingGame() {
   const [currentArticles, setCurrentArticles] = useState([]);
