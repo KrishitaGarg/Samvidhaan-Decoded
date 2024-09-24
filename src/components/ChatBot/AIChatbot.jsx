@@ -12,6 +12,21 @@ const AIChatbot = () => {
   const [input, setInput] = useState("");
   const { theme } = useTheme();
 
+  const placeholders = [
+    "Please enter your question regarding the Constitution.",
+    "What aspect of the Constitution would you like to discuss?",
+    "Feel free to ask about constitutional rights or principles.",
+    "Inquire about legislative processes or constitutional amendments.",
+    "What constitutional topic are you interested in exploring?",
+    "How may I assist you with your understanding of the Constitution?",
+    "Please share your thoughts or questions about constitutional law.",
+    "What would you like to learn about the Constitution today?",
+    "Let’s delve into constitutional matters. What’s your question?",
+    "Ask me anything related to the Constitution or its interpretation.",
+  ];
+
+  const [placeholder, setPlaceholder] = useState("");
+
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
 
@@ -54,6 +69,12 @@ const AIChatbot = () => {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  useEffect(() => {
+    const randomPlaceholder =
+      placeholders[Math.floor(Math.random() * placeholders.length)];
+    setPlaceholder(randomPlaceholder);
+  }, []);
 
   const streamBotMessage = (message) => {
     const wordsArray = message.split(" ");
@@ -169,7 +190,7 @@ const AIChatbot = () => {
               value={input}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="Start Typing here..."
+              placeholder={placeholder}
               rows={1}
             />
             <div className="send-icon" onClick={handleSendMessage}>
