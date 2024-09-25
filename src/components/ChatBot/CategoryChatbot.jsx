@@ -7,6 +7,7 @@ import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 import { useParams, useSearchParams } from "react-router-dom";
+import { ThreeDots } from "react-loader-spinner";
 
 const CategoryChatbot = () => {
   const { categoryId: categoryIdParam } = useParams();
@@ -15,6 +16,7 @@ const CategoryChatbot = () => {
   const { theme } = useTheme();
   const [searchParams] = useSearchParams();
   const categoryId = searchParams.get("category") || categoryIdParam;
+  const [loading, setLoading] = useState(false);
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
@@ -119,6 +121,8 @@ const CategoryChatbot = () => {
     setInput("");
 
     try {
+      setLoading(true);
+
       const token = await getAuthToken();
       if (!token) {
         throw new Error("User is not authenticated");
@@ -144,7 +148,11 @@ const CategoryChatbot = () => {
       streamBotMessage(data.message);
     } catch (error) {
       console.error("Error:", error);
-      streamBotMessage("Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!");
+      streamBotMessage(
+        "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!"
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -162,8 +170,7 @@ const CategoryChatbot = () => {
   return (
     <div className={`${theme}-theme`}>
       <div className="ai-chatbot-section">
-        <div className="sidebar">
-        </div>
+        <div className="sidebar"></div>
 
         <div className="chatbot">
           <div className="chatbot-header">
@@ -188,6 +195,22 @@ const CategoryChatbot = () => {
                 </ReactMarkdown>
               </div>
             ))}
+
+            {loading && (
+              <div className="loading-spinner">
+                <ThreeDots
+                  visible={true}
+                  height="80"
+                  width="80"
+                  color="#57383B"
+                  radius="9"
+                  ariaLabel="three-dots-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                />
+              </div>
+            )}
+
             <div ref={messagesEndRef} />
           </div>
 

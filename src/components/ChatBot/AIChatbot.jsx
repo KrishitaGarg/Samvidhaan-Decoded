@@ -6,10 +6,12 @@ import botLogo from "../../assets/logo.png";
 import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
+import { ThreeDots } from "react-loader-spinner";
 
 const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { theme } = useTheme();
 
   const placeholders = [
@@ -112,6 +114,8 @@ const AIChatbot = () => {
     setMessages([...messages, userMessage]);
     setInput("");
 
+    setIsLoading(true);
+
     try {
       const token = await getAuthToken();
       const response = await fetch(`${backendUrl}/message/get-ai-reply/`, {
@@ -134,6 +138,8 @@ const AIChatbot = () => {
       streamBotMessage(
         "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!"
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -151,8 +157,7 @@ const AIChatbot = () => {
   return (
     <div className={`${theme}-theme`}>
       <div className="ai-chatbot-section">
-        <div className="sidebar">
-        </div>
+        <div className="sidebar"></div>
 
         <div className="chatbot">
           <div className="chatbot-header">
@@ -177,6 +182,21 @@ const AIChatbot = () => {
                 </ReactMarkdown>
               </div>
             ))}
+
+            {isLoading && (
+              <div className="loading-spinner">
+                <ThreeDots
+                  visible={true}
+                  height="80"
+                  width="80"
+                  color="#57383B"
+                  radius="9"
+                  ariaLabel="three-dots-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                />
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
