@@ -25,6 +25,11 @@ const AIChatbot = () => {
     "What would you like to learn about the Constitution today?",
     "Let’s delve into constitutional matters. What’s your question?",
     "Ask me anything related to the Constitution or its interpretation.",
+    'Ask me a question like "Explain to me what Part V of the constitution focuses on?"',
+    "Would you like to learn more about the constitution? Should I help you?",
+    'Get started by asking me "How is the President of India elected as per our constitution?"',
+    'You can ask me, "Describe the major roles and responsibilities of the Supreme Court?"',
+    'Ask me, "How does the constitution talk about the subordination of courts under High Court?"',
   ];
 
   const [placeholder, setPlaceholder] = useState("");
