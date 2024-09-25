@@ -17,6 +17,7 @@ const CategoryChatbot = () => {
   const [searchParams] = useSearchParams();
   const categoryId = searchParams.get("category") || categoryIdParam;
   const [loading, setLoading] = useState(false);
+  const [categoryName, setCategoryName] = useState("");
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
@@ -26,6 +27,38 @@ const CategoryChatbot = () => {
     const user = auth.currentUser;
     return user ? await user.getIdToken() : null;
   };
+
+  useEffect(() => {
+    if (categoryId) fetchCategoryDetails();
+  }, [categoryId]);
+
+  const fetchCategoryDetails = async () => {
+    if (!categoryId) return;
+
+    try {
+      const token = await getAuthToken();
+      const response = await fetch(
+        `${backendUrl}/user/${categoryId}/get-category/`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setCategoryName(data.name);
+      } else {
+        console.error("Error fetching category");
+      }
+    } catch (error) {
+      console.error("Error fetching category details:", error);
+    }
+  };
+
 
   const fetchMessages = async () => {
     if (!categoryId) {
@@ -219,9 +252,12 @@ const CategoryChatbot = () => {
               value={input}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="Start Typing here..."
+              placeholder={`Ask me about anything related to '${
+                categoryName || "this category"
+              }'`}
               rows={1}
             />
+
             <div className="send-icon" onClick={handleSendMessage}>
               <img src={sendIcon} alt="send icon" />
             </div>
