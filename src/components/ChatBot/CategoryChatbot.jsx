@@ -1,62 +1,91 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./AIChatbot.css";
+import "./CategoryChatbot.css";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import botLogo from "../../assets/logo.png";
 import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
+import { useParams, useSearchParams } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 
-const AIChatbot = () => {
+const CategoryChatbot = () => {
+  const { categoryId: categoryIdParam } = useParams();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const { theme } = useTheme();
-
-  const placeholders = [
-    "Please enter your question regarding the Constitution.",
-    "What aspect of the Constitution would you like to discuss?",
-    "Feel free to ask about constitutional rights or principles.",
-    "Inquire about legislative processes or constitutional amendments.",
-    "What constitutional topic are you interested in exploring?",
-    "How may I assist you with your understanding of the Constitution?",
-    "Please share your thoughts or questions about constitutional law.",
-    "What would you like to learn about the Constitution today?",
-    "Let’s delve into constitutional matters. What’s your question?",
-    "Ask me anything related to the Constitution or its interpretation.",
-    'Ask me a question like "Explain to me what Part V of the constitution focuses on?"',
-    "Would you like to learn more about the constitution? Should I help you?",
-    'Get started by asking me "How is the President of India elected as per our constitution?"',
-    'You can ask me, "Describe the major roles and responsibilities of the Supreme Court?"',
-    'Ask me, "How does the constitution talk about the subordination of courts under High Court?"',
-  ];
-
-  const [placeholder, setPlaceholder] = useState("");
+  const [searchParams] = useSearchParams();
+  const categoryId = searchParams.get("category") || categoryIdParam;
+  const [loading, setLoading] = useState(false);
+  const [categoryName, setCategoryName] = useState("");
 
   const backendUrl =
     "https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io";
-
   const messagesEndRef = useRef(null);
 
   const getAuthToken = async () => {
     const user = auth.currentUser;
-    if (user) {
-      return await user.getIdToken();
-    }
-    return null;
+    return user ? await user.getIdToken() : null;
   };
 
-  const fetchMessages = async () => {
+  useEffect(() => {
+    if (categoryId) fetchCategoryDetails();
+  }, [categoryId]);
+
+  const fetchCategoryDetails = async () => {
+    if (!categoryId) return;
+
     try {
       const token = await getAuthToken();
-      const response = await fetch(`${backendUrl}/message/get-messages/`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      if (!response.ok) throw new Error("Error fetching messages");
+      const response = await fetch(
+        `${backendUrl}/user/${categoryId}/get-category/`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setCategoryName(data.name);
+      } else {
+        console.error("Error fetching category");
+      }
+    } catch (error) {
+      console.error("Error fetching category details:", error);
+    }
+  };
+
+
+  const fetchMessages = async () => {
+    if (!categoryId) {
+      console.error("No category ID found");
+      return;
+    }
+    try {
+      const token = await getAuthToken();
+      if (!token) {
+        throw new Error("User is not authenticated");
+      }
+
+      const response = await fetch(
+        `${backendUrl}/message/${categoryId}/get-messages/`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error fetching messages, Status: ${response.status}`);
+      }
+
       const data = await response.json();
       setMessages(
         data.map((msg) => ({
@@ -70,23 +99,16 @@ const AIChatbot = () => {
   };
 
   useEffect(() => {
-    fetchMessages();
-  }, []);
+    if (categoryId) fetchMessages();
+  }, [categoryId]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  useEffect(() => {
-    const randomPlaceholder =
-      placeholders[Math.floor(Math.random() * placeholders.length)];
-    setPlaceholder(randomPlaceholder);
-  }, []);
-
   const streamBotMessage = (message) => {
     const wordsArray = message.split(" ");
     let currentIndex = 0;
-
     const newMessage = { text: "", isBot: true };
 
     const intervalId = setInterval(() => {
@@ -113,30 +135,49 @@ const AIChatbot = () => {
   };
 
   const handleSendMessage = async () => {
-    if (input.trim() === "") return;
+    if (input.trim() === "") {
+      console.error("Message is empty");
+      return;
+    }
+
+    if (!categoryId) {
+      console.error("No category ID found");
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: "Error: No category selected.", isBot: true },
+      ]);
+      return;
+    }
 
     const userMessage = { text: input, isBot: false };
-    setMessages([...messages, userMessage]);
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
 
-    setIsLoading(true);
-
     try {
+      setLoading(true);
+
       const token = await getAuthToken();
-      const response = await fetch(`${backendUrl}/message/get-ai-reply/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          question: input,
-        }),
-      });
+      if (!token) {
+        throw new Error("User is not authenticated");
+      }
 
-      if (!response.ok) throw new Error("Error fetching reply");
+      const response = await fetch(
+        `${backendUrl}/message/${categoryId}/get-ai-reply/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ question: input }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error fetching reply, Status: ${response.status}`);
+      }
+
       const data = await response.json();
-
       streamBotMessage(data.message);
     } catch (error) {
       console.error("Error:", error);
@@ -144,7 +185,7 @@ const AIChatbot = () => {
         "Welcome to Nyaya.AI! 😊 To continue, please sign in to access all features of our chatbot. If you don't have an account, you can easily create one. Let's get started!"
       );
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
 
@@ -167,7 +208,7 @@ const AIChatbot = () => {
         <div className="chatbot">
           <div className="chatbot-header">
             <img src={botLogo} alt="bot logo" className="message-logo" />
-            Nyaya<span className="highlight-text">.AI</span>
+            Nyaya.AI
           </div>
 
           <div className="chatbot-messages">
@@ -188,7 +229,7 @@ const AIChatbot = () => {
               </div>
             ))}
 
-            {isLoading && (
+            {loading && (
               <div className="loading-spinner">
                 <ThreeDots
                   visible={true}
@@ -202,6 +243,7 @@ const AIChatbot = () => {
                 />
               </div>
             )}
+
             <div ref={messagesEndRef} />
           </div>
 
@@ -210,9 +252,12 @@ const AIChatbot = () => {
               value={input}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder={placeholder}
+              placeholder={`Ask me about anything related to '${
+                categoryName || "this category"
+              }'`}
               rows={1}
             />
+
             <div className="send-icon" onClick={handleSendMessage}>
               <img src={sendIcon} alt="send icon" />
             </div>
@@ -223,4 +268,4 @@ const AIChatbot = () => {
   );
 };
 
-export default AIChatbot;
+export default CategoryChatbot;

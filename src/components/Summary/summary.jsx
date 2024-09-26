@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./summary.css";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams, Link } from "react-router-dom";
 import MarkdownRender from "../markdownrender";
+import logo from "../../assets/logo.png";
+import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
 const DetailsPage = () => {
-  const { categoryId } = useParams();
+  const { categoryId: categoryIdParam } = useParams();
+
   const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [articles, setArticles] = useState([]);
@@ -12,10 +15,9 @@ const DetailsPage = () => {
   const [description, setDescription] = useState("");
   const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
+  const { theme } = useTheme();
 
-  const category_id =
-    searchParams.get("category") ||
-    categoryId;
+  const category_id = searchParams.get("category") || categoryIdParam;
 
   useEffect(() => {
     fetchArticles(category_id);
@@ -98,63 +100,74 @@ const DetailsPage = () => {
   };
 
   return (
-    <div className="details-page">
-      <section className="content">
-        <div className="title-section">
-          <h1>{name}</h1>
-          <p>{description}</p>
-        </div>
+    <div className={`${theme}-theme`}>
+      <div className="details-page">
+        <section className="content">
+          <div className="title-section">
+            <h1>{name}</h1>
+            <p>{description}</p>
+          </div>
 
-        <button
-          onClick={handleRelatedArticlesClick}
-          className="related-articles-button"
-        >
-          {showArticles ? "Hide Related Articles" : "Show Related Articles"}
-        </button>
+          <button
+            onClick={handleRelatedArticlesClick}
+            className="related-articles-button"
+          >
+            {showArticles ? "Hide Related Articles" : "Show Related Articles"}
+          </button>
 
-        {showArticles && (
-          <>
-            <div className="search-container">
-              <input
-                type="text"
-                className="search-input"
-                placeholder="Search article by title or number"
-                value={searchTerm}
-                onChange={handleSearch}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") scrollToArticle();
-                }}
-              />
-              <button className="go-button" onClick={scrollToArticle}>
-                Search
-              </button>
-            </div>
-
-            {loading ? (
-              <p>Loading articles...</p>
-            ) : (
-              <div className="related-articles">
-                {articles.map((article, index) => (
-                  <div key={article.id}>
-                    <div
-                      className="article-title"
-                      onClick={() => toggleArticleContent(index)}
-                      id={article.id}
-                    >
-                      <h3>{article.title}</h3>
-                    </div>
-                    {article.showContent && (
-                      <div className="article-details">
-                        <MarkdownRender content={article.content} />
-                      </div>
-                    )}
-                  </div>
-                ))}
+          {showArticles && (
+            <>
+              <div className="search-container">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search article by title or number"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter") scrollToArticle();
+                  }}
+                />
+                <button className="go-button" onClick={scrollToArticle}>
+                  Search
+                </button>
               </div>
-            )}
-          </>
-        )}
-      </section>
+
+              {loading ? (
+                <p>Loading articles...</p>
+              ) : (
+                <div className="related-articles">
+                  {articles.map((article, index) => (
+                    <div key={article.id}>
+                      <div
+                        className="article-title"
+                        onClick={() => toggleArticleContent(index)}
+                        id={article.id}
+                      >
+                        <h3>{article.title}</h3>
+                      </div>
+                      {article.showContent && (
+                        <div className="article-details">
+                          <MarkdownRender content={article.content} />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </section>
+        <div className="chatbot-link">
+          <Link
+            to={`/category-chatbot/${category_id}`}
+            className="chatbot-button"
+          >
+            <img src={logo} alt="Chatbot Logo" className="chatbot-logo" />
+            <span className="chatbot-text">Ask about {name}</span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

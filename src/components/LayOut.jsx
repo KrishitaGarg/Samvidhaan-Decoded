@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
                 }`}
                 onClick={() => handleButtonClick("Game")}
               >
-                Game
+                Games
               </Link>
               <Link
                 to="/chatbot"

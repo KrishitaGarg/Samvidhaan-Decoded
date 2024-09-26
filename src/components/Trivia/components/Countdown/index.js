@@ -19,17 +19,16 @@ const Countdown = ({ countdownTime, timeOver, setTimeTaken }) => {
 
   useEffect(() => {
     backgroundAudioRef.current.loop = true;
-    backgroundAudioRef.current.volume = defaultVolume; 
-    tickingAudioRef.current.volume = defaultVolume;
+    backgroundAudioRef.current.volume = isMuted ? 0 : defaultVolume;
+    tickingAudioRef.current.volume = isMuted ? 0 : defaultVolume;
 
-    const playAudio = (audioRef) => {
-      audioRef.current
-        .play()
-        .catch((error) => console.error("Audio play error:", error));
+    const playAudio = () => {
+      if (!isMuted) {
+        backgroundAudioRef.current
+          .play()
+          .catch((error) => console.error("Audio play error:", error));
+      }
     };
-
-    playAudio(backgroundAudioRef);
-    playAudio(tickingAudioRef);
 
     const timer = setInterval(() => {
       const newTime = timerTime - 1000;
@@ -52,23 +51,23 @@ const Countdown = ({ countdownTime, timeOver, setTimeTaken }) => {
       }
     }, 1000);
 
+    playAudio();
+
     return () => {
       clearInterval(timer);
       tickingAudioRef.current.pause();
       backgroundAudioRef.current.pause();
       setTimeTaken(totalTime - timerTime + 1000);
     };
-  }, [timerTime, totalTime, timeOver, setTimeTaken]);
+  }, [timerTime, totalTime, timeOver, setTimeTaken, isMuted]);
 
   const handleMuteToggle = () => {
-    if (isMuted) {
-      backgroundAudioRef.current.volume = defaultVolume;
-      tickingAudioRef.current.volume = defaultVolume;
-    } else {
-      backgroundAudioRef.current.volume = 0; 
-      tickingAudioRef.current.volume = 0;
-    }
-    setIsMuted(!isMuted);
+    setIsMuted((prev) => {
+      const newMutedState = !prev;
+      backgroundAudioRef.current.volume = newMutedState ? 0 : defaultVolume;
+      tickingAudioRef.current.volume = newMutedState ? 0 : defaultVolume;
+      return newMutedState;
+    });
   };
 
   return (

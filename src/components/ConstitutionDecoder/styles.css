@@ -1,8 +1,7 @@
 .constitution-decoder-container {
   padding: 20px;
   font-family: "Poppins", sans-serif;
-  color: #4a403a; 
-  background-color: white; 
+  color: #4a403a;
 }
 
 .first {
@@ -74,27 +73,26 @@
 }
 
 .dark-theme .explore-btn {
-  background-color: #D68D44 !important;
+  background-color: #d68d44 !important;
   color: white !important;
 }
 
 .dark-theme .explore-btn:hover {
   color: white !important;
   background-color: transparent !important;
-  border: 2px solid #D68D44 !important;
+  border: 2px solid #d68d44 !important;
 }
 
 .dark-theme .play-btn {
   color: white !important;
   background-color: transparent !important;
-  border: 2px solid #D68D44 !important;
+  border: 2px solid #d68d44 !important;
 }
 
 .dark-theme .play-btn:hover {
-  background-color: #D68D44 !important;
+  background-color: #d68d44 !important;
   color: white !important;
 }
-
 
 .main-image-container {
   flex: 1;
@@ -218,6 +216,7 @@
 
 .preamble-section .content {
   background: #332829;
+  border: 2px solid #fffbf5;
 }
 
 .constitution-section {
@@ -248,14 +247,6 @@
   color: black;
 }
 
-.light-theme .preamble-section {
-  background: #f8f9fa;
-}
-
-.light-theme .preamble-container {
-  color: #36230d;
-}
-
 .dark-theme {
   color: white;
   background-color: #332829;
@@ -276,6 +267,11 @@
 
 .dark-theme .preamble-container {
   color: black;
+}
+
+.react-flow__node {
+  height: auto !important;
+  box-shadow: none !important;
 }
 
 @media (max-width: 800px) {
@@ -382,10 +378,3 @@
     padding-bottom: 20px;
   }
 }
-
-
-.react-flow__node {
-  height: auto!important;
-  box-shadow: none!important;
-}
-
