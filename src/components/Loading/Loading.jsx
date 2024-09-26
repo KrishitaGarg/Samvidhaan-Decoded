@@ -2,8 +2,11 @@ import "./Loading.css";
 import MaimImage from "../../assets/main_image.png";
 import CloudImage from "../../assets/cloud.png";
 import { motion } from "framer-motion";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 export default function Loading() {
+  const { width } = useWindowSize();
+
   return (
     <motion.div
       className="loading-overlay"
@@ -14,19 +17,19 @@ export default function Loading() {
     >
       <motion.div
         className="loading-cloud"
-        initial={{ x: "25vw", y: "8vh" }}
-        animate={{ x: "-25vw", y: "8vh" }}
+        initial={{ x: width < 768 ? "40vw" : "25vw", y: width < 768 ? "30vh" : "8vh" }}
+        animate={{ x: "-50vw", y: width < 768 ? "30vh" : "8vh" }}
         transition={{ duration: 2, ease: "easeIn" }}
-        exit={{ x: "-50vw", y: "8vh" }}
+        exit={{ x: "-50vw", y: width < 768 ? "30vh" : "8vh" }}
       >
         <img src={CloudImage} alt="Cloud" className="cloud-image" />
       </motion.div>
       <motion.div
         className="loading-cloud"
-        initial={{ x: "65vw", y: "12vh" }}
-        animate={{ x: "150vw", y: "12vh" }}
+        initial={{ x: width < 768 ? "0vw" : "65vw", y: width < 768 ? "20vh" : "12vh" }}
+        animate={{ x: "150vw", y: width < 768 ? "20vh" : "12vh" }}
         transition={{ duration: 2, ease: "easeIn" }}
-        exit={{ x: "150vw", y: "10vh" }}
+        exit={{ x: "150vw", y: width < 768 ? "20vh" : "12vh" }}
       >
         <img src={CloudImage} alt="Cloud" className="cloud-image" />
       </motion.div>
