@@ -17,7 +17,7 @@ export default function Loading() {
     >
       <motion.div
         className="loading-cloud"
-        initial={{ x: width < 768 ? "40vw" : "25vw", y: width < 768 ? "30vh" : "8vh" }}
+        initial={{ x: width < 768 ? "40vw" : "30vw", y: width < 768 ? "30vh" : "10vh" }}
         animate={{ x: "-50vw", y: width < 768 ? "30vh" : "8vh" }}
         transition={{ duration: 2, ease: "easeIn" }}
         exit={{ x: "-50vw", y: width < 768 ? "30vh" : "8vh" }}
@@ -26,7 +26,7 @@ export default function Loading() {
       </motion.div>
       <motion.div
         className="loading-cloud"
-        initial={{ x: width < 768 ? "0vw" : "65vw", y: width < 768 ? "20vh" : "12vh" }}
+        initial={{ x: width < 768 ? "0vw" : "60vw", y: width < 768 ? "20vh" : "16vh" }}
         animate={{ x: "150vw", y: width < 768 ? "20vh" : "12vh" }}
         transition={{ duration: 2, ease: "easeIn" }}
         exit={{ x: "150vw", y: width < 768 ? "20vh" : "12vh" }}
