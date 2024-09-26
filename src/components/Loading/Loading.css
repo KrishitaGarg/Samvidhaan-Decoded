@@ -5,9 +5,6 @@
     width: 100vw;
     height: 100svh;
     background: #FFFBF5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 100;
 
 }
@@ -46,4 +43,30 @@
     top : 40px;
     left: 60px;
     z-index: 100000;
+}
+
+.loading-cloud{
+    position: fixed;
+    z-index: 100000;
+}
+
+.main-Image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cloud-image{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    max-width: 100px;
+    max-height: 100px;
+
+    @media (min-width: 768px){
+        max-width: 250px;
+        max-height: 250px;
+    }
 }

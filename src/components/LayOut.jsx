@@ -8,6 +8,7 @@ import ThemeToggle from "./ThemeToggle/ThemeToggle.jsx";
 import { useAuth } from "./AuthContex.jsx";
 import { auth } from "./firebase.js";
 import { FaUserAlt } from "react-icons/fa";
+import Loading from "./Loading/Loading.jsx";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <Loading />
       <header className="header">
         <nav>
           <div className="header-content">
