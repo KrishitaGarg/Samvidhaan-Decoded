@@ -121,7 +121,7 @@ const UnionNode = [
   },
   {
     id: "Control-of-Union",
-    data: { label: "Comptroller and Auditor Genera of India" , link : "055c0166-6dc4-4e9e-87c6-a49effbc48b7"},
+    data: { label: "Comptroller and Auditor General of India" , link : "055c0166-6dc4-4e9e-87c6-a49effbc48b7"},
     position,
   },
 ];
