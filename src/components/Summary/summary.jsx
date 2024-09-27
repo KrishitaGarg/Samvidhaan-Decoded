@@ -7,7 +7,6 @@ import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 
 const DetailsPage = () => {
   const { categoryId: categoryIdParam } = useParams();
-  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [articles, setArticles] = useState([]);
   const [description, setDescription] = useState("");
@@ -22,7 +21,6 @@ const DetailsPage = () => {
   }, [category_id]);
 
   const fetchArticles = async (category) => {
-    setLoading(true);
     try {
       const response = await fetch(
         `https://sih-main-hackathon.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/${category}/get-category/`
@@ -36,7 +34,6 @@ const DetailsPage = () => {
     } catch (e) {
       console.error("Error fetching articles:", e);
     } finally {
-      setLoading(false);
     }
   };
 
