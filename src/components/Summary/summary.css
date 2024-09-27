@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -5,18 +6,23 @@ body {
   box-sizing: border-box;
 }
 
+.article-details .summary {
+  font-size: 18px !important;
+}
+
 .content {
   background-color: transparent;
   padding: 30px;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 1.5;
   text-align: justify;
   letter-spacing: 0.03em;
   text-transform: capitalize;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.light-theme .content{
+.light-theme .content {
   color: #57383b;
 }
 
@@ -24,7 +30,7 @@ body {
   color: white;
 }
 
-.title-section h1 {
+.title h1 {
   padding: 15px;
   background: #57383b;
   border-radius: 10px;
@@ -32,16 +38,37 @@ body {
   font-weight: 500;
   font-size: 28px;
   color: #fffbf5;
-  margin-bottom: 30px;
   text-align: left;
   padding-left: 50px;
 }
 
-.title-section p {
-  font-size: 20px;
+.title-section h1 {
+  padding: 15px;
+  background: #d68d44;
+  border-radius: 10px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 26px;
+  color: #fffbf5;
+  text-align: left;
+  padding-left: 50px;
 }
 
-.light-theme .title-section p{
+.title-section h2{
+  padding: 15px;
+  margin: 0;
+  font-weight: 550;
+  font-size: 22px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.title-section p {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.light-theme .title-section p {
   color: #57383b;
 }
 
@@ -49,45 +76,42 @@ body {
   color: white;
 }
 
-.related-articles-button {
-  cursor: pointer;
-  transition: background-color 0.3s;
-  padding: 12px;
-  background: #D68D44 !important;
-  border-radius: 10px;
-  margin: 0;
-  margin-top: 50px;
-  font-weight: 500;
-  font-size: 28px;
-  color: #fffbf5;
-  margin-bottom: 10px;
-  text-align: left;
-  padding-left: 50px;
+.light-theme .title-section h2 {
+  color: #57383b;
 }
 
-.related-articles-button:hover {
-  background-color:  #a76972 !important;
+.dark-theme .title-section h2 {
   color: white;
 }
 
-.related-articles {
+/* Articles Section */
+.articles-section {
   margin-top: 20px;
+}
+
+.article-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d68d44;
 }
 
 .article-title {
   padding: 15px;
-  margin: 10px 0;
+  margin-top: 10px;
   cursor: pointer;
-  transition: color 0.3s;
-  border-bottom: 3px solid #D68D44; 
+  transition: color 0.3s, background 0.3s;
 }
 
 .article-title:hover {
   color: #d68e81;
+  background: rgba(215, 141, 68, 0.1);
 }
 
+.article-summary {
+  padding-left: 50px;
+}
 
-.loading-message, .error-message {
+.loading-message,
+.error-message {
   color: #f78b28;
   font-weight: bold;
   text-align: center;
@@ -117,15 +141,12 @@ body {
   padding-left: 60px;
 }
 
-.light-theme .description{
+.light-theme .description {
   color: #57383b;
 }
 
-.dark-theme .description h1{
-  color: white !important;
-}
-
-.dark-theme .description h2{
+.dark-theme .description h1,
+.dark-theme .description h2 {
   color: white !important;
 }
 
@@ -135,7 +156,7 @@ body {
 
 .dark-theme .article-title {
   color: #f78b28 !important;
-  background: #F9D8B8;
+  background: #f9d8b8;
 }
 
 .description h2 {
@@ -164,8 +185,8 @@ body {
 .search-input {
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #57383b !important; 
-  width: 25% !important; 
+  border: 1px solid #57383b !important;
+  width: 25% !important;
   height: 45px;
   margin-top: 10px;
 }
