@@ -4,6 +4,7 @@ import { useParams, useSearchParams, Link } from "react-router-dom";
 import MarkdownRender from "../markdownrender";
 import logo from "../../assets/logo.png";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
+import Loading from "../Loading/Loading.jsx";
 
 const DetailsPage = () => {
   const { categoryId: categoryIdParam } = useParams();
@@ -69,6 +70,8 @@ const DetailsPage = () => {
   };
 
   return (
+    <div>
+    <Loading />
     <div className={`${theme}-theme`}>
       <div className="details-page">
         <section className="content">
@@ -91,6 +94,7 @@ const DetailsPage = () => {
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
