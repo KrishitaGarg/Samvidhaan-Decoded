@@ -5,7 +5,12 @@
 }
 
 .first {
-  padding-bottom: 50px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .text-image-wrapper {
