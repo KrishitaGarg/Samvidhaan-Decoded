@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           <div className="header-content">
             <Link to="/" className="nav-li name" onClick={handleLogoClick}>
               <img src={mainLogo} height="55" width="55" alt="Logo" />
-              संस्थान & संविधान
+              संस्थाएं & संविधान
             </Link>
             <div className="header-buttons">
               <Link
