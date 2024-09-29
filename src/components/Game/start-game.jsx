@@ -28,8 +28,7 @@ const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
         question will be displayed on the screen.
       </p>
       <p>
-        IV. The game will be over if you answer three consecutive questions
-        incorrectly.
+        IV. The game will run for a maximum of 5 minutes.
       </p>
     </div>
   </div>
@@ -55,8 +54,8 @@ const GameComponent = () => {
         First rule: A question will appear on the screen. You will get 10 seconds to answer the question.
         Second rule: If you answer the question correctly, you will get to roll the dice.
         Third rule: If the answer is wrong, you can’t roll the dice and another question will be displayed on the screen.
-        Fourth rule: The game will be over if you answer three consecutive questions incorrectly.
-        You are ready to gamify your learnings. Enjoy!
+        Fourth rule: The game will run for a maximum of 5 minutes.
+        Now, you are ready to gamify your learnings. Enjoy!
       `;
 
       utteranceRef.current = new SpeechSynthesisUtterance(instructionsText);
