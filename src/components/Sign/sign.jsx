@@ -335,7 +335,13 @@ const SignInSignUp = () => {
         <SignUpContainer signingIn={signIn}>
           <Form onSubmit={handleSignUp}>
             <TypingEffect text={typingText} speed={150} />
-            <Input type="text" placeholder="Name" required value={username} onChange={(e) => setUsername(e.target.value)} />
+            <Input
+              type="text"
+              placeholder="Name"
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
             <Input
               type="email"
               placeholder="Email"
@@ -417,7 +423,7 @@ const SignInSignUp = () => {
         <OverlayContainer signingIn={signIn}>
           <Overlay signingIn={signIn}>
             <LeftOverlayPanel signingIn={signIn}>
-              <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
+              <WelcomeTitle>Welcome to Sansthaein & Samvidhan</WelcomeTitle>
               <Line className="line2"></Line>
               <Paragraph className="para">
                 Sign up to continue to your account
@@ -430,7 +436,7 @@ const SignInSignUp = () => {
               </GhostButton>
             </LeftOverlayPanel>
             <RightOverlayPanel signingIn={signIn}>
-              <WelcomeTitle>Welcome to Samvidhaan Decoded</WelcomeTitle>
+              <WelcomeTitle>Welcome to Sansthaein & Samvidhan</WelcomeTitle>
               <Line></Line>
               <Paragraph className="para">
                 Sign in to continue to your account
