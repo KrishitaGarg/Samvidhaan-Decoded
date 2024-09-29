@@ -208,7 +208,7 @@ const CategoryChatbot = () => {
         <div className="chatbot">
           <div className="chatbot-header">
             <img src={botLogo} alt="bot logo" className="message-logo" />
-            Nyaya.AI
+            Nyaya.AI +
           </div>
 
           <div className="chatbot-messages">
