@@ -30,12 +30,7 @@ const Instructions = ({ onToggleReadAloud, isSpeaking }) => (
       </p>
       <p>
         III. The game ends when all articles have been correctly matched with
-        their respective institutions and titles. Your score will be displayed
-        at the end, and you can start a new game if desired.
-      </p>
-      <p>
-        IV. Your live score is shown at the top. Think carefully before
-        selecting, as incorrect matches will reduce your score.
+        their respective institutions and titles.
       </p>
     </div>
   </div>
@@ -59,7 +54,7 @@ const GameComponent = () => {
         Listen to the instructions carefully before starting the game.
 First rule: A list of articles will be displayed. Click on an article to select it. The selected article will be highlighted. Next, choose the institution associated with the selected article by clicking on one of the options. Finally, select the correct title for the article by clicking on it from the list of titles provided.
 Second rule: Now, click the "Check Match" button to see if you've made the correct match. If correct, you'll earn 3 points; if incorrect, you'll lose 1 point.
-Third rule: The game ends when all articles have been correctly matched with their respective institutions and titles. Your score will be displayed at the end, and you can start a new game if desired.
+Third rule: The game ends when all articles have been correctly matched with their respective institutions and titles.
 Note: Your live score is shown at the top. Think carefully before selecting, as incorrect matches will reduce your score.
 You are ready to gamify your learnings. Enjoy!
       `;
